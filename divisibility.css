@@ -14,22 +14,6 @@ body {
     /*1080x2106  1.95 ratio*/
 }
 
-/*top of calculator*/
-#appbar {
-    height: 6%;
-    background-color: deepskyblue;
-}
-
-#title {
-    color: white;
-    font-size: 24px;
-    font-family: Arial, serif;
-    font-weight: 300;
-    text-align: center;
-    position: relative;
-    top: 20%;
-}
-
 /*this container explains input range*/
 #guideline {
     height: 5%;
@@ -69,4 +53,40 @@ body {
     font-size: 27px;
     font-family: Arial, serif;
     color: white;
+    text-align: left;
+}
+
+/*keyboard*/
+.keyboard {
+    align-content: center;
+}
+
+/*buttons*/
+button {
+    display: inline-block;
+    margin-top: 5px;
+    width: 25%;
+    height: 13%;
+    border: 0;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.number {
+    background-color: rgb(50, 50, 50);
+}
+
+.clear {
+    background-color: rgb(51, 0, 9);
+}
+
+.unused {
+    background-color: black;
+    color: black;
+}
+
+.enter {
+    background-color: tan;
 }
