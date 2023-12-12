@@ -1,0 +1,72 @@
+
+body {
+    background-color: black;
+}
+.calculator {
+    height: 634px;
+    width: 325px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+    /*1080x2106  1.95 ratio*/
+}
+
+/*top of calculator*/
+#appbar {
+    height: 6%;
+    background-color: deepskyblue;
+}
+
+#title {
+    color: white;
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+/*this container explains input range*/
+#guideline {
+    height: 5%;
+}
+
+#instruction {
+    font-size: 13px;
+    color: white;
+    font-family: Arial, serif;
+    text-align: center;
+}
+
+/*this container is for the input*/
+#display {
+    height: 8%;
+    border: solid white 1px;
+    border-radius: 15px;
+}
+
+#input {
+    font-size: 32px;
+    font-family: Arial, serif;
+    color: white;
+    text-align: right;
+    position: relative;
+    top: -50%;
+}
+
+/*for answer*/
+#result {
+    height: 28%;
+    border: solid white 1px;
+    border-radius: 15px;
+}
+
+#answer {
+    font-size: 27px;
+    font-family: Arial, serif;
+    color: white;
+}
