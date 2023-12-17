@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Divisibility Calculator</title>
     <link type="text/css" rel="stylesheet" href="divisibility.css">
-    <link href="divisibility.js">
 </head>
 <body>
     <div class="top">
@@ -14,48 +13,45 @@
         <div id="guideline">
             <p id="instruction">Enter a number between 2 and 999,999,999,999.</p>
         </div>
-        <div id="display">
-            <p id="input">8</p>
+        <form>
+            <input id="input" type="text" value="0" readonly>
+        </form>
+        <div>
+            <textarea id="answer" placeholder="" readonly></textarea>
         </div>
-        <div id="result">
-            <p id="answer">8 is divisible by 2, 4, and 8.</p>
-        </div>
         <table class="keyboard">
             <tr>
-                <Button class="number">7</Button>
-                <Button class="number">8</Button>
-                <Button class="number">9</Button>
-                <Button class="clear">CA</Button>
+                <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
             </tr>
-
         </table>
         <table class="keyboard">
             <tr>
-                <Button class="number">4</Button>
-                <Button class="number">5</Button>
-                <Button class="number">6</Button>
-                <Button class="clear">&#9003;</Button>
+                <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
             </tr>
-
         </table>
         <table class="keyboard">
             <tr>
-                <Button class="number">1</Button>
-                <Button class="number">2</Button>
-                <Button class="number">3</Button>
-                <Button class="enter">&#9166;</Button>
+                <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                <Button class="enter" onclick="calculate()">&#9166;</Button>
             </tr>
-
         </table>
         <table class="keyboard">
             <tr>
                 <Button disabled class="unused">.</Button>
-                <Button class="number">0</Button>
+                <Button class="number" onclick="appendToDisplay('0')">0</Button>
                 <Button disabled class="unused">.</Button>
                 <Button disabled class="unused">.</Button>
             </tr>
-
         </table>
     </div>
+    <script src="divisibility.js"></script>
 </body>
 </html>
