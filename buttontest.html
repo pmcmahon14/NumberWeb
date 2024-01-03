@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Test</title>
+</head>
+<body>
+<div>
+    <table class="keyboard">
+        <tr>
+            <Button class="number" style="width: 10%" value="1" onclick="appendToDisplay('1')">1</Button>
+            <Button class="number" style="width: 10%" value="2" onclick="appendToDisplay('2')">2</Button>
+            <Button class="number" style="width: 10%" value="3" onclick="appendToDisplay('3')">3</Button>
+            <Button class="number" style="width: 10%" value="4" onclick="appendToDisplay('4')">4</Button>
+            <Button class="number" style="width: 10%" value="5" onclick="appendToDisplay('5')">5</Button>
+            <Button class="number" style="width: 10%" value="6" onclick="appendToDisplay('6')">6</Button>
+            <Button class="number" style="width: 10%" value="7" onclick="appendToDisplay('7')">7</Button>
+            <Button class="number" style="width: 10%" value="8" onclick="appendToDisplay('8')">8</Button>
+            <Button class="number" style="width: 10%" value="9" onclick="appendToDisplay('9')">9</Button>
+            <Button class="number" style="width: 10%" value="0" onclick="appendToDisplay('0')">0</Button>
+        </tr>
+    </table>
+</div>
+<ul class="list">
+    <li>
+        <span class="listName">MacBook</span>
+    </li>
+    <li>
+        <span class="listName">Amazon Firestick</span>
+    </li>
+    <li>
+        <span class="listName">Keyboard</span>
+    </li>
+</ul>
+<script>
+    const listUl = document.querySelector('.list');
+    const lis = listUl.children;
+
+    function createBtn(li) {
+        const remove = document.createElement('button');
+        remove.className = "btn-icon remove";
+        li.appendChild(remove);
+        return li;
+    }
+    for (let i=0; i<lis.length; i++) {
+        createBtn(lis[i]);
+    }
+</script>
+</body>
+</html>

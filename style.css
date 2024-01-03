@@ -2,46 +2,50 @@
     box-sizing: border-box;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/*for logos*/
-[class*="logocol-"] {
-    float: left;
-    padding: 15px;
-}
-
-/*for calculators*/
-[class*="calccol-"] {
-    float: left;
-    padding: 15px;
+body {
+    background-color: #f1f1f1;
 }
 
 html {
     font-family: Arial, serif;
+    text-align: center;
 }
 
-/*for desktops*/
-.logocol-1 {width: 16.66%}
 
-.calccol-1 {width: 8.33%;}
-.calccol-2 {width: 16.66%;}
-.calccol-3 {width: 25%;}
-.calccol-4 {width: 33.33%;}
-.calccol-5 {width: 41.66%;}
-.calccol-6 {width: 50%;}
-.calccol-7 {width: 58.33%;}
-.calccol-8 {width: 66.66%;}
-.calccol-9 {width: 75%;}
-.calccol-10 {width: 83.33%;}
-.calccol-11 {width: 91.66%;}
-.calccol-12 {width: 100%;}
 
-.calcRow img {float: left; margin-right: 25px}
-.desc {font-size: 20px}
+#top {
+    border-bottom: 2px black solid;
+    #greeting {
+        font-size: 60px;
+    }
+    & span {
+        font-family: Charm, Arial, serif;
+    }
+    #sub-headline {
+        font-size: 40px;
+    }
+}
+
+.math {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*calculator lists*/
+.calclist {
+    /*text-align: left;*/
+    font-size: 28px;
+    font-weight: bold;
+    /*padding-left: 60px;*/
+}
+
 
 .calculator {
     height: 422px;
@@ -61,20 +65,11 @@ html {
 
 }
 
-#greeting {
-    font-size: 60px;
-}
-    span {
-        font-family: Charm, Arial, serif;
-    }
 
-#sub-headline {
-    font-size: 40px;
-}
 
-p {
-    text-align: center;
-}
+
+
+
 
 .desc {
     text-align: left;

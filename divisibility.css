@@ -1,6 +1,6 @@
-
 body {
     background-color: black;
+    font-family: Arial, serif;
 }
 
 .calculator {
@@ -23,18 +23,15 @@ body {
 #instruction {
     font-size: 13px;
     color: white;
-    font-family: Arial, serif;
     text-align: center;
 }
 
-/*this container is for the input*/
 #input {
     width: 98%;
     height: 40px;
     border: solid white 1px;
     border-radius: 15px;
     font-size: 32px;
-    font-family: Arial, serif;
     background-color: black;
     color: white;
     text-align: right;
@@ -44,12 +41,12 @@ body {
 
 /*for answer*/
 #answer {
+    font-family: Arial, serif;
     width: 98%;
     height: 180px;
     border: solid white 1px;
     border-radius: 15px;
     font-size: 27px;
-    font-family: Arial, serif;
     background-color: black;
     color: white;
     text-align: left;

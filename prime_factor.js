@@ -1,8 +1,6 @@
 const inputDisplay = document.getElementById("input");
 const answerDisplay = document.getElementById("answer");
 
-console.log(inputDisplay.value);
-
 let result = "";
 let count = 0;
 
@@ -58,9 +56,10 @@ function calculate() {
                     primeList.push();
                     primeCount.push(counter);
                     counter++;
+                    console.log(primeList);
+
                 }
                 primeFactor.push(`${result} ${i}^${counter}`) ;
-                //console.log(answerDisplay.value);
             }
         }
         for (let j = 0; j < primeList.length; j++) {

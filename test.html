@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Unit Conversion Calculator</title>
-    <link type="text/css" rel="stylesheet" href="unit_conversion.css">
+    <title>Test</title>
+
 </head>
 <body>
-<div class="top">
-    <a href="index.html"><img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
-</div>
-<div class="calculator">
-    <h2>Tabs</h2>
-    <p>Click on the buttons inside the tabbed menu:</p>
-
+<div>
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'London')">London</button>
         <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
@@ -35,15 +28,22 @@
         <p>Tokyo is the capital of Japan.</p>
     </div>
 </div>
-<script src="unit_conversion.js"></script>
-</body>
-</html>
-<head>
-    <meta charset="UTF-8">
-    <title>Unit Conversion Calculator</title>
-    <link type="text/css" rel="stylesheet" href="unit_conversion.css">
-</head>
-<body>
 
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
 </body>
 </html>
