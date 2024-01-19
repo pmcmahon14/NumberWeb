@@ -3,7 +3,7 @@ body {
     font-family: Arial, serif;
 }
 
-#baseInput {
+#input, #output{
     width: 98%;
     height: 40px;
     border: solid white 1px;
@@ -11,30 +11,13 @@ body {
     font-size: 32px;
     background-color: black;
     color: white;
-    text-align: right;
-    position: relative;
+    text-align: center;
     top: -50%;
 }
 
-#baseOutput {
-    width: 98%;
-    height: 40px;
-    border: solid white 1px;
-    border-radius: 15px;
-    font-size: 32px;
-    background-color: black;
-    color: white;
-    text-align: right;
-    position: relative;
-    top: -50%;
-}
-
-.baseDropdown {
-    align-content: center;
-}
-
-.baseDropdown {
-    width: 98%;
+.unitDropdown {
+    display: inline-block;
+    width: 49%;
 }
 
 form {
@@ -46,7 +29,7 @@ form {
 .keyboard {
     align-content: center;
     height: 325px;
-    width: 600px;
+    width: 300px;
     border: solid white 1px;
     margin-left: auto;
     margin-right: auto;
@@ -85,12 +68,15 @@ button {
     background-color: darkmagenta;
 }
 
+.switch {
+    background-color: tan;
+}
+
+.switch:hover {
+    background-color: rgb(255, 235, 205);
+}
+
 .unused {
     background-color: black;
     color: black;
 }
-
-.enter {
-    background-color: tan;
-}
-

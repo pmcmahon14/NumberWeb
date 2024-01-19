@@ -8,18 +8,15 @@
 </head>
 <body>
 <div class="top">
-    <a href="index.html"><img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+    <a href="index.html"><img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width :90px;height: 100px"></a>
 </div>
-<div class="top" style="height: 50px; color: white">
+<div class="top" style="height: 50px; color: white; margin-bottom: 25px">
     <h1>Base Number Calculator</h1>
 </div>
 <div class="calculator">
-    <div style="height: 10%">
-        <p style="font-size: 20px; color: white;">Tabs go here.</p>
-    </div>
     <div class="baseDropdown" style="text-align: center; height: 7%">
-        <label for="base1" style="color: white">BASE:</label>
-        <select name="base1" id="base1" onchange="changeBase(selectedBase1.value)" style="background-color: black; color: white">
+        <label for="base1" style="color: white; font-size: 24px">BASE:</label>
+        <select name="base1" id="base1" onchange="changeBase(selectedBase1.value)" style="background-color: black; color: white; font-size: 24px">
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -62,6 +59,14 @@
             <label for="baseInput"></label>
             <input id="baseInput" type="text" value="0" style="text-align: center" readonly>
         </form>
+    </div>
+    <div>
+        <form>
+            <label for="operationInput"></label>
+            <input id="operationInput" type="text" value="0" style="text-align: center" readonly>
+        </form>
+    </div>
+    <div>
         <form>
             <label for="baseOutput"></label>
             <input id="baseOutput" type="text" value="0" style="text-align: center" readonly>
@@ -71,50 +76,54 @@
     <div class="keyboard">
         <table>
             <tr>
-                <Button class="number" style="width: 10%" value="1" onclick="appendToDisplay('1')">1</Button>
-                <Button class="number" style="width: 10%" value="2" onclick="appendToDisplay('2')">2</Button>
-                <Button class="number" style="width: 10%" value="3" onclick="appendToDisplay('3')">3</Button>
-                <Button class="number" style="width: 10%" value="4" onclick="appendToDisplay('4')">4</Button>
-                <Button class="number" style="width: 10%" value="5" onclick="appendToDisplay('5')">5</Button>
-                <Button class="number" style="width: 10%" value="6" onclick="appendToDisplay('6')">6</Button>
-                <Button class="number" style="width: 10%" value="7" onclick="appendToDisplay('7')">7</Button>
-                <Button class="number" style="width: 10%" value="8" onclick="appendToDisplay('8')">8</Button>
-                <Button class="number" style="width: 10%" value="9" onclick="appendToDisplay('9')">9</Button>
-                <Button class="number" style="width: 10%" value="0" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" style="width: 9%" value="1" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" style="width: 9%" value="2" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" style="width: 9%" value="3" onclick="appendToDisplay('3')">3</Button>
+                <Button class="number" style="width: 9%" value="4" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" style="width: 9%" value="5" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" style="width: 9%" value="6" onclick="appendToDisplay('6')">6</Button>
+                <Button class="number" style="width: 9%" value="7" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" style="width: 9%" value="8" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" style="width: 9%" value="9" onclick="appendToDisplay('9')">9</Button>
+                <Button class="number" style="width: 9%" value="0" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" style="width: 9%; background-color: orange" value="0" onclick="operationDisplay('&#247;')">&#247;</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 10%"  value="q" onclick="appendToDisplay('q')" disabled="false">q</Button>
-                <Button class="number" style="width: 10%"  value="w" onclick="appendToDisplay('w')">w</Button>
-                <Button class="number" style="width: 10%" value="e" onclick="appendToDisplay('e')">e</Button>
-                <Button class="number" style="width: 10%" value="r" onclick="appendToDisplay('r')">r</Button>
-                <Button class="number" style="width: 10%" value="t" onclick="appendToDisplay('t')">t</Button>
-                <Button class="number" style="width: 10%" value="y" onclick="appendToDisplay('y')">y</Button>
-                <Button class="number" style="width: 10%" value="u" onclick="appendToDisplay('u')">u</Button>
-                <Button class="number" style="width: 10%" value="i" onclick="appendToDisplay('i')">i</Button>
-                <Button class="number" style="width: 10%" value="o" onclick="appendToDisplay('o')">o</Button>
-                <Button class="number" style="width: 10%" value="p" onclick="appendToDisplay('p')">p</Button>
+                <Button class="number" style="width :9%"  value="q" onclick="appendToDisplay('q')" disabled="false">q</Button>
+                <Button class="number" style="width :9%"  value="w" onclick="appendToDisplay('w')">w</Button>
+                <Button class="number" style="width :9%" value="e" onclick="appendToDisplay('e')">e</Button>
+                <Button class="number" style="width :9%" value="r" onclick="appendToDisplay('r')">r</Button>
+                <Button class="number" style="width :9%" value="t" onclick="appendToDisplay('t')">t</Button>
+                <Button class="number" style="width :9%" value="y" onclick="appendToDisplay('y')">y</Button>
+                <Button class="number" style="width :9%" value="u" onclick="appendToDisplay('u')">u</Button>
+                <Button class="number" style="width :9%" value="i" onclick="appendToDisplay('i')">i</Button>
+                <Button class="number" style="width :9%" value="o" onclick="appendToDisplay('o')">o</Button>
+                <Button class="number" style="width :9%" value="p" onclick="appendToDisplay('p')">p</Button>
+                <Button class="number" style="width :9%; background-color: orange" value="0" onclick="operationDisplay('X')">X</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('a')">a</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('s')">s</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('d')">d</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('f')">f</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('g')">g</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('h')">h</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('j')">j</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('k')">k</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('l')">l</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('a')">a</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('s')">s</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('d')">d</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('f')">f</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('g')">g</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('h')">h</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('j')">j</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('k')">k</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('l')">l</Button>
+                <Button class="number" style="width :9%; background-color: orange" value="0" onclick="operationDisplay('-')">-</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('z')">z</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('x')">x</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('c')">c</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('v')">v</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('b')">b</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('n')">n</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('m')">m</Button>
-                <Button class="clear" style="width: 11%" onclick="clearError()">&#9003;</Button>
-                <Button class="clear" style="width: 11%" onclick="clearAll()">CA</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('z')">z</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('x')">x</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('c')">c</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('v')">v</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('b')">b</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('n')">n</Button>
+                <Button class="number" style="width: 10%" onclick="appendToDisplay('m')">m</Button>
+                <Button class="clear" style="width: 10%" onclick="clearError()">&#9003;</Button>
+                <Button class="clear" style="width: 10%" onclick="clearAll()">CA</Button>
+                <Button class="number" style="width :10%; background-color: orange" value="0" onclick="operationDisplay('+')">+</Button>
             </tr>
         </table>
     </div>

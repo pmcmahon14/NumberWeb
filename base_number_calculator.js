@@ -74,6 +74,10 @@ function changeBase(selectedBase1) {
     baseConverter1();
 }
 
+function operationDisplay() {
+
+}
+
 // console.log(parseInt('2143', 5).toString(9) );
 
 // const selectedBase = document.getElementById("base1").value;

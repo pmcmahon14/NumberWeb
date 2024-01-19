@@ -3,8 +3,46 @@ body {
     font-family: Arial, serif;
 }
 
-#baseInput {
-    width: 98%;
+/* Style the tab */
+.tab {
+    height: 8%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.measurements>button {
+    background-color: black;
+    border: grey solid 1px;
+}
+
+/*.measurements>button:focus {*/
+/*    background-color: green;*/
+/*}*/
+
+h1 {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+.trig {
+    background-color: deepskyblue;
+    color: black;
+}
+
+#shift, #hyp{
+    background-color: grey;
+    color: black;
+}
+
+label {
+    color: white;
+    font-size: 32px;
+}
+
+input {
+    width: 49%;
     height: 40px;
     border: solid white 1px;
     border-radius: 15px;
@@ -12,29 +50,7 @@ body {
     background-color: black;
     color: white;
     text-align: right;
-    position: relative;
     top: -50%;
-}
-
-#baseOutput {
-    width: 98%;
-    height: 40px;
-    border: solid white 1px;
-    border-radius: 15px;
-    font-size: 32px;
-    background-color: black;
-    color: white;
-    text-align: right;
-    position: relative;
-    top: -50%;
-}
-
-.baseDropdown {
-    align-content: center;
-}
-
-.baseDropdown {
-    width: 98%;
 }
 
 form {
@@ -46,7 +62,7 @@ form {
 .keyboard {
     align-content: center;
     height: 325px;
-    width: 600px;
+    width: 300px;
     border: solid white 1px;
     margin-left: auto;
     margin-right: auto;

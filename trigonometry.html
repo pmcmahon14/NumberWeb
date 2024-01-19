@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trigonometry</title>
+    <link type="text/css" rel="stylesheet" href="trigonometry.css">
+    <link type="text/css" rel="stylesheet" href="all-calc.css">
+</head>
+<body>
+<div class="top">
+    <a href="index.html"><img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width :90px;height: 100px"></a>
+</div>
+<div class="top" style="height: 50px; color: white; margin-bottom: 25px">
+    <h1>Trigonometry</h1>
+</div>
+<div class="calculator">
+    <div class="measurements" style="text-align: center; height: 7%">
+        <button id="select" onclick="selector()" style="width: 8%"></button>
+    </div>
+    <div style="text-align: center; height: 7%">
+        <button id="shift" onclick="shiftSelector()" style="width: 8%">shift</button>
+        <button class="trig" id="asin" style="width: 8%" onclick="trigMeas(this)"></button>
+        <button class="trig" id="acos" style="width: 8%" onclick="trigMeas(this)"></button>
+        <button class="trig" id="atan" style="width: 8%" onclick="trigMeas(this)"></button>
+    </div>
+    <div style="text-align: center; height: 7%">
+        <button id="hyp" onclick="hypSelector()" style="width: 8%">hyp</button>
+        <button class="trig" id="sin" style="width: 8%" onclick="trigMeas(this)"></button>
+        <button class="trig" id="cos" style="width: 8%" onclick="trigMeas(this)"></button>
+        <button class="trig" id="tan" style="width: 8%" onclick="trigMeas(this)"></button>
+    </div>
+    <div>
+        <form style="margin-top: 20px">
+            <label id="inputLabel" for="meas" style="display: inline-block"></label>
+            <input id="meas" type="text" value="0" style="text-align: center; float: right; margin-right: 250px" readonly>
+        </form>
+        <form style="margin-top: 20px">
+            <label id="outputLabel" for="output" style="display: inline-block"></label>
+            <input id="output" type="text" value="0" style="text-align: center; float: right; margin-right: 250px" readonly>
+        </form>
+    </div>
+    <h1 style="color: aliceblue" id="shiftDisp"></h1>
+    <h1 style="color: aliceblue" id="hypDisp"></h1>
+    <div class="keyboard">
+        <table>
+            <tr>
+                <Button class="number" style="width: 25%" value="1" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" style="width: 25%" value="2" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" style="width: 25%" value="3" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" style="width: 25%" onclick="clearAll()">CA</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width :25%"  value="q" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" style="width :25%"  value="w" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" style="width :25%" value="e" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" style="width: 25%" onclick="clearError()">&#9003;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('3')">3</Button>
+<!--                <Button class="enter" style="width: 25%" onclick="calculate()">&#9166;</Button>-->
+                <Button disabled class="unused">.</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('.')">.</Button>
+                <Button class="number" style="width: 25%" onclick="appendToDisplay('-')">+/-</Button>
+                <Button disabled class="unused">.</Button>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="trigonometry.js"></script>
+</body>
+</html>
+
