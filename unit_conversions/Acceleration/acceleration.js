@@ -18,14 +18,13 @@ const accelConvArray = [1.296e9, 360000, 100, 42519685.04, 11811.02362, 3.28084,
   5.102362205e8, 141732.2844, 39.370079, 12960, 3.6, 0.001, 6997.84, 116.63, 1.94, 12960000, 3600, 1, 8052.97,
   2.236936292, 0.000621371, 1.296e10, 3600000, 1000, 14173224.48, 3937.0068, 1.093613];
 
-function clearAll() {
+document.addEventListener("DOMContentLoaded", function(){
+  convArray = accelConvArray;
+})
+
+function clearAcceleration() {
   selectedUnit1.value = accelInitValue1;
   selectedUnit2.value = accelInitValue2;
-  inputDisplay.value = "0";
-  outputDisplay.value = "0";
   originalUnit1 = accelInitValue1;
   originalUnit2 = accelInitValue2;
-  decimalUsed = false;
-  hiddenAnswer = 0;
-  hiddenInput = (inputDisplay.value).toString();
 }

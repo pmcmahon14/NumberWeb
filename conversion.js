@@ -2,8 +2,9 @@ const inputDisplay = document.getElementById("input");
 const outputDisplay = document.getElementById("output");
 let selectedUnit1 = document.getElementById("unit1");
 let selectedUnit2 = document.getElementById("unit2");
-let originalUnit1 = accelInitValue1;
-let originalUnit2 = accelInitValue2;
+let originalUnit1 = "";
+let originalUnit2 = "";
+//let convArray = [];
 
 let hiddenInput = (inputDisplay.value).toString();
 let hiddenAnswer = 0;
@@ -24,6 +25,14 @@ function buttonPressed(buttonText){
     } else {
         numberCalc(buttonText);
     }
+}
+
+function clearAll() {
+    inputDisplay.value = "0";
+    outputDisplay.value = "0";
+    decimalUsed = false;
+    hiddenAnswer = 0;
+    hiddenInput = (inputDisplay.value).toString();
 }
 
 function clearError() {
@@ -216,16 +225,14 @@ function unitConverter() {
     if (document.getElementById("top").innerText === "Temperature") {
         //tempConversion();
     } else {
-        hiddenAnswer = ((Number(inputDisplay.value) * accelConvArray[index2]) / accelConvArray[index1]);
+        hiddenAnswer = ((Number(inputDisplay.value) * convArray[index2]) / convArray[index1]);
     }
     if (hiddenAnswer.toString() === 'Infinity') {
         outputDisplay.value = '0'; //8052970000
     } else if (hiddenAnswer >= 1e10 || hiddenAnswer <= -1e10) {
-        console.log(Number(hiddenAnswer));
         outputDisplay.value = hiddenAnswer.toExponential(10);
     } else if ((hiddenAnswer < 1e10 && hiddenAnswer >= 0.00000000001)
         || (hiddenAnswer > -1e10 && hiddenAnswer <= -0.00000000001) || hiddenAnswer === 0) {
-        console.log(Number(hiddenAnswer));
         outputDisplay.value = hiddenAnswer.toString();
         if (outputDisplay.value.endsWith('.')) {
             outputDisplay.value = outputDisplay.value.substring(0, outputDisplay.length - 1);
