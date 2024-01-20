@@ -12,7 +12,7 @@ const aosConvArray = [6.02214076e23, 1e-24, 1e-21, 1e-18, 1e-15, 1e-12, 1e-9, 0.
   0.1, 1, 10, 100, 1000, 1000000, 1e9, 1e12, 1e15, 1e18, 1e21, 1e24];
 
 document.addEventListener("DOMContentLoaded", function(){
-  convArray = aosConvArray;
+  window.convArray = aosConvArray;
 })
 
 function clearAos() {

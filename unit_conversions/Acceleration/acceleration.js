@@ -19,7 +19,7 @@ const accelConvArray = [1.296e9, 360000, 100, 42519685.04, 11811.02362, 3.28084,
   2.236936292, 0.000621371, 1.296e10, 3600000, 1000, 14173224.48, 3937.0068, 1.093613];
 
 document.addEventListener("DOMContentLoaded", function(){
-  convArray = accelConvArray;
+  window.convArray = accelConvArray;
 })
 
 function clearAcceleration() {
