@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Velocity</title>
+  <link type="text/css" rel="stylesheet" href="../../conversion.css">
+  <link type="text/css" rel="stylesheet" href="../../all-calc.css">
+</head>
+<body>
+<div class="logo">
+  <a href="../../index.html"><img src="../../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div id="top" style="height: 50px; color: white">
+  <h1>Angular Velocity</h1>
+</div>
+<div class="calculator">
+  <div class="unitDropdown" style="text-align: center; height: 7%">
+    <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px">
+      <option value="0" selected>Degree/Second(°/s)</option>
+      <option value="1">Degree/Millisecond(°/ms)</option>
+      <option value="2">Degree/Minute(°/min)</option>
+      <option value="3">Degree/Hour(°/hr)</option>
+      <option value="4">Degree/Day(°/d)</option>
+      <option value="5">Gradian/Second(grad/s)</option>
+      <option value="6">Gradian/Millisecond(grad/ms)</option>
+      <option value="7">Gradian/Minute(grad/min)</option>
+      <option value="8">Gradian/Hour(grad/hr)</option>
+      <option value="9">Gradian/Day(grad/d)</option>
+      <option value="10">Mil/Second(mil/s)</option>
+      <option value="11">Mil/Millisecond(mil/ms)</option>
+      <option value="12">Mil/Minute(mil/min)</option>
+      <option value="13">Mil/Hour(mil/hr)</option>
+      <option value="14">Mil/Day(mil/d)</option>
+      <option value="15">Radian/Second(rad/s)</option>
+      <option value="16">Radian/Millisecond(rad/ms)</option>
+      <option value="17">Radian/Minute(rad/min)</option>
+      <option value="18">Radian/Hour(rad/hr)</option>
+      <option value="19">Radian/Day(rad/d)</option>
+      <option value="20">Revolution/Second(rev/s)</option>
+      <option value="21">Revolution/Millisecond(rev/ms)</option>
+      <option value="22">Revolution/Minute(rev/min)</option>
+      <option value="23">Revolution/Hour(rev/hr)</option>
+      <option value="24">Revolution/Day(rev/d)</option>
+      <option value="25">Sign/Second(sign/s)</option>
+      <option value="26">Sign/Millisecond(sign/ms)</option>
+      <option value="27">Sign/Minute(sign/min)</option>
+      <option value="28">Sign/Hour(sign/hr)</option>
+      <option value="29">Sign/Day(sign/d)</option>
+    </select>
+  </div>
+  <div  class="unitDropdown" style="text-align: center; height: 7%">
+    <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px">
+      <option value="0">Degree/Second(°/s)</option>
+      <option value="1">Degree/Millisecond(°/ms)</option>
+      <option value="2">Degree/Minute(°/min)</option>
+      <option value="3">Degree/Hour(°/hr)</option>
+      <option value="4">Degree/Day(°/d)</option>
+      <option value="5">Gradian/Second(grad/s)</option>
+      <option value="6">Gradian/Millisecond(grad/ms)</option>
+      <option value="7">Gradian/Minute(grad/min)</option>
+      <option value="8">Gradian/Hour(grad/hr)</option>
+      <option value="9">Gradian/Day(grad/d)</option>
+      <option value="10">Mil/Second(mil/s)</option>
+      <option value="11">Mil/Millisecond(mil/ms)</option>
+      <option value="12">Mil/Minute(mil/min)</option>
+      <option value="13">Mil/Hour(mil/hr)</option>
+      <option value="14">Mil/Day(mil/d)</option>
+      <option value="15" selected>Radian/Second(rad/s)</option>
+      <option value="16">Radian/Millisecond(rad/ms)</option>
+      <option value="17">Radian/Minute(rad/min)</option>
+      <option value="18">Radian/Hour(rad/hr)</option>
+      <option value="19">Radian/Day(rad/d)</option>
+      <option value="20">Revolution/Second(rev/s)</option>
+      <option value="21">Revolution/Millisecond(rev/ms)</option>
+      <option value="22">Revolution/Minute(rev/min)</option>
+      <option value="23">Revolution/Hour(rev/hr)</option>
+      <option value="24">Revolution/Day(rev/d)</option>
+      <option value="25">Sign/Second(sign/s)</option>
+      <option value="26">Sign/Millisecond(sign/ms)</option>
+      <option value="27">Sign/Minute(sign/min)</option>
+      <option value="28">Sign/Hour(sign/hr)</option>
+      <option value="29">Sign/Day(sign/d)</option>
+    </select>
+  </div>
+  <div>
+    <form>
+      <label for="input"></label>
+      <input id="input" type="text" value="0" style="text-align: center">
+    </form>
+    <form>
+      <label for="output"></label>
+      <input id="output" type="text" value="0" style="text-align: center" readonly>
+    </form>
+  </div>
+
+  <div class="keyboard">
+    <table>
+      <tr>
+        <Button class="number" style="width: 25%" value="1" onclick="buttonPressed('7')">7</Button>
+        <Button class="number" style="width: 25%" value="2" onclick="buttonPressed('8')">8</Button>
+        <Button class="number" style="width: 25%" value="3" onclick="buttonPressed('9')">9</Button>
+        <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'), clearAngle()">CA</Button>
+      </tr>
+      <tr>
+        <Button class="number" style="width :25%"  value="q" onclick="buttonPressed('4')">4</Button>
+        <Button class="number" style="width :25%"  value="w" onclick="buttonPressed('5')">5</Button>
+        <Button class="number" style="width :25%" value="e" onclick="buttonPressed('6')">6</Button>
+        <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
+      </tr>
+      <tr>
+        <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
+        <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
+        <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
+        <Button class="switch" style="width: 25%" onclick="switchCalc()">&#8646;</Button>
+      </tr>
+      <tr>
+        <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
+        <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
+        <!--                <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>-->
+        <Button disabled class="unused">.</Button>
+        <Button disabled class="unused">.</Button>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+<script src="angular_velocity.js"></script>
+<script src="../../conversion.js"></script>
+</body>
+</html>
+
