@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Storage</title>
+    <link type="text/css" rel="stylesheet" href="../../conversion.css">
+    <link type="text/css" rel="stylesheet" href="../../all-calc.css">
+</head>
+<body>
+<div class="logo">
+    <a href="../../index.html"><img src="../../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div id="top" style="height: 50px; color: white">
+    <h1>Data Storage</h1>
+</div>
+<div class="calculator">
+    <div class="unitDropdown" style="text-align: center; height: 7%">
+        <label for="unit1"></label>
+        <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px">
+            <option value="0">Bit</option>
+            <option value="1">Byte</option>
+            <option value="2">CD (74 min)</option>
+            <option value="3">CD (80 min)</option>
+            <option value="4">DVD (1 layer, 1 side)</option>
+            <option value="5">DVD (1 layer, 2 sides)</option>
+            <option value="6">DVD (2 layer, 1 side)</option>
+            <option value="7">DVD (2 layers, 2 sides)</option>
+            <option value="8">Exabit (Eb)</option>
+            <option value="9">Exabyte (EB)</option>
+            <option value="10">Exbibit (Eib)</option>
+            <option value="11">Exbibyte (EiB)</option>
+            <option value="12">Floppy Disc (3.5\", DD)</option>
+            <option value="13">Floppy Disc (3.5\", ED)</option>
+            <option value="14">Floppy Disc (3.5\", HD)</option>
+            <option value="15">Floppy Disc (5.25\", DD)</option>
+            <option value="16">Floppy Disc (5.25\", HD)</option>
+            <option value="17">Gibibit (Gib)</option>
+            <option value="18">Gibibyte (GiB)</option>
+            <option value="19">Gigabit (Gb)</option>
+            <option value="20">Gigabyte (GB)</option>
+            <option value="21">Kibibit (kib)</option>
+            <option value="22">Kibibyte (kiB)</option>
+            <option value="23">Kilobit (kb)</option>
+            <option value="24">Kilobyte (kB)</option>
+            <option value="25">Mebibit (Mib)</option>
+            <option value="26">Mebibyte (MiB)</option>
+            <option value="27">Megabit (Mb)</option>
+            <option value="28" selected>Megabyte (MB)</option>
+            <option value="29">Pebibit (Pib)</option>
+            <option value="30">Pebibyte (PiB)</option>
+            <option value="31">Petabit (Pb)</option>
+            <option value="32">Petabyte (PB)</option>
+            <option value="33">Tebibit (Tib)</option>
+            <option value="34">Tebibyte (TiB)</option>
+            <option value="35">Terabit (Tb)</option>
+            <option value="36">Terabyte (TB)</option>
+            <option value="37">Yobibit (Yib)</option>
+            <option value="38">Yobibyte (YiB)</option>
+            <option value="39">Yottabit (Yb)</option>
+            <option value="40">Yottabyte (YB)</option>
+            <option value="41">Zebibit (Zib)</option>
+            <option value="42">Zebibyte (ZiB)</option>
+            <option value="43">Zettabit (Zb)</option>
+            <option value="44">Zettabyte (ZB)</option>
+            <option value="45">Zip 100</option>
+            <option value="46">Zip 250</option>
+        </select>
+    </div>
+    <div  class="unitDropdown" style="text-align: center; height: 7%">
+        <label for="unit2"></label>
+        <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px">
+            <option value="0">Bit</option>
+            <option value="1">Byte</option>
+            <option value="2">CD (74 min)</option>
+            <option value="3">CD (80 min)</option>
+            <option value="4">DVD (1 layer, 1 side)</option>
+            <option value="5">DVD (1 layer, 2 sides)</option>
+            <option value="6">DVD (2 layer, 1 side)</option>
+            <option value="7">DVD (2 layers, 2 sides)</option>
+            <option value="8">Exabit (Eb)</option>
+            <option value="9">Exabyte (EB)</option>
+            <option value="10">Exbibit (Eib)</option>
+            <option value="11">Exbibyte (EiB)</option>
+            <option value="12">Floppy Disc (3.5\", DD)</option>
+            <option value="13">Floppy Disc (3.5\", ED)</option>
+            <option value="14">Floppy Disc (3.5\", HD)</option>
+            <option value="15">Floppy Disc (5.25\", DD)</option>
+            <option value="16">Floppy Disc (5.25\", HD)</option>
+            <option value="17">Gibibit (Gib)</option>
+            <option value="18">Gibibyte (GiB)</option>
+            <option value="19">Gigabit (Gb)</option>
+            <option value="20" selected>Gigabyte (GB)</option>
+            <option value="21">Kibibit (kib)</option>
+            <option value="22">Kibibyte (kiB)</option>
+            <option value="23">Kilobit (kb)</option>
+            <option value="24">Kilobyte (kB)</option>
+            <option value="25">Mebibit (Mib)</option>
+            <option value="26">Mebibyte (MiB)</option>
+            <option value="27">Megabit (Mb)</option>
+            <option value="28">Megabyte (MB)</option>
+            <option value="29">Pebibit (Pib)</option>
+            <option value="30">Pebibyte (PiB)</option>
+            <option value="31">Petabit (Pb)</option>
+            <option value="32">Petabyte (PB)</option>
+            <option value="33">Tebibit (Tib)</option>
+            <option value="34">Tebibyte (TiB)</option>
+            <option value="35">Terabit (Tb)</option>
+            <option value="36">Terabyte (TB)</option>
+            <option value="37">Yobibit (Yib)</option>
+            <option value="38">Yobibyte (YiB)</option>
+            <option value="39">Yottabit (Yb)</option>
+            <option value="40">Yottabyte (YB)</option>
+            <option value="41">Zebibit (Zib)</option>
+            <option value="42">Zebibyte (ZiB)</option>
+            <option value="43">Zettabit (Zb)</option>
+            <option value="44">Zettabyte (ZB)</option>
+            <option value="45">Zip 100</option>
+            <option value="46">Zip 250</option>
+        </select>
+    </div>
+    <div>
+        <form>
+            <label for="input"></label>
+            <input id="input" type="text" value="0" style="text-align: center">
+        </form>
+        <form>
+            <label for="output"></label>
+            <input id="output" type="text" value="0" style="text-align: center" readonly>
+        </form>
+    </div>
+    <div class="keyboard">
+        <table>
+            <tr>
+                <Button class="number" style="width: 25%" value="1" onclick="buttonPressed('7')">7</Button>
+                <Button class="number" style="width: 25%" value="2" onclick="buttonPressed('8')">8</Button>
+                <Button class="number" style="width: 25%" value="3" onclick="buttonPressed('9')">9</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAngle()">CA</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width :25%"  value="q" onclick="buttonPressed('4')">4</Button>
+                <Button class="number" style="width :25%"  value="w" onclick="buttonPressed('5')">5</Button>
+                <Button class="number" style="width :25%" value="e" onclick="buttonPressed('6')">6</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
+                <Button class="switch" style="width: 25%" onclick="switchCalc()">&#8646;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
+                <!--                <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>-->
+                <Button disabled class="unused">.</Button>
+                <Button disabled class="unused">.</Button>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="data_storage.js"></script>
+<script src="../../conversion.js"></script>
+</body>
+</html>
+
