@@ -1,4 +1,4 @@
-const List<String> efsArray = ['Abvolt/Kilometer(abV/km)', 'Abvolt/Meter(abV/m)', 'Abvolt/Centimeter(abV/cm)',
+const efsArray = ['Abvolt/Kilometer(abV/km)', 'Abvolt/Meter(abV/m)', 'Abvolt/Centimeter(abV/cm)',
   'Abvolt/Millimeter(abV/mm)', 'Abvolt/Micrometer(abV/µm)', 'Abvolt/Nanometer(abV/nm)', 'Abvolt/Mile(abV/mi)',
   'Abvolt/Yard(abV/yd)', 'Abvolt/Foot(abV/ft)', 'Abvolt/Inch(abV/in)', 'Kilovolt/Kilometer(kV/km)',
   'Kilovolt/Meter(kV/m)', 'Kilovolt/Centimeter(kV/cm)', 'Kilovolt/Millimeter(kV/mm)',
@@ -22,11 +22,11 @@ const List<String> efsArray = ['Abvolt/Kilometer(abV/km)', 'Abvolt/Meter(abV/m)'
   'Watt/Ampere/Nanometer(W/A/nm)', 'Watt/Ampere/Mile(W/A/mi)', 'Watt/Ampere/Yard(W/A/yd)',
   'Watt/Ampere/Foot(W/A/ft)', 'Watt/Ampere/Inch(W/A/in)'];
 
-String efsInitValue1 = 'Volt/Meter(V/m)';
-String efsInitValue2 = 'Watt/Ampere/Meter(W/A/m)';
+const efsInitValue1 = "61";
+const efsInitValue2 = "71";
 
 //based on 1 volt/meter
-const List<double> efsConvArray = [1e11, 1e8, 1e6, 1e5, 100, 0.1, 1.609344e11, 91440000, 30480000, 2540000,
+const efsConvArray = [1e11, 1e8, 1e6, 1e5, 100, 0.1, 1.609344e11, 91440000, 30480000, 2540000,
   1, 0.001, 0.00001, 0.000001, 1e-9, 1e-12, 1.60934, 0.0009144, 0.0003048, 0.0000254,
   0.001, 0.000001, 1e-8, 1e-9, 1e-12, 1e-15, 0.001609344, 0.0000009144, 3.048e-7, 2.54e-8,
   1e9, 1000000, 10000, 1000, 1, 0.001, 1.609344e9, 914400, 304800, 25400,
@@ -35,3 +35,14 @@ const List<double> efsConvArray = [1e11, 1e8, 1e6, 1e5, 100, 0.1, 1.609344e11, 9
   3.3356399951e-12, 5.37, 0.0030501092115, 0.0010167030705, 0.000084725255876,
   1000, 1, 0.01, 0.001, 0.000001, 1e-9, 1609.34, 0.9144, 0.3048, 0.0254,
   1000, 1, 0.01, 0.001, 0.000001, 1e-9, 1609.34, 0.9144, 0.3048, 0.0254];
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.convArray = efsConvArray;
+})
+
+function clearAngle() {
+  selectedUnit1.value = efsInitValue1;
+  selectedUnit2.value = efsInitValue2;
+  originalUnit1 = efsInitValue1;
+  originalUnit2 = efsInitValue2;
+}
