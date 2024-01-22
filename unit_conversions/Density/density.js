@@ -1,4 +1,4 @@
-const List<String> densityArray = ['Earth Density (ρ)', 'Gamma/Cubic Inch(Γ/in³)', 'Gamma/Cubic Millimeter(Γ/mm³)',
+const densityArray = ['Earth Density (ρ)', 'Gamma/Cubic Inch(Γ/in³)', 'Gamma/Cubic Millimeter(Γ/mm³)',
   'Gamma/Microliter(Γ/µl)', 'Gamma/Milliliter(Γ/ml)', 'Grain/Cubic Feet(gr/ft³)', 'Grain/Cubic Inch(gr/in³)',
   'Grain/Cubic Yard(gr/yd³)', 'Grain/Gallon (UK)(gr/gal)', 'Grain/Gallon (US)(gr/gal)', 'Grain/Liter(gr/l)',
   'Gram/Cubic Centimeter(g/cm³)', 'Gram/Cubic Meter(g/m³)', 'Gram/Cubic Millimeter(g/mm³)', 'Gram/Liter(g/l)',
@@ -23,11 +23,11 @@ const List<String> densityArray = ['Earth Density (ρ)', 'Gamma/Cubic Inch(Γ/in
   'Troy Ounce/Cubic Yard(oz-t/yd³)', 'Troy Ounce/Gallon (UK)(oz-t/gal)', 'Troy Ounce/Gallon (US)(oz-t/gal)',
   'Water Density (H2O)'];
 
-String densityInitValue1 = 'Gram/Cubic Centimeter(g/cm³)';
-String densityInitValue2 = 'Parts per Million (ppm)';
+const densityInitValue1 = "11";
+const densityInitValue2 = "39";
 
 //based on 1 grain/cubic feet
-const List<double> densityConvArray = [4.1470676161032e-7, 37.5, 0.0022883519106, 0.0022883519106, 2.2883519106, 1,
+const densityConvArray = [4.1470676161032e-7, 37.5, 0.0022883519106, 0.0022883519106, 2.2883519106, 1,
   5.7870370370e-4, 27, 0.16054365324, 0.13368056318, 0.035314666721, 2.2883519106e-6, 2.29, 2.2883519106e-9,
   0.0022883519106, 2.2883519106e-9, 2.2883519106e-6, 2.2883519106e-9, 2288351.9106, 0.0022883519106,
   2.2883519106e-6, 2.2883519106e-9,  0.0022883519106, 2288.3519106, 0.0022883519106, 0.0022883519106, 2288.3519106,
@@ -39,3 +39,14 @@ const List<double> densityConvArray = [4.1470676161032e-7, 37.5, 0.0022883519106
   7.1428571429e-8, 4.1335978836e-11, 1.9285714286e-6, 1.1469127759e-8, 9.548611656e-9, 6.3775510204e-8,
   3.6907123961e-11, 1.7219387755e-6, 1.0238753395e-8, 8.5255461214e-9, 2288.3519106, 2.2883519106e-6, 1.74957057e-6,
   0.0020833333869, 1.2056327471e-6, 0.056250001447, 0.00033446595284, 0.00027850118046, 2.2883519106e-6];
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.convArray = densityConvArray;
+})
+
+function clearAngle() {
+  selectedUnit1.value = densityInitValue1;
+  selectedUnit2.value = densityInitValue2;
+  originalUnit1 = densityInitValue1;
+  originalUnit2 = densityInitValue2;
+}
