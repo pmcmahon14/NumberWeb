@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Force</title>
+    <link type="text/css" rel="stylesheet" href="../../conversion.css">
+    <link type="text/css" rel="stylesheet" href="../../all-calc.css">
+</head>
+<body>
+<div class="logo">
+    <a href="../../index.html"><img src="../../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div id="top" style="height: 50px; color: white">
+    <h1>Force</h1>
+</div>
+<div class="calculator">
+    <div class="unitDropdown" style="text-align: center; height: 7%">
+        <label for="unit1"></label>
+        <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px">
+            <option value="0">Atomic Unit Of Force (auf)</option>"
+            <option value="1">Attonewton (aN)</option>
+            <option value="2">Centinewton (cN)</option>
+            <option value="3">Crinal (crinal)</option>
+            <option value="4">Decapond (dkp)</option>
+            <option value="5">Decigram Force (dgf)</option>
+            <option value="6">Decinewton (dN)</option>
+            <option value="7">Dekagram Force (dkgf)</option>
+            <option value="8">Dekanewton (dkN)</option>
+            <option value="9">Dyne (dyn)</option>
+            <option value="10">Exanewton (EN)</option>
+            <option value="11">Femtonewton (fN)</option>
+            <option value="12">Giganewton (GN)</option>
+            <option value="13">Gigapond (Gp)</option>
+            <option value="14">Gram Force (gf)</option>
+            <option value="15">Grave Force (Gf)</option>
+            <option value="16">Gravet Force (gf)</option>
+            <option value="17">Hectonewton (hN)</option>
+            <option value="18">Joules/Centimeter (J/cm)</option>
+            <option value="19">Joules/Meter (J/m)</option>
+            <option value="20">Kilogram Force (kgf)</option>
+            <option value="21">Kilonewton (kN)</option>
+            <option value="22">Kilopond (kp)</option>
+            <option value="23">KIP (kip)</option>
+            <option value="24">Meganewton (MN)</option>
+            <option value="25">Megapond (Mp)</option>
+            <option value="26">Micronewton (µN)</option>
+            <option value="27">Micropond (µp)</option>
+            <option value="28">Milligram Force (mgf)</option>
+            <option value="29">Milligrave Force (mGf)</option>
+            <option value="30">Millinewton (mN)</option>
+            <option value="31">Millipond (mp)</option>
+            <option value="32">Nanonewton (nN)</option>
+            <option value="33">Nanopond (np)</option>
+            <option value="34" selected>Newton (N)</option>
+            <option value="35">Ounce Force (ozf)</option>
+            <option value="36">Pascal/Square Meter (Pa/m²)</option>
+            <option value="37">Petanewton (PN)</option>
+            <option value="38">Piconewton (pN)</option>
+            <option value="39">Planck Force (LMT⁻²)</option>
+            <option value="40">Pond (p)</option>
+            <option value="41">Pound Foot/Second Squared (lb ft/s²)</option>
+            <option value="42">Pound Force (lbf)</option>
+            <option value="43">Poundal (pdl)</option>
+            <option value="44">Sthene (sn)</option>
+            <option value="45">Teranewton (TN)</option>
+            <option value="46">Ton Force (Long) (tnf)</option>
+            <option value="47">Ton Force (Metric) (tnf)</option>
+            <option value="48">Ton Force (Short) (tnf)</option>
+            <option value="49">Yoctonewton (yN)</option>
+            <option value="50">Yottanewton (YN)</option>
+            <option value="51">Zeptonewton (zN)</option>
+            <option value="52">Zettanewton (ZN)</option>
+        </select>
+    </div>
+    <div  class="unitDropdown" style="text-align: center; height: 7%">
+        <label for="unit2"></label>
+        <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px">
+            <option value="0">Atomic Unit Of Force (auf)</option>"
+            <option value="1">Attonewton (aN)</option>
+            <option value="2">Centinewton (cN)</option>
+            <option value="3">Crinal (crinal)</option>
+            <option value="4">Decapond (dkp)</option>
+            <option value="5">Decigram Force (dgf)</option>
+            <option value="6">Decinewton (dN)</option>
+            <option value="7">Dekagram Force (dkgf)</option>
+            <option value="8">Dekanewton (dkN)</option>
+            <option value="9">Dyne (dyn)</option>
+            <option value="10">Exanewton (EN)</option>
+            <option value="11">Femtonewton (fN)</option>
+            <option value="12">Giganewton (GN)</option>
+            <option value="13">Gigapond (Gp)</option>
+            <option value="14">Gram Force (gf)</option>
+            <option value="15">Grave Force (Gf)</option>
+            <option value="16">Gravet Force (gf)</option>
+            <option value="17">Hectonewton (hN)</option>
+            <option value="18">Joules/Centimeter (J/cm)</option>
+            <option value="19">Joules/Meter (J/m)</option>
+            <option value="20">Kilogram Force (kgf)</option>
+            <option value="21">Kilonewton (kN)</option>
+            <option value="22">Kilopond (kp)</option>
+            <option value="23">KIP (kip)</option>
+            <option value="24">Meganewton (MN)</option>
+            <option value="25">Megapond (Mp)</option>
+            <option value="26">Micronewton (µN)</option>
+            <option value="27">Micropond (µp)</option>
+            <option value="28">Milligram Force (mgf)</option>
+            <option value="29">Milligrave Force (mGf)</option>
+            <option value="30">Millinewton (mN)</option>
+            <option value="31">Millipond (mp)</option>
+            <option value="32">Nanonewton (nN)</option>
+            <option value="33">Nanopond (np)</option>
+            <option value="34">Newton (N)</option>
+            <option value="35">Ounce Force (ozf)</option>
+            <option value="36">Pascal/Square Meter (Pa/m²)</option>
+            <option value="37">Petanewton (PN)</option>
+            <option value="38">Piconewton (pN)</option>
+            <option value="39">Planck Force (LMT⁻²)</option>
+            <option value="40">Pond (p)</option>
+            <option value="41">Pound Foot/Second Squared (lb ft/s²)</option>
+            <option value="42" selected>Pound Force (lbf)</option>
+            <option value="43">Poundal (pdl)</option>
+            <option value="44">Sthene (sn)</option>
+            <option value="45">Teranewton (TN)</option>
+            <option value="46">Ton Force (Long) (tnf)</option>
+            <option value="47">Ton Force (Metric) (tnf)</option>
+            <option value="48">Ton Force (Short) (tnf)</option>
+            <option value="49">Yoctonewton (yN)</option>
+            <option value="50">Yottanewton (YN)</option>
+            <option value="51">Zeptonewton (zN)</option>
+            <option value="52">Zettanewton (ZN)</option>
+        </select>
+    </div>
+    <div>
+        <form>
+            <label for="input"></label>
+            <input id="input" type="text" value="0" style="text-align: center">
+        </form>
+        <form>
+            <label for="output"></label>
+            <input id="output" type="text" value="0" style="text-align: center" readonly>
+        </form>
+    </div>
+    <div class="keyboard">
+        <table>
+            <tr>
+                <!--todo get rid of values in buttons-->
+                <Button class="number" style="width: 25%" value="1" onclick="buttonPressed('7')">7</Button>
+                <Button class="number" style="width: 25%" value="2" onclick="buttonPressed('8')">8</Button>
+                <Button class="number" style="width: 25%" value="3" onclick="buttonPressed('9')">9</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAngle()">CA</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width :25%"  value="q" onclick="buttonPressed('4')">4</Button>
+                <Button class="number" style="width :25%"  value="w" onclick="buttonPressed('5')">5</Button>
+                <Button class="number" style="width :25%" value="e" onclick="buttonPressed('6')">6</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
+                <Button class="switch" style="width: 25%" onclick="switchCalc()">&#8646;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
+                <!--                <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>-->
+                <Button disabled class="unused">.</Button>
+                <Button disabled class="unused">.</Button>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="force.js"></script>
+<script src="../../conversion.js"></script>
+</body>
+</html>
+
