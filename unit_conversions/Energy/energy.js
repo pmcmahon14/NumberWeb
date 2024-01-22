@@ -1,4 +1,4 @@
-const List<String> energyArray = ['100 Cubic Feet Natural Gas (ccf)', 'Attojoule (aJ)',
+const energyArray = ['100 Cubic Feet Natural Gas (ccf)', 'Attojoule (aJ)',
   'Automotive Gasoline (UK) (gal)', 'Automotive Gasoline (US) (gal)', 'Aviation Gasoline (UK) (gal)',
   'Aviation Gasoline (US) (gal)', 'Board of Trade (BOTU)', 'BTU (BTU)', 'BTU (TH) (BTU)', 'Calorie (Cal)',
   'Calorie (15°C) (Cal)', 'Calorie (Nutritional) (Cal)', 'Calorie (TH) (Cal)', 'Celsius Heat (CHU)',
@@ -28,10 +28,10 @@ const List<String> energyArray = ['100 Cubic Feet Natural Gas (ccf)', 'Attojoule
   'Watt Second (Ws)', 'Yoctojoule (yJ)', 'Yottajoule (YJ)', 'Yottawatt Hour (YWh)', 'Zeptojoule (zJ)',
   'Zettajoule (ZJ)', 'Zettawatt Hour (ZWh)'];
 
-String energyInitValue1 = 'Joule (J)';
-String energyInitValue2 = 'BTU (BTU)';
-//62 197162129779
-const List<double> energyConvArray = [9.1979396615e-9, 1e18, 6.3196276031e-9, 7.5895567699e-9, 6.3196276031e-9,
+const energyInitValue1 = "48";
+const energyInitValue2 = "7";
+
+const energyConvArray = [9.1979396615e-9, 1e18, 6.3196276031e-9, 7.5895567699e-9, 6.3196276031e-9,
   7.5895567699e-9, 2.7777777778e-7, 0.00094781712031, 0.0009484513828, 0.23884589663, 0.23890295762,
   0.00023884589663, 0.23900573614, 0.00052656507647, 100, 3.776726715e-7, 10, 0.1, 9.4804342797e-10, 2.7777777778e-5,
   5.6830066406e-9, 6.825006825e-9, 5.6830066406e-9, 6.825006825e-9, 10000000, 6.2415093433e18, 1e-18,
@@ -46,3 +46,14 @@ const List<double> energyConvArray = [9.1979396615e-9, 1e18, 6.3196276031e-9, 7.
   9.4781707775e-19, 7.8984760026e-8, 5.2687555871e-9, 6.3275120223e-9, 6241509.34, 1e-12, 2.7777777778e-16,
   9.4781707775e-9, 9.4804342797e-9, 2.3890295762e-7, 2.3900573614e-10, 3.4120842375e-11, 2.3884589663e-11,
   0.00027777777778, 1, 1e24, 1e-24, 2.7777777778e-28, 1e21, 1e-21, 2.7777777778e-25];
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.convArray = energyConvArray;
+})
+
+function clearAngle() {
+  selectedUnit1.value = energyInitValue1;
+  selectedUnit2.value = energyInitValue2;
+  originalUnit1 = energyInitValue1;
+  originalUnit2 = energyInitValue2;
+}
