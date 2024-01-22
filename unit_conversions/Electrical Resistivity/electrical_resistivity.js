@@ -1,4 +1,4 @@
-const List<String> elecRyArray = ['Abohm/Meter(abΩ/m)', 'Abohm/Kilometer(abΩ/km)',
+const elecRyArray = ['Abohm/Meter(abΩ/m)', 'Abohm/Kilometer(abΩ/km)',
   'Abohm/Centimeter(abΩ/cm)', 'Abohm/Millimeter(abΩ/mm)', 'Abohm/Micrometer(abΩ/µm)', 'Abohm/Nanometer(abΩ/nm)',
   'Kiloohm/Meter(kΩ/m)', 'Kiloohm/Kilometer(kΩ/km)', 'Kiloohm/Centimeter(kΩ/cm)',
   'Kiloohm/Millimeter(kΩ/mm)', 'Kiloohm/Micrometer(kΩ/µm)', 'Kiloohm/Nanometer(kΩ/nm)', 'Kiloohm/Mile(kΩ/mi)',
@@ -20,12 +20,10 @@ const List<String> elecRyArray = ['Abohm/Meter(abΩ/m)', 'Abohm/Kilometer(abΩ/k
   'Volt/Ampere/Nanometer(V/A/nm)', 'Volt/Ampere/Yard(V/A/yd)',
   'Volt/Ampere/Foot(V/A/ft)', 'Volt/Ampere/Inch(V/A/in)'];
 
-//siemens is reciprocal
-//based on 1 ohm meter
-String elecRyInitValue1 = 'Ohm/Meter(Ω/m)';
-String elecRyInitValue2 = 'Ohm/Kilometer(Ω/km)';
+const elecRyInitValue1 = "38";
+const elecRyInitValue2 = "39";
 
-const List<double> elecRyConvArray = [1e9, 1000000, 1e11, 1e12, 1e15, 1e18,
+const elecRyConvArray = [1e9, 1000000, 1e11, 1e12, 1e15, 1e18,
   0.001, 0.000001, 0.1, 1, 1000, 1000000, 6.2137119224e-7, 0.0010936132983, 0.003280839895, 0.03937007874,
   0.000001, 1e-9, 0.0001, 0.001, 1, 1000, 6.2137119224e-10, 1.0936132983e-6, 3.280839895e-6, 3.937007874e-5,
   1000000, 1000, 1e8, 1e9, 1e12, 1e15,
@@ -34,3 +32,14 @@ const List<double> elecRyConvArray = [1e9, 1000000, 1e11, 1e12, 1e15, 1e18,
   1, 0.001, 100, 1000, 1000000, 1e9, 1.09, 3.28, 39.37,
   1.1126500297e-12, 1.1126500297e-15, 1.11265002973e-10, 1.1126500297e-9, 1.1126500297e-6, 0.0011126500297,
   1, 0.001, 100, 1000, 1000000, 1e9, 1.09, 3.28, 39.37];
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.convArray = elecRyConvArray;
+})
+
+function clearAngle() {
+  selectedUnit1.value = elecRyInitValue1;
+  selectedUnit2.value = elecRyInitValue2;
+  originalUnit1 = elecRyInitValue1;
+  originalUnit2 = elecRyInitValue2;
+}
