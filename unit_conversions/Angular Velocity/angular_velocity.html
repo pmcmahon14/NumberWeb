@@ -15,6 +15,7 @@
 </div>
 <div class="calculator">
   <div class="unitDropdown" style="text-align: center; height: 7%">
+    <label for="unit1"></label>
     <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px">
       <option value="0" selected>Degree/Second(°/s)</option>
       <option value="1">Degree/Millisecond(°/ms)</option>
@@ -49,6 +50,7 @@
     </select>
   </div>
   <div  class="unitDropdown" style="text-align: center; height: 7%">
+    <label for="unit2"></label>
     <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px">
       <option value="0">Degree/Second(°/s)</option>
       <option value="1">Degree/Millisecond(°/ms)</option>
@@ -99,7 +101,7 @@
         <Button class="number" style="width: 25%" value="1" onclick="buttonPressed('7')">7</Button>
         <Button class="number" style="width: 25%" value="2" onclick="buttonPressed('8')">8</Button>
         <Button class="number" style="width: 25%" value="3" onclick="buttonPressed('9')">9</Button>
-        <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'), clearAngle()">CA</Button>
+        <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAngle()">CA</Button>
       </tr>
       <tr>
         <Button class="number" style="width :25%"  value="q" onclick="buttonPressed('4')">4</Button>
