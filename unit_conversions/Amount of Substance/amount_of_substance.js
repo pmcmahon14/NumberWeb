@@ -21,3 +21,26 @@ function clearAos() {
   originalUnit1 = aosInitValue1;
   originalUnit2 = aosInitValue2;
 }
+
+let option = "";
+for(let i=0;i<aosArray.length;i++){
+  if (i === parseInt(aosInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + aosArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + aosArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<aosArray.length;j++){
+  if (j === parseInt(aosInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + aosArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + aosArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
