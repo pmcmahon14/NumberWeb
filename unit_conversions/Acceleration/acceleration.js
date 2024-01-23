@@ -28,3 +28,26 @@ function clearAcceleration() {
   originalUnit1 = accelInitValue1;
   originalUnit2 = accelInitValue2;
 }
+
+let option = "";
+for(let i=0;i<accelArray.length;i++){
+  if (i === parseInt(accelInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + accelArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + accelArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<accelArray.length;j++){
+  if (j === parseInt(accelInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + accelArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + accelArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
