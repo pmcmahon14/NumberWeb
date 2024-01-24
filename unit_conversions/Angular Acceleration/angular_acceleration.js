@@ -29,3 +29,26 @@ function clearAngle() {
   originalUnit1 = angAccInitValue1;
   originalUnit2 = angAccInitValue2;
 }
+
+let option = "";
+for(let i=0;i<angAccArray.length;i++){
+  if (i === parseInt(angAccInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + angAccArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + angAccArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<angAccArray.length;j++){
+  if (j === parseInt(angAccInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + angAccArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + angAccArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
