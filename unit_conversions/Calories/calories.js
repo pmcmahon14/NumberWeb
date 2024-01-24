@@ -20,3 +20,26 @@ function clearAngle() {
     originalUnit1 = calorieInitValue1;
     originalUnit2 = calorieInitValue2;
 }
+
+let option = "";
+for(let i=0;i<calorieArray.length;i++){
+    if (i === parseInt(calorieInitValue1)) {
+        option +=
+            '<option value="'+ i + '" selected>' + calorieArray[i] + "</option>"
+    } else {
+        option +=
+            '<option value="'+ i + '">' + calorieArray[i] + "</option>"
+    }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<calorieArray.length;j++){
+    if (j === parseInt(calorieInitValue2)) {
+        option +=
+            '<option value="'+ j + '" selected>' + calorieArray[j] + "</option>"
+    } else {
+        option +=
+            '<option value="'+ j + '">' + calorieArray[j] + "</option>"
+    }
+}
+document.getElementById("unit2").innerHTML = option;
