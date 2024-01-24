@@ -40,3 +40,26 @@ function clearAngle() {
   originalUnit1 = dataTransferInitValue1;
   originalUnit2 = dataTransferInitValue2;
 }
+
+let option = "";
+for(let i=0;i<dataTransferArray.length;i++){
+  if (i === parseInt(dataTransferInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + dataTransferArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + dataTransferArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<dataTransferArray.length;j++){
+  if (j === parseInt(dataTransferInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + dataTransferArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + dataTransferArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
