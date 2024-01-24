@@ -16,103 +16,11 @@
 <div class="calculator">
     <div class="unitDropdown" style="text-align: center; height: 7%">
         <label for="unit1"></label>
-        <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px">
-            <option value="0">#2.5 can (can)</option>
-            <option value="1">#10 can (can)</option>
-            <option value="2">Bushel (US) (bu)</option>
-            <option value="3">Bushel (UK) (bu)</option>
-            <option value="4">Butter Stick (stick)</option>
-            <option value="5">Coffee Spoon (csp)</option>
-            <option value="6" selected>Cup (US) (C)</option>
-            <option value="7">Cup (metric) (C)</option>
-            <option value="8">Cup (Imperial) (C)</option>
-            <option value="9">Dash (ds)</option>
-            <option value="10">Deciliter (dl)</option>
-            <option value="11">Dessertspoon (US) (dstspn)</option>
-            <option value="12">Dessertspoon (UK) (dstspn)</option>
-            <option value="13">Dram (dr)</option>
-            <option value="14">Drop (dp)</option>
-            <option value="15">Fifth (1/5)</option>
-            <option value="16">Fluid Ounce (US) (fl oz)</option>
-            <option value="17">Fluid Ounce (UK) (fl oz)</option>
-            <option value="18">Gallon (US dry) (gal)</option>
-            <option value="19">Gallon (US liquid) (gal)</option>
-            <option value="20">Gallon (UK) (gal)</option>
-            <option value="21">Gill (US) (gl)</option>
-            <option value="22">Gill (UK) (gl)</option>
-            <option value="23">Hogshead (US) (hhd)</option>
-            <option value="24">Hogshead (UK) (hhd)</option>
-            <option value="25">Jigger (jigger)</option>
-            <option value="26">Kiloliter (kl)</option>
-            <option value="27">Liter (l)</option>
-            <option value="28">Milliliter (ml)</option>
-            <option value="29">Ounce (US) (oz)</option>
-            <option value="30">Ounce (UK) (oz)</option>
-            <option value="31">Peck (US) (pk)</option>
-            <option value="32">Peck (UK) (pk)</option>
-            <option value="33">Pinch (pinch)</option>
-            <option value="34">Pint (US) (pt)</option>
-            <option value="35">Pint (UK) (pt)</option>
-            <option value="36">Quart (US) (qt)</option>
-            <option value="37">Quart (UK) (qt)</option>
-            <option value="38">Shot (shot)</option>
-            <option value="39">Tablespoon (US) (tbsp)</option>
-            <option value="40">Tablespoon (UK) (tbsp)</option>
-            <option value="41">Tablespoon (metric) (tbsp)</option>
-            <option value="42">Teaspoon (US) (tsp)</option>
-            <option value="43">Teaspoon (UK) (tsp)</option>
-            <option value="44">Teaspoon (metric) (tsp)</option>
-        </select>
+        <select name="unit1" id="unit1" onchange="changeUnit(selectedUnit1.value)" style="background-color: black; color: white; font-size: 20px"></select>
     </div>
     <div  class="unitDropdown" style="text-align: center; height: 7%">
         <label for="unit2"></label>
-        <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px">
-            <option value="0">#2.5 can (can)</option>
-            <option value="1">#10 can (can)</option>
-            <option value="2">Bushel (US) (bu)</option>
-            <option value="3">Bushel (UK) (bu)</option>
-            <option value="4">Butter Stick (stick)</option>
-            <option value="5">Coffee Spoon (csp)</option>
-            <option value="6">Cup (US) (C)</option>
-            <option value="7">Cup (metric) (C)</option>
-            <option value="8">Cup (Imperial) (C)</option>
-            <option value="9">Dash (ds)</option>
-            <option value="10">Deciliter (dl)</option>
-            <option value="11">Dessertspoon (US) (dstspn)</option>
-            <option value="12">Dessertspoon (UK) (dstspn)</option>
-            <option value="13">Dram (dr)</option>
-            <option value="14">Drop (dp)</option>
-            <option value="15">Fifth (1/5)</option>
-            <option value="16">Fluid Ounce (US) (fl oz)</option>
-            <option value="17">Fluid Ounce (UK) (fl oz)</option>
-            <option value="18">Gallon (US dry) (gal)</option>
-            <option value="19">Gallon (US liquid) (gal)</option>
-            <option value="20">Gallon (UK) (gal)</option>
-            <option value="21">Gill (US) (gl)</option>
-            <option value="22">Gill (UK) (gl)</option>
-            <option value="23">Hogshead (US) (hhd)</option>
-            <option value="24">Hogshead (UK) (hhd)</option>
-            <option value="25">Jigger (jigger)</option>
-            <option value="26">Kiloliter (kl)</option>
-            <option value="27">Liter (l)</option>
-            <option value="28">Milliliter (ml)</option>
-            <option value="29">Ounce (US) (oz)</option>
-            <option value="30">Ounce (UK) (oz)</option>
-            <option value="31">Peck (US) (pk)</option>
-            <option value="32">Peck (UK) (pk)</option>
-            <option value="33">Pinch (pinch)</option>
-            <option value="34">Pint (US) (pt)</option>
-            <option value="35">Pint (UK) (pt)</option>
-            <option value="36">Quart (US) (qt)</option>
-            <option value="37">Quart (UK) (qt)</option>
-            <option value="38">Shot (shot)</option>
-            <option value="39">Tablespoon (US) (tbsp)</option>
-            <option value="40">Tablespoon (UK) (tbsp)</option>
-            <option value="41">Tablespoon (metric) (tbsp)</option>
-            <option value="42" selected>Teaspoon (US) (tsp)</option>
-            <option value="43">Teaspoon (UK) (tsp)</option>
-            <option value="44">Teaspoon (metric) (tsp)</option>
-        </select>
+        <select name="unit2" id="unit2" onchange="changeUnit(selectedUnit2.value)" style="background-color: black; color: white; font-size: 20px"></select>
     </div>
     <div>
         <form>
