@@ -26,7 +26,7 @@ export const titleArray = [
     "Energy",
     "Enzyme",                       //25
     "Force",
-    "Frequency/Wavelength",
+    "Frequency Wavelength/Wavelength",
     "Fuel Consumption",
     "Fuel Efficiency Mass",
     "Fuel Efficiency Volume",           //30
