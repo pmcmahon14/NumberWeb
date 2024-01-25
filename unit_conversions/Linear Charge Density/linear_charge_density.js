@@ -1,4 +1,4 @@
-const List<String> linChDenArray = ['Ampere Hour/Kilometer (A·h/km)', 'Ampere Hour/Meter (A·h/m)',
+const linChDenArray = ['Ampere Hour/Kilometer (A·h/km)', 'Ampere Hour/Meter (A·h/m)',
   'Ampere Hour/Centimeter (A·h/cm)', 'Ampere Hour/Millimeter (A·h/mm)', 'Ampere Hour/Micrometer (A·h/µm)',
   'Ampere Hour/Nanometer (A·h/nm)', 'Ampere Hour/Yard (A·h/yd)', 'Ampere Hour/Foot (A·h/ft)',
   'Ampere Hour/Inch (A·h/in)', 'Ampere Second/Kilometer (A·s/km)', 'Ampere Second/Meter (A·s/m)',
@@ -34,11 +34,11 @@ const List<String> linChDenArray = ['Ampere Hour/Kilometer (A·h/km)', 'Ampere H
   'Nanocoulomb/Micrometer (nC/µm)', 'Nanocoulomb/Nanometer (nC/nm)', 'Nanocoulomb/Yard (nC/yd)',
   'Nanocoulomb/Foot (nC/ft)', 'Nanocoulomb/Inch (nC/in)'];
 
-String linChDenInitValue1 = 'Coulomb/Meter (C/m)';
-String linChDenInitValue2 = 'Ampere Hour/Meter (A·h/m)';
+const linChDenInitValue1 = "19";
+const linChDenInitValue2 = "1";
 
 //based on 1 coulomb/meter
-const List<double> linChDenConvArray = [0.27777777778, 0.00027777777778, 2.7777777778e-6,
+const linChDenConvArray = [0.27777777778, 0.00027777777778, 2.7777777778e-6,
   2.7777777778e-7, 2.7777777778e-10, 2.7777777778e-13, 0.000254, 0.000084666666667,
   7.0555555556e-6, 1000, 1, 0.01, 0.001, 0.000001, 1e-9, 0.9144, 0.3048, 0.0254, 1000, 1, 0.01, 0.001,
   0.000001, 1e-9, 0.9144, 0.3048, 0.0254, 6.2415090745e+21, 6.2415090745e18, 6.2415090745e16,
@@ -51,3 +51,35 @@ const List<double> linChDenConvArray = [0.27777777778, 0.00027777777778, 2.77777
   1e-9, 1e-12, 0.0009144, 0.0003048, 0.0000254, 0.001, 0.000001, 1e-8, 1e-9, 1e-12, 1e-15, 9.144e-7, 3.048e-7,
   2.54e-8, 1000000000, 1000000, 10000, 1000, 1, 0.001, 914400, 304800, 25400, 1000000, 1000, 10, 1, 0.001,
   0.000001, 914.4, 304.8, 25.4, 1e12, 1e9, 10000000, 1000000, 1000, 1, 9.144e8, 304800000, 25400000];
+
+window.convArray = linChDenConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = linChDenInitValue1;
+  selectedUnit2.value = linChDenInitValue2;
+  originalUnit1 = linChDenInitValue1;
+  originalUnit2 = linChDenInitValue2;
+}
+
+let option = "";
+for(let i=0;i<linChDenArray.length;i++){
+  if (i === parseInt(linChDenInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + linChDenArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + linChDenArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<linChDenArray.length;j++){
+  if (j === parseInt(linChDenInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + linChDenArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + linChDenArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
