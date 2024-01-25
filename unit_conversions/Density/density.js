@@ -50,3 +50,26 @@ function clearAngle() {
   originalUnit1 = densityInitValue1;
   originalUnit2 = densityInitValue2;
 }
+
+let option = "";
+for(let i=0;i<densityArray.length;i++){
+  if (i === parseInt(densityInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + densityArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + densityArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<densityArray.length;j++){
+  if (j === parseInt(densityInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + densityArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + densityArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
