@@ -1,4 +1,4 @@
-const List<String> feMassArray = ['BTU/Kilogram (BTU/kg)', 'BTU/Gram (BTU/g)', 'BTU/Milligram (BTU/mg)',
+const feMassArray = ['BTU/Kilogram (BTU/kg)', 'BTU/Gram (BTU/g)', 'BTU/Milligram (BTU/mg)',
   'BTU/Microgram (BTU/µg)', 'BTU/Grain (BTU/gr)', 'BTU/Ounce (BTU/oz)', 'BTU/Pound (BTU/lb)', 'BTU/Ton (BTU/tn)',
   'Calorie/Kilogram (cal/kg)', 'Calorie/Gram (cal/g)', 'Calorie/Milligram (cal/mg)',
   'Calorie/Microgram (cal/µg)', 'Calorie/Grain (cal/gr)', 'Calorie/Ounce (cal/oz)', 'Calorie/Pound (cal/lb)',
@@ -32,11 +32,11 @@ const List<String> feMassArray = ['BTU/Kilogram (BTU/kg)', 'BTU/Gram (BTU/g)', '
   'Watt Hour/Microgram (W·h/µg)', 'Watt Hour/Grain (W·h/gr)', 'Watt Hour/Ounce (W·h/oz)',
   'Watt Hour/Pound (W·h/lb)', 'Watt Hour/Ton (W·h/tn)'];
 
-String feMassInitValue1 = 'Joule/Gram (J/g)';
-String feMassInitValue2 = 'Joule/Kilogram (J/kg)';
+const feMassInitValue1 = "25";
+const feMassInitValue2 = "24";
 
 //based on 1 joule/gram
-const List<double> feMassConvArray = [0.94781712031, 0.00094781712031, 9.4781712031e-7, 9.4781712031e-10,
+const feMassConvArray = [0.94781712031, 0.00094781712031, 9.4781712031e-7, 9.4781712031e-10,
   6.1417516276e-5, 0.026870163371, 0.42992261393, 947.81712031, 238.84589663, 0.23884589663, 0.00023884589663,
   2.3884589663e-7, 0.015476953759, 6.77, 108.34, 238845.89663, 0.00037250607185, 3.7250607185e-7, 3.7250607185e-10,
   3.7250607185e-13, 2.4137987424e-8, 1.0560369498e-5, 0.00016896591197, 0.37250607185, 1000, 1, 0.001, 0.000001,
@@ -48,3 +48,36 @@ const List<double> feMassConvArray = [0.94781712031, 0.00094781712031, 9.4781712
   64.79891, 28349.52313, 453592.37, 1000000000, 1000, 1, 0.001, 0.000001, 0.06479891, 28.34952313, 453.59237,
   1000000, 1000, 1, 0.001, 0.000001, 0.06479891, 28.34952313, 453.59237, 1000000, 0.277777777778, 0.00027777777778,
   2.7777777778e-7, 2.78e10, 1.79997e-5, 0.007874868, 0.125997881, 277.77777778];
+
+
+window.convArray = feMassConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = feMassInitValue1;
+  selectedUnit2.value = feMassInitValue2;
+  originalUnit1 = feMassInitValue1;
+  originalUnit2 = feMassInitValue2;
+}
+
+let option = "";
+for(let i=0;i<feMassArray.length;i++){
+  if (i === parseInt(feMassInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + feMassArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + feMassArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<feMassArray.length;j++){
+  if (j === parseInt(feMassInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + feMassArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + feMassArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
