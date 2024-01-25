@@ -24,3 +24,26 @@ function clearAngle() {
   originalUnit1 = enzymeInitValue1;
   originalUnit2 = enzymeInitValue2;
 }
+
+let option = "";
+for(let i=0;i<enzymeArray.length;i++){
+  if (i === parseInt(enzymeInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + enzymeArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + enzymeArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<enzymeArray.length;j++){
+  if (j === parseInt(enzymeInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + enzymeArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + enzymeArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
