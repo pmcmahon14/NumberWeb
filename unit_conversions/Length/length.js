@@ -1,4 +1,4 @@
-const List<String> lengthArray = ['Angstrom (A)', 'Arm\'s Length (arm\'s-length)',
+const lengthArray = ['Angstrom (A)', 'Arm\'s Length (arm\'s-length)',
   'Astronomical Unit (AU)', 'Attometer (am)', 'Barleycorn (barleycorn)', 'Bee Space (bee space)', 'Bohr (bohr)',
   'Button (button)', 'Cable (cable)', 'Cable (UK) (cable)', 'Cable (US) (cable)', 'Centimeter (cm)',
   'Chain (ch)', 'Cubit (cubit)', 'Decimeter (dm)', 'Dekameter (dkm)', 'Digit (digit)',
@@ -17,11 +17,11 @@ const List<String> lengthArray = ['Angstrom (A)', 'Arm\'s Length (arm\'s-length)
   'U (U)', 'Yard (yd)', 'Yoctometer (ym)', 'Yottameter (Ym)', 'Zeptometer (zm)',
   'Zettameter (Zm)'];
 
-String lengthInitValue1 = 'Foot (ft)';
-String lengthInitValue2 = 'Meter (m)';
+const lengthInitValue1 = "24";
+const lengthInitValue2 = "46";
 
 //based on 1 foot
-var lengthConvArray = [3.048e9, 0.43542857143, 2.0135865888e-12, 3.048e17, 36, 46.892307692, 5759854869.8, 480,
+const lengthConvArray = [3.048e9, 0.43542857143, 2.0135865888e-12, 3.048e17, 36, 46.892307692, 5759854869.8, 480,
   0.0016457883369, 0.0016447368421, 0.0013888888889, 30.48,0.015151515152, 0.66666666667, 3.048, 0.03048,
   16.042105263,0.26666666667, 3.048e-19, 0.16666666667, 3.048e14, 2.6666666667,16, 3.048, 1, 0.0015151515152,
   3.048e-10, 9.877895215e-27, 3048, 3, 4, 0.003048, 12, 0.001, 0.0003048, 9.877895215e-21, 3.3333333333e-4,
@@ -31,3 +31,36 @@ var lengthConvArray = [3.048e9, 0.43542857143, 2.0135865888e-12, 3.048e17, 36, 4
   3.0476036668e-8, 7.5757575758e-4, 0.11377379619, 0.049382716049, 0.060606060606, 0.05, 0.011111111111,
   2, 1.3333333333, 3.0122768585e-13, 0.0016475675676, 0.4, 0.092363636364, 0.2, 3.048e-13, 12192, 6.8571428571,
   3, 3.048e23, 3.048e-25, 3.048e20, 3.048e-22];
+
+
+window.convArray = lengthConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = lengthInitValue1;
+  selectedUnit2.value = lengthInitValue2;
+  originalUnit1 = lengthInitValue1;
+  originalUnit2 = lengthInitValue2;
+}
+
+let option = "";
+for(let i=0;i<lengthArray.length;i++){
+  if (i === parseInt(lengthInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + lengthArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + lengthArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<lengthArray.length;j++){
+  if (j === parseInt(lengthInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + lengthArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + lengthArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
