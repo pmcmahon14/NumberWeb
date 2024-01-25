@@ -1,4 +1,4 @@
-const List<String> feVolumeArray = ['BTU (IT)/Cubic Kilometer (BTU/km³)', 'BTU (IT)/Cubic Meter (BTU/m³)',
+const feVolumeArray = ['BTU (IT)/Cubic Kilometer (BTU/km³)', 'BTU (IT)/Cubic Meter (BTU/m³)',
   'BTU (IT)/Cubic Centimeter (BTU/cm³)', 'BTU (IT)/Cubic Millimeter (BTU/mm³)', 'BTU (IT)/Cubic Yard (BTU/yd³)',
   'BTU (IT)/Cubic Foot (BTU/ft³)', 'BTU (IT)/Cubic Inch (BTU/in³)', 'BTU (IT)/Gallon (UK) (BTU/gal)',
   'BTU (IT)/Gallon (US) (BTU/gal)', 'BTU (IT)/Liter (BTU/l)', 'BTU (IT)/Milliliter (BTU/ml)',
@@ -77,11 +77,11 @@ const List<String> feVolumeArray = ['BTU (IT)/Cubic Kilometer (BTU/km³)', 'BTU 
   'Watt Hour/Cubic Inch (W·h/in³)', 'Watt Hour/Gallon (UK) (W·h/gal)', 'Watt Hour/Gallon (US) (W·h/gal)',
   'Watt Hour/Liter (W·h/l)', 'Watt Hour/Milliliter (W·h/ml)', 'Watt Hour/Microliter (W·h/µl)'];
 
-String feVolumeInitValue1 = 'Joule/Cubic Meter (J/m³)';
-String feVolumeInitValue2 = 'Watt Hour/Cubic Foot (W·h/ft³)';
+const feVolumeInitValue1 = "61";
+const feVolumeInitValue2 = "185";
 
 //based on 1 joule/cubic meter
-var feVolumeConvArray = [947817.12031, 9.4781712031e-4, 9.4781712031e-10, 9.4781712031e-13, 7.2465818381e-4,
+const feVolumeConvArray = [947817.12031, 9.4781712031e-4, 9.4781712031e-10, 9.4781712031e-13, 7.2465818381e-4,
   2.6839191993e-5, 1.5531939811e-8, 4.3088619325e-6, 3.587878301e-6, 9.4781712031e-7, 9.4781712031e-10,
   9.4781712031e-13, 948451.38281, 9.4845138281e-4, 9.4845138281e-10, 9.4845138281e-13, 7.2514311228e-4,
   2.6857152307e-5, 1.5542333511e-8, 4.3117453469e-6, 3.5902792459e-6, 9.4845138281e-7, 9.4845138281e-10,
@@ -106,3 +106,36 @@ var feVolumeConvArray = [947817.12031, 9.4781712031e-4, 9.4781712031e-10, 9.4781
   0.000001, 1e-9, 0.76455485798, 0.028316846592, 1.6387064e-5, 0.00454609, 0.003785412, 0.001, 0.000001, 1e-9,
   277777.77778, 2.7777777778e-4, 2.7777777778e-10, 2.7777777778e-13, 2.1237634944e-4, 7.86579072e-6,
   4.5519622222e-9, 1.2628027778e-6, 1.0515033333e-6, 2.7777777778e-7, 2.7777777778e-10, 2.7777777778e-13];
+
+
+window.convArray = feVolumeConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = feVolumeInitValue1;
+  selectedUnit2.value = feVolumeInitValue2;
+  originalUnit1 = feVolumeInitValue1;
+  originalUnit2 = feVolumeInitValue2;
+}
+
+let option = "";
+for(let i=0;i<feVolumeArray.length;i++){
+  if (i === parseInt(feVolumeInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + feVolumeArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + feVolumeArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<feVolumeArray.length;j++){
+  if (j === parseInt(feVolumeInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + feVolumeArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + feVolumeArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
