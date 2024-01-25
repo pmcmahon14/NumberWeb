@@ -1,4 +1,4 @@
-const List<String> heatFluxDensityArray = ['BTU (IT)/Hour/Sq Centimeter (BTU/cm²)',
+const heatFluxDensityArray = ['BTU (IT)/Hour/Sq Centimeter (BTU/cm²)',
   'BTU (IT)/Hour/Sq Feet (BTU/ft²)', 'BTU (IT)/Hour/Sq Inch (BTU/in²)',
   'BTU (IT)/Hour/Sq Meter (BTU/m²)', 'BTU (IT)/Hour/Sq Millimeter (BTU/mm²)',
   'BTU (IT)/Minute/Sq Centimeter (BTU/cm²)', 'BTU (IT)/Minute/Sq Feet (BTU/ft²)',
@@ -61,11 +61,11 @@ const List<String> heatFluxDensityArray = ['BTU (IT)/Hour/Sq Centimeter (BTU/cm�
   'Milliwatt/Sq Millimeter (mW/mm²)', 'Watt/Sq Centimeter (W/cm²)', 'Watt/Sq Feet (W/ft²)',
   'Watt/Sq Inch (W/in²)', 'Watt/Sq Meter (W/m²)', 'Watt/Sq Millimeter (W/mm²)'];
 
-String heatFluxDensityInitValue1 = 'Watt/Sq Meter (W/m²)';
-String heatFluxDensityInitValue2 = 'Horsepower/Sq Feet (hp/ft²)';
+const heatFluxDensityInitValue1 = "128";
+const heatFluxDensityInitValue2 = "61";
 
 //based on 1 watt/Sq meter
-var heatFluxDensityConvArray = [0.000341, 0.3167993664, 0.0021999956, 3.41, 0.00000341, 5.6907082969e-6,
+const heatFluxDensityConvArray = [0.000341, 0.3167993664, 0.0021999956, 3.41, 0.00000341, 5.6907082969e-6,
   0.0052833055105, 0.0000366896216, 0.056869027219, 5.6869027219e-8, 9.4781712031e-8, 0.000088055091841,
   6.1149369334e-7, 0.00094781712031, 9.4781712031e-10, 0.000341, 0.3167993664, 0.0021999956, 3.41, 0.00000341,
   5.6907082969e-6, 0.0052868410053, 0.000036714173648, 0.056907082969, 5.6907082969e-8, 9.4845138281e-8,
@@ -82,3 +82,36 @@ var heatFluxDensityConvArray = [0.000341, 0.3167993664, 0.0021999956, 3.41, 0.00
   2.2189509888e-5, 1.5409381867e-7, 0.00023884589663, 2.3884589663e-10, 8.6042065e-5, 0.079935694073, 5.5510898662e-4,
   0.8604206501, 8.604206501e-7, 1.4340344168e-6, 0.0013322615679, 9.2518164436e-6, 0.014340344168, 1.4340344168e-8,
   2.3900573614e-8, 2.2204359465e-5, 1.5419694073e-7, 0.00023900573614, 2.3900573614e-10];
+
+
+window.convArray = heatFluxDensityConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = heatFluxDensityInitValue1;
+  selectedUnit2.value = heatFluxDensityInitValue2;
+  originalUnit1 = heatFluxDensityInitValue1;
+  originalUnit2 = heatFluxDensityInitValue2;
+}
+
+let option = "";
+for(let i=0;i<heatFluxDensityArray.length;i++){
+  if (i === parseInt(heatFluxDensityInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + heatFluxDensityArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + heatFluxDensityArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<heatFluxDensityArray.length;j++){
+  if (j === parseInt(heatFluxDensityInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + heatFluxDensityArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + heatFluxDensityArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
