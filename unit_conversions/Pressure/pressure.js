@@ -1,4 +1,4 @@
-const List<String> pressArray = ['Atmosphere (atm)', 'Atmosphere (Technical) (atm)', 'Attobar (ab)',
+const pressArray = ['Atmosphere (atm)', 'Atmosphere (Technical) (atm)', 'Attobar (ab)',
   'Attopascal (aPa)', 'Bar (b)', 'Barad (Ba)', 'Barye (Ba)', 'Centibar (cb)',
   'Centimeter of Mercury (cm Hg)', 'Centipascal (cPa)', 'Centitorr (cTorr)',
   'Decibar (db)', 'Decipascal (dPa)', 'Dekabar (dkb)', 'Dekapascal (dkPa)', 'Dyne/Centimeter² (dyn/cm²)',
@@ -25,11 +25,11 @@ const List<String> pressArray = ['Atmosphere (atm)', 'Atmosphere (Technical) (at
   'Yoctobar (yb)', 'Yoctopascal (yPa)', 'Yottabar (Yb)', 'Yottapascal (YPa)', 'Zeptobar (zb)',
   'Zeptopascal (zPa)', 'Zettabar (Zb)', 'Zettapascal (ZPa)'];
 
-String pressInitValue1 = 'Atmosphere (atm)';
-String pressInitValue2 = 'Bar (b)';
+const pressInitValue1 = "0";
+const pressInitValue2 = "4";
 
 //based on 1 atmosphere
-const List<double> pressConvArray = [1, 1.03, 1.01325e18, 1.01325e23, 1.01325, 1013250, 1013250, 101.325, 76,
+const pressConvArray = [1, 1.03, 1.01325e18, 1.01325e23, 1.01325, 1013250, 1013250, 101.325, 76,
   1.01325e7, 76000, 10.1325, 1013250, 0.101325, 10132.5, 1.01325e6, 1.01325e-18, 1.01325e-13, 26222.22,
   27667.09, 33.9, 2.49, 1.01325e15, 1.01325e20, 1.01325e-9, 0.000101325, 1033.23, 1.03323e7, 10.33, 0.0101325,
   1013.25, 314666.68, 332005.09, 29.92, 0.00101325, 1.03, 10332.27, 0.010332274527999, 0.010133, 101.33,
@@ -39,3 +39,35 @@ const List<double> pressConvArray = [1, 1.03, 1.01325e18, 1.01325e23, 1.01325, 1
   1.01325e12, 1.01325e17, 101.33, 19045.95, 2116.216667, 14.7, 68087.26, 2116.22, 14.7, 101.33, 1.01325e-12,
   1.01325e-7, 1.06, 0.9447421878, 0.007347974402, 0.00656069143, 760, 1033.23, 406.78, 10332.27,
   1.01325e24, 1.01325e29, 1.01325e-24, 1.01325e-19, 1.01325e21, 1.01325e26, 1.01325e-21, 1.01325e-16];
+
+window.convArray = pressConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = pressInitValue1;
+  selectedUnit2.value = pressInitValue2;
+  originalUnit1 = pressInitValue1;
+  originalUnit2 = pressInitValue2;
+}
+
+let option = "";
+for(let i=0;i<pressArray.length;i++){
+  if (i === parseInt(pressInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + pressArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + pressArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<pressArray.length;j++){
+  if (j === parseInt(pressInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + pressArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + pressArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
