@@ -1,4 +1,4 @@
-const List<String> momInArray = ['Carat/Square Kilometer (ct/km²)', 'Carat/Square Meter (ct/m²)',
+const momInArray = ['Carat/Square Kilometer (ct/km²)', 'Carat/Square Meter (ct/m²)',
   'Carat/Square Decimeter (ct/dm²)', 'Carat/Square Centimeter (ct/cm²)', 'Carat/Square Millimeter (ct/mm²)',
   'Carat/Square Micrometer (ct/µm²)', 'Carat/Square Nanometer (ct/nm²)', 'Carat/Square Mile (ct/mi²)',
   'Carat/Square Yard (ct/yd²)', 'Carat/Square Foot (ct/ft²)', 'Carat/Square Inch (ct/in²)', 'Gamma/Square Kilometer (γ/km²)',
@@ -47,11 +47,11 @@ const List<String> momInArray = ['Carat/Square Kilometer (ct/km²)', 'Carat/Squa
   'Ton/Square Nanometer (tn/nm²)', 'Ton/Square Mile (tn/mi²)', 'Ton/Square Yard (tn/yd²)', 'Ton/Square Foot (tn/ft²)',
   'Ton/Square Inch (tn/in²)'];
 
-String momInInitValue1 = 'Gram/Square Meter (g/m²)';
-String momInInitValue2 = 'Pound/Square Inch (lb/in²)';
+const momInInitValue1 = "34";
+const momInInitValue2 = "109";
 
 //based on 1 gram/square meter
-var momInConvArray = [0.000005, 5, 500, 50000, 5000000, 5e12, 5e18, 1.9305107927e-6, 6, 53.8, 7750, 1, 1000000, 1e8,
+const momInConvArray = [0.000005, 5, 500, 50000, 5000000, 5e12, 5e18, 1.9305107927e-6, 6, 53.8, 7750, 1, 1000000, 1e8,
   1e10, 1e12, 1e18, 1e24, 0.3861021585, 1200000, 10760000, 1.55e9, 0.00001543, 15.43, 1543, 154300, 15430000,
   1.543e13, 1.543e19, 5.9575563063e-6, 18.516, 166.0268, 23916.5, 0.000001, 1, 100, 10000, 1000000, 1e12, 1e18,
   3.8610215854e-7, 1.2, 10.76, 1550, 1e-9, 0.001, 0.1, 10, 1000, 1e9, 1e15, 3.8610215854e-10, 0.0012, 0.01076, 1.55,
@@ -66,3 +66,35 @@ var momInConvArray = [0.000005, 5, 500, 50000, 5000000, 5e12, 5e18, 1.9305107927
   0.006852177965, 0.6852177965, 68.52177965, 6.852177965e7, 6.852177965e13, 2.6456407029e-11, 8.2226135577e-5,
   7.3729434901e-4, 0.1062087585, 1e-12, 0.000001, 0.0001, 0.01, 1, 1000000, 1e12, 3.8610215854e-13, 0.0000012,
   0.00001076, 0.00155];
+
+window.convArray = momInConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = momInInitValue1;
+  selectedUnit2.value = momInInitValue2;
+  originalUnit1 = momInInitValue1;
+  originalUnit2 = momInInitValue2;
+}
+
+let option = "";
+for(let i=0;i<momInArray.length;i++){
+  if (i === parseInt(momInInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + momInArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + momInArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<momInArray.length;j++){
+  if (j === parseInt(momInInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + momInArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + momInArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
