@@ -1,4 +1,4 @@
-const List<String> molarConcArray = ['Mole/Cubic Meter(mol/m³)', 'Mole/Cubic Centimeter(mol/cm³)',
+const molarConcArray = ['Mole/Cubic Meter(mol/m³)', 'Mole/Cubic Centimeter(mol/cm³)',
   'Mole/Cubic Millimeter(mol/mm³)', 'Mole/Liter(mol/l)', 'Mole/Microliter(mol/µl)', 'Mole/Milliliter(mol/ml)',
   'Kilomole/Cubic Meter(kmol/m³)', 'Kilomole/Cubic Centimeter(kmol/cm³)', 'Kilomole/Cubic Millimeter(kmol/mm³)',
   'Kilomole/Liter(kmol/l)', 'Kilomole/Microliter(kmol/µl)', 'Kilomole/Milliliter(kmol/ml)',
@@ -13,11 +13,43 @@ const List<String> molarConcArray = ['Mole/Cubic Meter(mol/m³)', 'Mole/Cubic Ce
   'Nanomole/Milliliter(nmol/ml)', 'Molar (M)', 'Millimolar (mM)', 'Micromolar (µM)', 'Nanomolar (nM)',
   'Picomolar (pM)', 'Femtomolar (fM)', 'Attomolar (aM)', 'Zeptomolar (zM)', 'Yoctomolar (yM)'];
 
-String molarConcInitValue1 = 'Mole/Cubic Meter(mol/m³)';
-String molarConcInitValue2 = 'Mole/Liter(mol/l)';
+const molarConcInitValue1 = "0";
+const molarConcInitValue2 = "3";
 
 //based on 1 mole/liter
-const List<double> molarConcConvArray = [1, 0.000001, 1e-9, 0.001, 1e-9, 0.000001, 0.001, 1e-9, 1e-12,
+const molarConcConvArray = [1, 0.000001, 1e-9, 0.001, 1e-9, 0.000001, 0.001, 1e-9, 1e-12,
   0.000001, 1e-12, 1e-9, 1000, 0.001, 0.000001, 1, 0.000001, 0.001, 1000000, 1, 0.001, 1000, 0.001, 1, 1e12,
   1000000, 1000, 1e9, 1000, 1000000, 1e9, 1000, 1, 1000000, 1, 1000, 0.001, 1, 1000, 1000000, 1e9, 1e12, 1e15,
   1e18, 1e21];
+
+window.convArray = molarConcConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = molarConcInitValue1;
+  selectedUnit2.value = molarConcInitValue2;
+  originalUnit1 = molarConcInitValue1;
+  originalUnit2 = molarConcInitValue2;
+}
+
+let option = "";
+for(let i=0;i<molarConcArray.length;i++){
+  if (i === parseInt(molarConcInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + molarConcArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + molarConcArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<molarConcArray.length;j++){
+  if (j === parseInt(molarConcInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + molarConcArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + molarConcArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
