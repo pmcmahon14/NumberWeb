@@ -1,4 +1,4 @@
-const List<String> magFluxDenArray = ['Gamma (Γ)', 'Gauss (G)', 'Tesla (T)', 'Millitesla (mT)', 'Microtesla (µT)',
+const magFluxDenArray = ['Gamma (Γ)', 'Gauss (G)', 'Tesla (T)', 'Millitesla (mT)', 'Microtesla (µT)',
   'Line/Square Kilometer (line/km²)', 'Line/Square Meter (line/m²)', 'Line/Square Decimeter (line/dm²)',
   'Line/Square Centimeter (line/cm²)', 'Line/Square Millimeter (line/mm²)', 'Line/Square Micrometer (line/µm²)',
   'Line/Square Nanometer (line/nm²)', 'Line/Square Mile (line/mi²)', 'Line/Square Yard (line/yd²)',
@@ -25,11 +25,11 @@ const List<String> magFluxDenArray = ['Gamma (Γ)', 'Gauss (G)', 'Tesla (T)', 'M
   'Weber/Square Mile (W/mi²)', 'Weber/Square Yard (W/yd²)', 'Weber/Square Foot (W/ft²)',
   'Weber/Square Inch (W/in²)'];
 
-String magFluxDenInitValue1 = 'Tesla (T)';
-String magFluxDenInitValue2 = 'Gauss (G)';
+const magFluxDenInitValue1 = "2";
+const magFluxDenInitValue2 = "1";
 
 //based on 1 weber
-var magFluxDenConvArray = [1e9, 10000, 1, 1000, 1000000,
+const magFluxDenConvArray = [1e9, 10000, 1, 1000, 1000000,
   1e14, 1e8, 1000000, 10000, 100, 0.0001, 1e-10, 2.589988110e14, 83612736, 9290304, 64516,
   1e14, 1e8, 1000000, 10000, 100, 0.0001, 1e-10, 2.589988110e14, 83612736, 9290304, 64516,
   1e12, 1000000, 10000, 100, 1, 0.000001, 1e-12, 2.589988110e12, 836127.36, 92903.04, 645.16,
@@ -37,3 +37,35 @@ var magFluxDenConvArray = [1e9, 10000, 1, 1000, 1000000,
   7.957747155e12, 7957747.155, 79577.47155, 795.7747155, 7.957747155, 7.957747155e-6, 7.957747155e-12,
   2.061047052e13, 6653690.12, 739298.9, 5134.02,
   1000000, 1, 0.01, 0.0001, 0.000001, 1e-12, 1e-18, 2589988.11, 0.83612736, 0.09290304, 0.00064516];
+
+window.convArray = magFluxDenConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = magFluxDenInitValue1;
+  selectedUnit2.value = magFluxDenInitValue2;
+  originalUnit1 = magFluxDenInitValue1;
+  originalUnit2 = magFluxDenInitValue2;
+}
+
+let option = "";
+for(let i=0;i<magFluxDenArray.length;i++){
+  if (i === parseInt(magFluxDenInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + magFluxDenArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + magFluxDenArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<magFluxDenArray.length;j++){
+  if (j === parseInt(magFluxDenInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + magFluxDenArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + magFluxDenArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
