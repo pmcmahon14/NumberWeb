@@ -1,4 +1,4 @@
-const List<String> radiationArray = ['Rem/Second (rem/s)', 'Sievert/Second (Sv/s)', 'Watt/Kilogram (W/kg)',
+const radiationArray = ['Rem/Second (rem/s)', 'Sievert/Second (Sv/s)', 'Watt/Kilogram (W/kg)',
   'Attogray/Second (aGy/s)', 'Attogray/Millisecond (aGy/ms)', 'Attogray/Microsecond (aGy/µs)',
   'Attogray/Nanosecond (aGy/ns)', 'Attogray/Minute (aGy/min)',
   'Attogray/Hour (aGy/hr)', 'Attogray/Day (aGy/d)', 'Attogray/Week (aGy/wk)', 'Attogray/Month (aGy/mo)',
@@ -73,11 +73,11 @@ const List<String> radiationArray = ['Rem/Second (rem/s)', 'Sievert/Second (Sv/s
   'Teragray/Minute (TGy/min)', 'Teragray/Hour (TGy/hr)', 'Teragray/Day (TGy/d)', 'Teragray/Week (TGy/wk)',
   'Teragray/Month (TGy/mo)', 'Teragray/Year (TGy/yr)'];
 
-String radiationInitValue1 = 'Rad/Second (rd/s)';
-String radiationInitValue2 = 'Watt/Kilogram (W/kg)';
+const radiationInitValue1 = "173";
+const radiationInitValue2 = "2";
 
 //based on 1 rad/second
-const List<double> radiationConvArray = [1, 0.01, 0.01,
+const radiationConvArray = [1, 0.01, 0.01,
   1e16, 1e13, 1e10, 10000000, 6e17, 3.6e19, 8.64e20, 6.048e21, 2.6298e22, 3.15576e23,
   1, 0.001, 0.000001, 1e-9, 60, 3600, 86400, 604800, 2629800, 31557600,
   1e-20, 1e-23, 1e-26, 1e-29, 6e-19, 3.6e-17, 8.64e-16, 6.048e-15, 2.6298e-14, 3.15576e-13,
@@ -97,3 +97,35 @@ const List<double> radiationConvArray = [1, 0.01, 0.01,
   1e10, 1e7, 10000, 10, 6e11, 3.6e13, 8.64e14, 6.048e15, 2.6298e16, 3.15576e17,
   1, 0.001, 0.000001, 1e-9, 60, 3600, 86400, 604800, 2629800, 3.15576e7,
   1e-14, 1e-17, 1e-20, 1e-23, 6e-13, 3.6e-11, 8.64e-10, 6.048e-9, 2.6298e-8, 3.15576e-7];
+
+window.convArray = radiationConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = radiationInitValue1;
+  selectedUnit2.value = radiationInitValue2;
+  originalUnit1 = radiationInitValue1;
+  originalUnit2 = radiationInitValue2;
+}
+
+let option = "";
+for(let i=0;i<radiationArray.length;i++){
+  if (i === parseInt(radiationInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + radiationArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + radiationArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<radiationArray.length;j++){
+  if (j === parseInt(radiationInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + radiationArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + radiationArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
