@@ -1,4 +1,4 @@
-const List<String> powerArray = ['Attojoule/Hour (aJ/hr)', 'Attojoule/Minute (aJ/min)',
+const powerArray = ['Attojoule/Hour (aJ/hr)', 'Attojoule/Minute (aJ/min)',
   'Attojoule/Second (aJ/s)', 'Attowatt (aW)', 'BTU (IT)/Hour (BTU/hr)', 'BTU (IT)/Minute (BTU/min)',
   'BTU (IT)/Second (BTU/s)', 'BTU (TH)/Hour (BTU/hr)', 'BTU (TH)/Minute (BTU/min)', 'BTU (TH)/Second (BTU/s)',
   'Calorie (IT)/Hour (cal/hr)', 'Calorie (IT)/Minute (cal/min)', 'Calorie (IT)/Second (cal/s)',
@@ -38,13 +38,13 @@ const List<String> powerArray = ['Attojoule/Hour (aJ/hr)', 'Attojoule/Minute (aJ
   'Yoctojoule/Hour (yJ/hr)', 'Yoctojoule/Minute (yJ/min)', 'Yoctojoule/Second (yJ/s)', 'Yoctowatt (yW)',
   'Yottajoule/Hour (YJ/hr)', 'Yottajoule/Minute (YJ/min)', 'Yottajoule/Second (YJ/s)', 'Yottawatt (YW)',
   'Zeptojoule/Hour (zJ/hr)', 'Zeptojoule/Minute (zJ/min)', 'Zeptojoule/Second (zJ/s)', 'Zeptowatt (zW)',
-  'Zettajoule/Hour (ZJ/hr)', 'Zettajoule/Minute (ZJ/min)', 'Zettajoule/Second (ZJ/s)''Zettawatt (ZW)'];
+  'Zettajoule/Hour (ZJ/hr)', 'Zettajoule/Minute (ZJ/min)', 'Zettajoule/Second (ZJ/s)', 'Zettawatt (ZW)'];
 
-String powerInitValue1 = 'Joule/Second (J/s)';
-String powerInitValue2 = 'Watt (W)';
+const powerInitValue1 = "67";
+const powerInitValue2 = "122";
 
 //based on 1 watt = joule/second
-const List<double> powerConvArray = [3.6e21, 6e19, 1e18, 1e18, 3.41, 0.05686902722, 0.0009478171203, 3.41,
+const powerConvArray = [3.6e21, 6e19, 1e18, 1e18, 3.41, 0.05686902722, 0.0009478171203, 3.41,
   0.05690708297, 0.0009484513828, 859.85, 14.33, 0.2388458966, 860.42, 14.34, 0.2390057361, 360000, 6000, 100, 100,
   0.001359621617, 360, 6, 0.1, 0.1, 36000, 600, 10, 10, 3.6e10, 6e8,1e7, 3.6e-15, 6e-17,1e-18, 1e-18, 3.6e18, 6e16,
   1e15, 1e15, 2655.22, 44.25, 0.7375621524, 85429.32, 1423.82, 23.73, 0.0000036, 6e-8, 1e-9, 1e-9, 3.670978367e7,
@@ -55,3 +55,35 @@ const List<double> powerConvArray = [3.6e21, 6e19, 1e18, 1e18, 3.41, 0.056869027
   3.412141633e-6, 5.6869027e-8, 9.478171e-10, 3.6e12, 6e10, 1e9, 1e9, 3600, 60, 1, 3.6e-12, 6e-14, 1e-15, 1e-15,
   3.6e15, 6e13, 1e12, 1e12, 23.73, 3.6e-9, 6e-11, 1e-12, 1e-12, 0.0002843451363, 1, 1, 3.6e27, 6e25, 1e24, 1e24,
   3.6e-21, 6e-23, 1e-24, 1e-24, 3.6e24, 6e22, 1e21, 1e21, 3.6e-18, 6e-20, 1e-21];
+
+window.convArray = powerConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = powerInitValue1;
+  selectedUnit2.value = powerInitValue2;
+  originalUnit1 = powerInitValue1;
+  originalUnit2 = powerInitValue2;
+}
+
+let option = "";
+for(let i=0;i<powerArray.length;i++){
+  if (i === parseInt(powerInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + powerArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + powerArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<powerArray.length;j++){
+  if (j === parseInt(powerInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + powerArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + powerArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
