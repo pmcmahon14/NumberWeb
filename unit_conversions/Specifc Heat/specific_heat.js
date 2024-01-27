@@ -1,4 +1,4 @@
-const List<String> specificHeatArray = ['BTU (IT)/Pound/C° (BTU/lb·°C)',
+const specificHeatArray = ['BTU (IT)/Pound/C° (BTU/lb·°C)',
   'BTU (IT)/Pound/F° (BTU/lb·°F)', 'BTU (IT)/Pound/K (BTU/lb·°K)',
   'BTU (IT)/Pound/R (BTU/lb·°R)', 'BTU (TH)/Pound/C° (BTU/lb·°C)',
   'BTU (TH)/Pound/F° (BTU/lb·°F)', 'BTU (TH)/Pound/K (BTU/lb·°K)',
@@ -25,11 +25,11 @@ const List<String> specificHeatArray = ['BTU (IT)/Pound/C° (BTU/lb·°C)',
   'Kilojoule/Pound/F° (kJ/lb·°F)', 'Kilojoule/Pound/R (kJ/lb·°R)',
   'Pound Force Foot/Pound/F° (lbF·ft/lb·°F)', 'Pound Force Foot/Pound/R (lbF·ft/lb·°R)'];
 
-String specificHeatInitValue1 = 'Joule/Kilogram/K (J/kg·°K)';
-String specificHeatInitValue2 = 'Joule/Kilogram/C° (J/kg·°C)';
+const specificHeatInitValue1 = "22";
+const specificHeatInitValue2 = "21";
 
 //based on 1 joule/kilogram K
-const List<double> specificHeatConvArray = [0.0004299226139, 0.0002388458966, 0.0004299226139, 0.0002388458966,
+const specificHeatConvArray = [0.0004299226139, 0.0002388458966, 0.0004299226139, 0.0002388458966,
   0.0004302103106, 0.0002390057281, 0.0004302103106, 0.0002390057281, 0.0002388458966, 0.0002388458966,
   0.003761759594, 0.003761759594, 0.06018815351, 0.06018815351, 0.0002390057361, 0.003764277024, 0.003764277024,
   0.06022843239, 0.06022843239, 0.001, 0.001, 1, 1, 0.01574973507, 0.01574973507, 0.2519957611, 0.2519957611,
@@ -37,3 +37,35 @@ const List<double> specificHeatConvArray = [0.0004299226139, 0.0002388458966, 0.
   0.0002390057361, 0.0002390057361, 0.000003764277024, 0.000003764277024, 0.00006022843239, 0.00006022843239,
   0.0001019716213, 0.0001019716213, 0.0001019716213, 0.0001019716213, 0.000001, 0.000001, 0.001, 0.001,
   0.00001574973507, 0.00001574973507, 0.0002519957611, 0.0002519957611, 0.185862536, 0.185862536];
+
+window.convArray = specificHeatConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = specificHeatInitValue1;
+  selectedUnit2.value = specificHeatInitValue2;
+  originalUnit1 = specificHeatInitValue1;
+  originalUnit2 = specificHeatInitValue2;
+}
+
+let option = "";
+for(let i=0;i<specificHeatArray.length;i++){
+  if (i === parseInt(specificHeatInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + specificHeatArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + specificHeatArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<specificHeatArray.length;j++){
+  if (j === parseInt(specificHeatInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + specificHeatArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + specificHeatArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
