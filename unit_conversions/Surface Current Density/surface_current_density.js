@@ -1,4 +1,4 @@
-const List<String> surfCuDenArray = ['Abampere/Square Meter (abA/m²)', 'Abampere/Square Centimeter (abA/cm²)',
+const surfCuDenArray = ['Abampere/Square Meter (abA/m²)', 'Abampere/Square Centimeter (abA/cm²)',
   'Abampere/Square Millimeter (abA/mm²)', 'Abampere/Square Micrometer (abA/µm²)', 'Abampere/Square Yard (abA/yd²)',
   'Abampere/Square Foot (abA/ft²)', 'Abampere/Square Inch (abA/in²)', 'Ampere/Square Meter (A/m²)',
   'Ampere/Square Centimeter (A/cm²)', 'Ampere/Square Millimeter (A/mm²)', 'Ampere/Square Micrometer (A/µm²)',
@@ -21,13 +21,45 @@ const List<String> surfCuDenArray = ['Abampere/Square Meter (abA/m²)', 'Abamper
   'Statampere/Square Millimeter (stA/mm²)', 'Statampere/Square Micrometer (stA/µm²)',
   'Statampere/Square Yard (stA/yd²)', 'Statampere/Square Foot (stA/ft²)', 'Statampere/Square Inch (stA/in²)'];
 
-String surfCuDenInitValue1 = 'Ampere/Square Meter (A/m²)';
-String surfCuDenInitValue2 = 'Ampere/Square Foot (A/ft²)';
+const surfCuDenInitValue1 = "7";
+const surfCuDenInitValue2 = "12";
 
 //based on 1 ampere/square meter
-const List<double> surfCuDenConvArray = [0.1, 0.00001, 1e-7, 1e-13, 0.083612736, 0.009290304, 0.000064516, 1,
+const surfCuDenConvArray = [0.1, 0.00001, 1e-7, 1e-13, 0.083612736, 0.009290304, 0.000064516, 1,
   0.0001, 0.000001, 1e-12, 0.83612736, 0.09290304, 0.00064516, 0.1, 0.00001, 1e-7, 1e-13, 0.083612736, 0.009290304,
   0.000064516, 0.001, 1e-7, 1e-9, 1e-15, 0.00083612736, 0.00009290304, 6.4516e-7, 0.000001, 1e-10, 1e-12, 1e-18,
   8.3612736e-7, 9.290304e-8, 6.4516e-10, 1000000, 100, 1, 0.000001, 836127.36, 92903.04, 645.16, 1000, 0.1, 0.001,
   1e-9, 836.12736, 92.90304, 0.64516, 2997924536.8, 299792.45368, 2997.9245368, 0.0029979245368, 2506646728.5,
   278516303.16, 1934140.9942];
+
+window.convArray = surfCuDenConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = surfCuDenInitValue1;
+  selectedUnit2.value = surfCuDenInitValue2;
+  originalUnit1 = surfCuDenInitValue1;
+  originalUnit2 = surfCuDenInitValue2;
+}
+
+let option = "";
+for(let i=0;i<surfCuDenArray.length;i++){
+  if (i === parseInt(surfCuDenInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + surfCuDenArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + surfCuDenArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<surfCuDenArray.length;j++){
+  if (j === parseInt(surfCuDenInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + surfCuDenArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + surfCuDenArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
