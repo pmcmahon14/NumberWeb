@@ -1,4 +1,4 @@
-const List<String> surfTenArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/cm)', 'Dyne/Millimeter (dyn/mm)',
+const surfTenArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/cm)', 'Dyne/Millimeter (dyn/mm)',
   'Dyne/Micrometer (dyn/µm)', 'Dyne/Yard (dyn/yd)', 'Dyne/Foot (dyn/ft)', 'Dyne/Inch (dyn/in)',
   'Gram Force/Meter (gf/m)', 'Gram Force/Centimeter (gf/cm)', 'Gram Force/Millimeter (gf/mm)',
   'Gram Force/Micrometer (gf/µm)', 'Gram Force/Yard (gf/yd)', 'Gram Force/Foot (gf/ft)', 'Gram Force/Inch (gf/in)',
@@ -24,11 +24,11 @@ const List<String> surfTenArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/c
   'Poundal/Millimeter (pdl/mm)', 'Poundal/Micrometer (pdl/µm)', 'Poundal/Yard (pdl/yd)', 'Poundal/Foot (pdl/ft)',
   'Poundal/Inch (pdl/in)'];
 
-String surfTenInitValue1 = 'Newton/Meter (N/m)';
-String surfTenInitValue2 = 'Dyne/Meter (dyn/m)';
+const surfTenInitValue1 = "49";
+const surfTenInitValue2 = "0";
 
 //based on 1 newton/meter
-const List<double> surfTenConvArray = [100000, 1000, 100, 0.1, 91440, 30480, 2540, 101.9716213, 1.019716213,
+const surfTenConvArray = [100000, 1000, 100, 0.1, 91440, 30480, 2540, 101.9716213, 1.019716213,
   0.1019716213, 0.0001019716213, 93.242850515, 31.080950172, 2.590079181, 0.1019716213, 0.001019716213,
   0.0001019716213, 1.019716213e-7, 0.093242850515, 0.031080950172, 0.002590079181, 0.001, 0.00001, 0.000001, 1e-9,
   0.0009144, 0.0003048, 0.0000254, 0.1019716213, 0.001019716213, 0.0001019716213, 1.019716213e-7, 0.093242850515,
@@ -37,3 +37,35 @@ const List<double> surfTenConvArray = [100000, 1000, 100, 0.1, 91440, 30480, 254
   0.09144, 101.9716213, 1.019716213, 0.1019716213, 0.0001019716213, 93.242850515, 31.080950172, 2.590079181,
   0.2248089431, 0.002248089431, 0.0002248089431, 2.248089431e-7, 0.20556529757, 0.068521765857, 0.0057101471547,
   7.23, 0.0723, 0.00723, 0.00000723, 6.611112, 2.203704, 0.183642];
+
+window.convArray = surfTenConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = surfTenInitValue1;
+  selectedUnit2.value = surfTenInitValue2;
+  originalUnit1 = surfTenInitValue1;
+  originalUnit2 = surfTenInitValue2;
+}
+
+let option = "";
+for(let i=0;i<surfTenArray.length;i++){
+  if (i === parseInt(surfTenInitValue1)) {
+    option +=
+        '<option value="'+ i + '" selected>' + surfTenArray[i] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ i + '">' + surfTenArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option;
+
+for(let j=0;j<surfTenArray.length;j++){
+  if (j === parseInt(surfTenInitValue2)) {
+    option +=
+        '<option value="'+ j + '" selected>' + surfTenArray[j] + "</option>"
+  } else {
+    option +=
+        '<option value="'+ j + '">' + surfTenArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option;
