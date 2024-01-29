@@ -32,7 +32,6 @@ const lengthConvArray = [3.048e9, 0.43542857143, 2.0135865888e-12, 3.048e17, 36,
   2, 1.3333333333, 3.0122768585e-13, 0.0016475675676, 0.4, 0.092363636364, 0.2, 3.048e-13, 12192, 6.8571428571,
   3, 3.048e23, 3.048e-25, 3.048e20, 3.048e-22];
 
-
 window.convArray = lengthConvArray;
 
 function clearAngle() {
@@ -42,25 +41,26 @@ function clearAngle() {
   originalUnit2 = lengthInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<lengthArray.length;i++){
   if (i === parseInt(lengthInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + lengthArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + lengthArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<lengthArray.length;j++){
   if (j === parseInt(lengthInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + lengthArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + lengthArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

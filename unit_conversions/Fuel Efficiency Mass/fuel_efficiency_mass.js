@@ -49,7 +49,6 @@ const feMassConvArray = [0.94781712031, 0.00094781712031, 9.4781712031e-7, 9.478
   1000000, 1000, 1, 0.001, 0.000001, 0.06479891, 28.34952313, 453.59237, 1000000, 0.277777777778, 0.00027777777778,
   2.7777777778e-7, 2.78e10, 1.79997e-5, 0.007874868, 0.125997881, 277.77777778];
 
-
 window.convArray = feMassConvArray;
 
 function clearAngle() {
@@ -59,25 +58,26 @@ function clearAngle() {
   originalUnit2 = feMassInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<feMassArray.length;i++){
   if (i === parseInt(feMassInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + feMassArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + feMassArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<feMassArray.length;j++){
   if (j === parseInt(feMassInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + feMassArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + feMassArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

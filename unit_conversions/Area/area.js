@@ -20,9 +20,7 @@ const areaConvArray = [2.2956820844e-5, 0.0009290304, 9.290304e26, 0.09290304, 1
   9.290304e10, 1.44e8, 3.5870064279e-8, 92903.04, 3.0095769444e-9, 2.7086168606e-8, 9.7572788783e-35,
   0.0036730945822, 0.0036730804434, 1.44e8, 0.11111111111, 9.9638979357e-10];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = areaConvArray;
-})
+window.convArray = areaConvArray;
 
 function clearAngle() {
   selectedUnit1.value = areaInitValue1;
@@ -31,25 +29,26 @@ function clearAngle() {
   originalUnit2 = areaInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<areaArray.length;i++){
   if (i === parseInt(areaInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + areaArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + areaArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<areaArray.length;j++){
   if (j === parseInt(areaInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + areaArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + areaArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

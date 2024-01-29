@@ -83,7 +83,6 @@ const heatFluxDensityConvArray = [0.000341, 0.3167993664, 0.0021999956, 3.41, 0.
   0.8604206501, 8.604206501e-7, 1.4340344168e-6, 0.0013322615679, 9.2518164436e-6, 0.014340344168, 1.4340344168e-8,
   2.3900573614e-8, 2.2204359465e-5, 1.5419694073e-7, 0.00023900573614, 2.3900573614e-10];
 
-
 window.convArray = heatFluxDensityConvArray;
 
 function clearAngle() {
@@ -93,25 +92,26 @@ function clearAngle() {
   originalUnit2 = heatFluxDensityInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<heatFluxDensityArray.length;i++){
   if (i === parseInt(heatFluxDensityInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + heatFluxDensityArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + heatFluxDensityArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<heatFluxDensityArray.length;j++){
   if (j === parseInt(heatFluxDensityInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + heatFluxDensityArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + heatFluxDensityArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

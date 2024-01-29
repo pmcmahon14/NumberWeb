@@ -12,7 +12,6 @@ const heatTransferCoeffInitValue2 = "9";
 const heatTransferCoeffConvArray = [0.17611018368, 4.8919495467e-5, 0.17622803351,
   4.895223153e-5, 2.3884589663e-5, 0.17611018368, 1, 0.85984522786, 0.079882235598, 1, 1];
 
-
 window.convArray = heatTransferCoeffConvArray;
 
 function clearAngle() {
@@ -22,25 +21,26 @@ function clearAngle() {
   originalUnit2 = heatTransferCoeffInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<heatTransferCoeffArray.length;i++){
   if (i === parseInt(heatTransferCoeffInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + heatTransferCoeffArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + heatTransferCoeffArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<heatTransferCoeffArray.length;j++){
   if (j === parseInt(heatTransferCoeffInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + heatTransferCoeffArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + heatTransferCoeffArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

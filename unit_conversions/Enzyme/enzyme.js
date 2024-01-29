@@ -14,9 +14,7 @@ const enzymeInitValue2 = "27";
 const enzymeConvArray = [1e-24, 1e-21, 1e-18, 1e-15, 1e-12, 1e-9, 1e-6, 1000, 100, 10, 1, 0.1,
   0.01, 0.001, 1e6, 1e9, 1e12, 1e15, 1e18, 1e21, 124, 0.06, 0.001, 60000, 1000, 60000000, 1000000, 60, 1];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = enzymeConvArray;
-})
+window.convArray = enzymeConvArray;
 
 function clearAngle() {
   selectedUnit1.value = enzymeInitValue1;
@@ -25,25 +23,26 @@ function clearAngle() {
   originalUnit2 = enzymeInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<enzymeArray.length;i++){
   if (i === parseInt(enzymeInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + enzymeArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + enzymeArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<enzymeArray.length;j++){
   if (j === parseInt(enzymeInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + enzymeArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + enzymeArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

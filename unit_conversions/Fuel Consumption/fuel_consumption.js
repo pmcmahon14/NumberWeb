@@ -20,7 +20,6 @@ const fuelConsConvArray = [325.05, 12.04, 0.0069668567453, 425.14, 1.93, 1.61, 0
   175.51, 6.5, 0.0037618016983, 229.56, 1.04, 0.8689762419, 0.22955922417, 0.26089922336,
   0.21724403752];
 
-
 window.convArray = fuelConsConvArray;
 
 function clearAngle() {
@@ -30,25 +29,26 @@ function clearAngle() {
   originalUnit2 = fuelConsInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<fuelConsArray.length;i++){
   if (i === parseInt(fuelConsInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + fuelConsArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + fuelConsArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<fuelConsArray.length;j++){
   if (j === parseInt(fuelConsInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + fuelConsArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + fuelConsArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

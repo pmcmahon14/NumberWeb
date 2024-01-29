@@ -33,6 +33,7 @@ function clearAll() {
     decimalUsed = false;
     hiddenAnswer = 0;
     hiddenInput = (inputDisplay.value).toString();
+    tempConversion();
 }
 
 function clearError() {
@@ -119,93 +120,93 @@ function numberCalc(buttonText) {
     unitConverter();
 }
 
-// tempConversion() {
-//   if (widget.selectedUnit1 == "Kelvin (K)") {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = double.parse(input1);
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = (-273.15+double.parse(input1));
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = (double.parse(input1)*1.8-459.67);
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = (double.parse(input1)*(9/5));
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = (-218.52+(double.parse(input1)*0.8));
-//     } else {
-//       hiddenAnswer = (0.0036608581*double.parse(input1));
-//     }
-//   } else if (widget.selectedUnit1 == "Celsius (°C)") {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = double.parse(input1)+273.15;
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = double.parse(input1);
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = (double.parse(input1)*1.8)+32;
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = 491.67+(double.parse(input1)*(9/5));
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = double.parse(input1)*0.8;
-//     } else {
-//       hiddenAnswer = 0.9999633914+(double.parse(input1)*0.0036608581);
-//     }
-//   } else if (widget.selectedUnit1 == "Fahrenheit (°F)") {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = (255.37222222+double.parse(input1)*(5/9));
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = ((-17-(7/9))+(double.parse(input1)*(5/9)));
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = double.parse(input1);
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = (459.67+double.parse(input1));
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = ((-14-(2/9))+(double.parse(input1)*(4/9)));
-//     } else {
-//       hiddenAnswer = (0.9348814695+(double.parse(input1)*0.0020338101));
-//     }//done
-//   } else if (widget.selectedUnit1 == "Rankine (°R)") {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = (double.parse(input1)*(5/9));
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = (-273.15+(double.parse(input1)*(5/9)));
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = (-459.67+double.parse(input1));
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = double.parse(input1);
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = (-218.52+(double.parse(input1)*(4/9)));
-//     } else {
-//       hiddenAnswer = (double.parse(input1)*0.0020338101);
-//     }
-//   } else if (widget.selectedUnit1 == "Reaumur (°Re)") {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = (273.15+(double.parse(input1)*1.25));
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = (double.parse(input1)*1.25);
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = (32+(double.parse(input1)*2.25));
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = (491.67+(double.parse(input1)*2.25));
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = double.parse(input1);
-//     } else {
-//       hiddenAnswer = (0.9999633914+(double.parse(input1)*0.0045760727));
-//     }
-//   } else {
-//     if (widget.selectedUnit2 == "Kelvin (K)") {
-//       hiddenAnswer = ((double.parse(input1)*273.16));
-//     } else if (widget.selectedUnit2 == "Celsius (°C)") {
-//       hiddenAnswer = (-273.15+(double.parse(input1)*273.16));
-//     } else if (widget.selectedUnit2 == "Fahrenheit (°F)") {
-//       hiddenAnswer = (-459.67+(double.parse(input1)*491.688));
-//     } else if (widget.selectedUnit2 == "Rankine (°R)") {
-//       hiddenAnswer = (double.parse(input1)*491.688);
-//     } else if (widget.selectedUnit2 == "Reaumur (°Re)") {
-//       hiddenAnswer = (-218.52+(double.parse(input1)*218.528));
-//     } else {
-//       hiddenAnswer = double.parse(input1);
-//     }
-//   }
-// }
+function tempConversion() {
+  if (selectedUnit1.value === "0") {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = inputDisplay.value;
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = (-273.15+Number(inputDisplay.value));
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = (Number(inputDisplay.value)*1.8-459.67);
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = (Number(inputDisplay.value)*(9/5));
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*0.8));
+    } else {
+      hiddenAnswer = (0.0036608581*Number(inputDisplay.value));
+    }
+  } else if (selectedUnit1.value === "1") {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = Number(inputDisplay.value)+273.15;
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = Number(inputDisplay.value);
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = (Number(inputDisplay.value)*1.8)+32;
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = 491.67+(Number(inputDisplay.value)*(9/5));
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = Number(inputDisplay.value)*0.8;
+    } else {
+      hiddenAnswer = 0.9999633914+(Number(inputDisplay.value)*0.0036608581);
+    }
+  } else if (selectedUnit1.value === "2") {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = (255.37222222+Number(inputDisplay.value)*(5/9));
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = ((-17-(7/9))+(Number(inputDisplay.value)*(5/9)));
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = Number(inputDisplay.value);
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = (459.67+Number(inputDisplay.value));
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = ((-14-(2/9))+(Number(inputDisplay.value)*(4/9)));
+    } else {
+      hiddenAnswer = (0.9348814695+(Number(inputDisplay.value)*0.0020338101));
+    }//done
+  } else if (selectedUnit1.value === "3") {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = (Number(inputDisplay.value)*(5/9));
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = (-273.15+(Number(inputDisplay.value)*(5/9)));
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = (-459.67+Number(inputDisplay.value));
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = Number(inputDisplay.value);
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*(4/9)));
+    } else {
+      hiddenAnswer = (Number(inputDisplay.value)*0.0020338101);
+    }
+  } else if (selectedUnit1.value === "4") {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = (273.15+(Number(inputDisplay.value)*1.25));
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = (Number(inputDisplay.value)*1.25);
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = (32+(Number(inputDisplay.value)*2.25));
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = (491.67+(Number(inputDisplay.value)*2.25));
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = Number(inputDisplay.value);
+    } else {
+      hiddenAnswer = (0.9999633914+(Number(inputDisplay.value)*0.0045760727));
+    }
+  } else {
+    if (selectedUnit2.value === "0") {
+      hiddenAnswer = ((Number(inputDisplay.value)*273.16));
+    } else if (selectedUnit2.value === "1") {
+      hiddenAnswer = (-273.15+(Number(inputDisplay.value)*273.16));
+    } else if (selectedUnit2.value === "2") {
+      hiddenAnswer = (-459.67+(Number(inputDisplay.value)*491.688));
+    } else if (selectedUnit2.value === "3") {
+      hiddenAnswer = (Number(inputDisplay.value)*491.688);
+    } else if (selectedUnit2.value === "4") {
+      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*218.528));
+    } else {
+      hiddenAnswer = Number(inputDisplay.value);
+    }
+  }
+}
 
 function switchCalc() {
     const switchUnit1 = selectedUnit1.value;
@@ -223,7 +224,7 @@ function unitConverter() {
     let index1 = selectedUnit1.value;
     let index2 = selectedUnit2.value;
     if (document.getElementById("top").innerText === "Temperature") {
-        //tempConversion();
+        tempConversion();
     } else {
         hiddenAnswer = ((Number(inputDisplay.value) * convArray[index2]) / convArray[index1]);
     }
@@ -238,7 +239,8 @@ function unitConverter() {
             outputDisplay.value = outputDisplay.value.substring(0, outputDisplay.length - 1);
         }
     } else {
-        outputDisplay.value = hiddenAnswer.toExponential(10);
+        console.log(typeof hiddenAnswer);
+        outputDisplay.value = hiddenAnswer.toString();
     }
     outputDisplay.value = outputDisplay.value.replaceAll("+", "");
 }

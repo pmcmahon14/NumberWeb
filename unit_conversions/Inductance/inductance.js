@@ -11,7 +11,6 @@ const inductanceInitValue2 = "25";
 const inductanceConvArray = [1, 1e-24, 1e-21, 1e-18, 1e-15, 1e-12, 1e-9, 1e-6, 1e-3, 1e-2, 1e-1, 1e+1,
   1e+2, 1e+3, 1e+6, 1e+9, 1e+12, 1e+15, 1e+18, 1e+21, 1e+24, 1e9, 1e9, 1.1126500297e-12, 1.1126500297e-12, 1];
 
-
 window.convArray = inductanceConvArray;
 
 function clearAngle() {
@@ -21,25 +20,26 @@ function clearAngle() {
   originalUnit2 = inductanceInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<inductanceArray.length;i++){
   if (i === parseInt(inductanceInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + inductanceArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + inductanceArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<inductanceArray.length;j++){
   if (j === parseInt(inductanceInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + inductanceArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + inductanceArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

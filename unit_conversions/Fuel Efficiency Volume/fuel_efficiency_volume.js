@@ -117,25 +117,26 @@ function clearAngle() {
   originalUnit2 = feVolumeInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<feVolumeArray.length;i++){
   if (i === parseInt(feVolumeInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + feVolumeArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + feVolumeArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<feVolumeArray.length;j++){
   if (j === parseInt(feVolumeInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + feVolumeArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + feVolumeArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

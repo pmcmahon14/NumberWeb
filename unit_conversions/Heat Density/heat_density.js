@@ -97,7 +97,6 @@ const heatDensityConvArray = [2.3900573614e-5,
   1.1241277778, 2.7777777778e-8, 2.58064e-5, 1.7921111111e-7, 0.00027777777778, 2.7777777778e-16, 2.7777777778e-10, 0.0002322576,
   4046.86, 0.0001, 0.09290304, 0.00064516, 1, 1e-12, 0.000001, 0.83612736];
 
-
 window.convArray = heatDensityConvArray;
 
 function clearAngle() {
@@ -107,25 +106,26 @@ function clearAngle() {
   originalUnit2 = heatDensityInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<heatDensityArray.length;i++){
   if (i === parseInt(heatDensityInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + heatDensityArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + heatDensityArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<heatDensityArray.length;j++){
   if (j === parseInt(heatDensityInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + heatDensityArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + heatDensityArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

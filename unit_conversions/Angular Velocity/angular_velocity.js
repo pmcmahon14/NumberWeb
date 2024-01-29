@@ -16,9 +16,7 @@ const angVelConvArray = [1, 0.001, 60, 3600, 86400, 1.1111111111, 0.001111111111
   0.017453293, 0.000017453293, 1.047198, 62.831855, 1507.964515, 0.0027777777778,
   2.7777777778e-6, 0.16666666667, 10, 240, 0.033333333333, 3.3333333333e-5, 2, 120, 2880];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = angVelConvArray;
-})
+window.convArray = angVelConvArray;
 
 function clearAngle() {
   selectedUnit1.value = angVelInitValue1;
@@ -27,25 +25,26 @@ function clearAngle() {
   originalUnit2 = angVelInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<angVelArray.length;i++){
   if (i === parseInt(angVelInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + angVelArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + angVelArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<angVelArray.length;j++){
   if (j === parseInt(angVelInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + angVelArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + angVelArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

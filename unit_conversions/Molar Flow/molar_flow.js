@@ -23,25 +23,26 @@ function clearAngle() {
   originalUnit2 = molarFlowInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<molarFlowArray.length;i++){
   if (i === parseInt(molarFlowInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + molarFlowArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + molarFlowArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<molarFlowArray.length;j++){
   if (j === parseInt(molarFlowInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + molarFlowArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + molarFlowArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

@@ -36,9 +36,7 @@ const efsConvArray = [1e11, 1e8, 1e6, 1e5, 100, 0.1, 1.609344e11, 91440000, 3048
   1000, 1, 0.01, 0.001, 0.000001, 1e-9, 1609.34, 0.9144, 0.3048, 0.0254,
   1000, 1, 0.01, 0.001, 0.000001, 1e-9, 1609.34, 0.9144, 0.3048, 0.0254];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = efsConvArray;
-})
+window.convArray = efsConvArray;
 
 function clearAngle() {
   selectedUnit1.value = efsInitValue1;
@@ -47,25 +45,26 @@ function clearAngle() {
   originalUnit2 = efsInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<efsArray.length;i++){
   if (i === parseInt(efsInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + efsArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + efsArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<efsArray.length;j++){
   if (j === parseInt(efsInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + efsArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + efsArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

@@ -29,25 +29,26 @@ function clearAngle() {
   originalUnit2 = forceInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<forceArray.length;i++){
   if (i === parseInt(forceInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + forceArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + forceArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<forceArray.length;j++){
   if (j === parseInt(forceInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + forceArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + forceArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

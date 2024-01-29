@@ -30,9 +30,7 @@ const dataTransferConvArray = [691200, 28800, 0.000008, 0.008, 480, 8e-9, 8, 864
   1e-15, 0.000001, 6.912e-7, 2.88e-8, 8e-18, 8e-15, 4.8e-10, 8e-21, 8e-12, 8.64e-8, 3.6e-9, 1e-18, 1e-15, 6e-11, 1e-21,
   1e-12];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = dataTransferConvArray;
-})
+window.convArray = dataTransferConvArray;
 
 function clearAngle() {
   selectedUnit1.value = dataTransferInitValue1;
@@ -41,25 +39,26 @@ function clearAngle() {
   originalUnit2 = dataTransferInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<dataTransferArray.length;i++){
   if (i === parseInt(dataTransferInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + dataTransferArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + dataTransferArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<dataTransferArray.length;j++){
   if (j === parseInt(dataTransferInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + dataTransferArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + dataTransferArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

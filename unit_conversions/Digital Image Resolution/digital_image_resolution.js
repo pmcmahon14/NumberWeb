@@ -7,9 +7,7 @@ const dirInitValue2 = "1";
 //based on 1 pixel/meter
 const dirConvArray = [1, 0.01, 0.001, 0.000001, 0.9144, 0.3048, 0.0254];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = dirConvArray;
-})
+window.convArray = dirConvArray;
 
 function clearAngle() {
   selectedUnit1.value = dirInitValue1;
@@ -18,25 +16,26 @@ function clearAngle() {
   originalUnit2 = dirInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<dirArray.length;i++){
   if (i === parseInt(dirInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + dirArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + dirArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<dirArray.length;j++){
   if (j === parseInt(dirInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + dirArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + dirArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

@@ -30,25 +30,26 @@ function clearAngle() {
   originalUnit2 = massFluxDensityInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<massFluxDensityArray.length;i++){
   if (i === parseInt(massFluxDensityInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + massFluxDensityArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + massFluxDensityArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<massFluxDensityArray.length;j++){
   if (j === parseInt(massFluxDensityInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + massFluxDensityArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + massFluxDensityArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

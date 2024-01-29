@@ -22,25 +22,26 @@ function clearAngle() {
   originalUnit2 = radAbsorbedDoseInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<radAbsorbedDoseArray.length;i++){
   if (i === parseInt(radAbsorbedDoseInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + radAbsorbedDoseArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + radAbsorbedDoseArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<radAbsorbedDoseArray.length;j++){
   if (j === parseInt(radAbsorbedDoseInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + radAbsorbedDoseArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + radAbsorbedDoseArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

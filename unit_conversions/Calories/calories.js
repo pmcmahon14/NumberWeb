@@ -10,9 +10,7 @@ const calorieInitValue2 = "1";
 const calorieConvArray = [1, 0.0089051017705, 372589.46, 37258.95, 8.91, 37.26,
   0.037258945808, 37258.95, 1.0002387672e-5];
 
-document.addEventListener("DOMContentLoaded", function(){
-    window.convArray = calorieConvArray;
-})
+window.convArray = calorieConvArray;
 
 function clearAngle() {
     selectedUnit1.value = calorieInitValue1;
@@ -21,25 +19,26 @@ function clearAngle() {
     originalUnit2 = calorieInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<calorieArray.length;i++){
     if (i === parseInt(calorieInitValue1)) {
-        option +=
+        option1 +=
             '<option value="'+ i + '" selected>' + calorieArray[i] + "</option>"
     } else {
-        option +=
+        option1 +=
             '<option value="'+ i + '">' + calorieArray[i] + "</option>"
     }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<calorieArray.length;j++){
     if (j === parseInt(calorieInitValue2)) {
-        option +=
+        option2 +=
             '<option value="'+ j + '" selected>' + calorieArray[j] + "</option>"
     } else {
-        option +=
+        option2 +=
             '<option value="'+ j + '">' + calorieArray[j] + "</option>"
     }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

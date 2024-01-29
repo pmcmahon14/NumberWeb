@@ -18,25 +18,26 @@ function clearAngle() {
   originalUnit2 = magFieldStrInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<magFieldStrArray.length;i++){
   if (i === parseInt(magFieldStrInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + magFieldStrArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + magFieldStrArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<magFieldStrArray.length;j++){
   if (j === parseInt(magFieldStrInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + magFieldStrArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + magFieldStrArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

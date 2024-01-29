@@ -47,9 +47,7 @@ const energyConvArray = [9.1979396615e-9, 1e18, 6.3196276031e-9, 7.5895567699e-9
   9.4781707775e-9, 9.4804342797e-9, 2.3890295762e-7, 2.3900573614e-10, 3.4120842375e-11, 2.3884589663e-11,
   0.00027777777778, 1, 1e24, 1e-24, 2.7777777778e-28, 1e21, 1e-21, 2.7777777778e-25];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = energyConvArray;
-})
+window.convArray = energyConvArray;
 
 function clearAngle() {
   selectedUnit1.value = energyInitValue1;
@@ -58,25 +56,26 @@ function clearAngle() {
   originalUnit2 = energyInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<energyArray.length;i++){
   if (i === parseInt(energyInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + energyArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + energyArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<energyArray.length;j++){
   if (j === parseInt(energyInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + energyArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + energyArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

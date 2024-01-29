@@ -40,9 +40,7 @@ const densityConvArray = [4.1470676161032e-7, 37.5, 0.0022883519106, 0.002288351
   3.6907123961e-11, 1.7219387755e-6, 1.0238753395e-8, 8.5255461214e-9, 2288.3519106, 2.2883519106e-6, 1.74957057e-6,
   0.0020833333869, 1.2056327471e-6, 0.056250001447, 0.00033446595284, 0.00027850118046, 2.2883519106e-6];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = densityConvArray;
-})
+window.convArray = densityConvArray;
 
 function clearAngle() {
   selectedUnit1.value = densityInitValue1;
@@ -51,25 +49,26 @@ function clearAngle() {
   originalUnit2 = densityInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<densityArray.length;i++){
   if (i === parseInt(densityInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + densityArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + densityArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<densityArray.length;j++){
   if (j === parseInt(densityInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + densityArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + densityArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

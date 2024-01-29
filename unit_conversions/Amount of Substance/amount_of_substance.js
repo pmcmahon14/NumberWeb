@@ -11,9 +11,7 @@ const aosInitValue2 = "0";
 const aosConvArray = [6.02214076e23, 1e-24, 1e-21, 1e-18, 1e-15, 1e-12, 1e-9, 0.000001, 0.001, 0.01,
   0.1, 1, 10, 100, 1000, 1000000, 1e9, 1e12, 1e15, 1e18, 1e21, 1e24];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = aosConvArray;
-})
+window.convArray = aosConvArray;
 
 function clearAos() {
   selectedUnit1.value = aosInitValue1;
@@ -22,25 +20,26 @@ function clearAos() {
   originalUnit2 = aosInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<aosArray.length;i++){
   if (i === parseInt(aosInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + aosArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + aosArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<aosArray.length;j++){
   if (j === parseInt(aosInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + aosArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + aosArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;

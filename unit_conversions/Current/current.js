@@ -11,9 +11,7 @@ const currentInitValue2 = "11";
 const currentConvArray = [0.1, 1, 0.1, 100, 1, 10, 0.1, 0.1, 2.9979245368e9, 2.9940119761e9, 0.01,
   0.001, 1e-6, 1e+6, 1000, 1, 2.9979245368e9, 1, 1, 1,];
 
-document.addEventListener("DOMContentLoaded", function(){
-  window.convArray = currentConvArray;
-})
+window.convArray = currentConvArray;
 
 function clearAngle() {
   selectedUnit1.value = currentInitValue1;
@@ -22,25 +20,26 @@ function clearAngle() {
   originalUnit2 = currentInitValue2;
 }
 
-let option = "";
+let option1 = "";
 for(let i=0;i<currentArray.length;i++){
   if (i === parseInt(currentInitValue1)) {
-    option +=
+    option1 +=
         '<option value="'+ i + '" selected>' + currentArray[i] + "</option>"
   } else {
-    option +=
+    option1 +=
         '<option value="'+ i + '">' + currentArray[i] + "</option>"
   }
 }
-document.getElementById("unit1").innerHTML = option;
+document.getElementById("unit1").innerHTML = option1;
 
+let option2 = "";
 for(let j=0;j<currentArray.length;j++){
   if (j === parseInt(currentInitValue2)) {
-    option +=
+    option2 +=
         '<option value="'+ j + '" selected>' + currentArray[j] + "</option>"
   } else {
-    option +=
+    option2 +=
         '<option value="'+ j + '">' + currentArray[j] + "</option>"
   }
 }
-document.getElementById("unit2").innerHTML = option;
+document.getElementById("unit2").innerHTML = option2;
