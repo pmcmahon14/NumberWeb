@@ -1,4 +1,4 @@
-const List<String> torqueArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/cm)', 'Dyne/Millimeter (dyn/mm)',
+const torqueArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/cm)', 'Dyne/Millimeter (dyn/mm)',
   'Dyne/Micrometer (dyn/µm)', 'Dyne/Yard (dyn/yd)', 'Dyne/Foot (dyn/ft)', 'Dyne/Inch (dyn/in)',
   'Gram Force/Meter (gf/m)', 'Gram Force/Centimeter (gf/cm)', 'Gram Force/Millimeter (gf/mm)',
   'Gram Force/Micrometer (gf/µm)', 'Gram Force/Yard (gf/yd)', 'Gram Force/Foot (gf/ft)',
@@ -23,11 +23,11 @@ const List<String> torqueArray = ['Dyne/Meter (dyn/m)', 'Dyne/Centimeter (dyn/cm
   'Ton Force/Centimeter (tnf/cm)', 'Ton Force/Millimeter (tnf/mm)', 'Ton Force/Micrometer (tnf/µm)',
   'Ton Force/Yard (tnf/yd)', 'Ton Force/Foot (tnf/ft)', 'Ton Force/Inch (tnf/in)'];
 
-String torqueInitValue1 = 'Newton/Meter (N/m)';
-String torqueInitValue2 = 'Gram Force/Meter (gf/m)';
+const torqueInitValue1 = "42";
+const torqueInitValue2 = "7";
 
 //based on 1 newton/meter
-const List<double> torqueConvArray = [100000, 10000000, 100000000, 1e+11, 109361.3, 328084, 3937007.9, 101.97,
+const torqueConvArray = [100000, 10000000, 100000000, 1e+11, 109361.3, 328084, 3937007.9, 101.97,
   10197, 101970, 101970000, 111.5157176, 334.5472548, 4014.566956, 0.1019716213, 10.19716213, 101.9716213,
   101971.6213, 0.1115174907, 0.334552574, 4.014630786, 0.001, 0.1, 1, 1000, 0.001093613, 0.00328084, 0.039370079,
   0.0002248089431, 0.02248089431, 0.2248089431, 224.8089431, 0.0002458539827, 0.0007375621729, 0.00885074585,
@@ -36,3 +36,36 @@ const List<double> torqueConvArray = [100000, 10000000, 100000000, 1e+11, 109361
   224.8089431, 224808.9431, 0.2458539827, 0.7375621729, 8.85074585, 7.233014, 723.3014, 7233.014, 7233014,
   7.91011814, 23.73036165, 284.7643326, 0.0001019716213, 0.01019716213, 0.1019716213, 101.9716213, 0.0001115174907,
   0.000334552574, 0.004014630786];
+
+window.convArray = torqueConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = torqueInitValue1;
+  selectedUnit2.value = torqueInitValue2;
+  originalUnit1 = torqueInitValue1;
+  originalUnit2 = torqueInitValue2;
+}
+
+let option1 = "";
+for(let i=0;i<torqueArray.length;i++){
+  if (i === parseInt(torqueInitValue1)) {
+    option1 +=
+        '<option value="'+ i + '" selected>' + torqueArray[i] + "</option>"
+  } else {
+    option1 +=
+        '<option value="'+ i + '">' + torqueArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option1;
+
+let option2 = "";
+for(let j=0;j<torqueArray.length;j++){
+  if (j === parseInt(torqueInitValue2)) {
+    option2 +=
+        '<option value="'+ j + '" selected>' + torqueArray[j] + "</option>"
+  } else {
+    option2 +=
+        '<option value="'+ j + '">' + torqueArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option2;
