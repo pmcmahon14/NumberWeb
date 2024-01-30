@@ -1,4 +1,4 @@
-const List<String> volumeArray = ['Acre Feet (ac-ft)', 'Acre Inch (ac-in)', 'Attoliter (al)',
+const volumeArray = ['Acre Feet (ac-ft)', 'Acre Inch (ac-in)', 'Attoliter (al)',
   'Barrel (Beer) (bbl)','Barrel (Dry, US) (bbl)', 'Barrel (Gasoline, US) (bbl)', 'Barrel (Oil) (bbl)',
   'Barrel (UK) (bbl)',
   'Barrel (US) (bbl)', 'Barrel (Wine, UK) (bbl)', 'Board Feet (BF)', 'Bucket (UK) (bucket)',
@@ -22,11 +22,11 @@ const List<String> volumeArray = ['Acre Feet (ac-ft)', 'Acre Inch (ac-in)', 'Att
   'Tablespoon (UK) (tbsp)', 'Tablespoon (US) (tbsp)', 'Teaspoon (Metric) (tsp)', 'Teaspoon (UK) (tsp)',
   'Teaspoon (US) (tsp)', 'Teraliter (Tl)', 'Thousand Cubic Feet (MCF)', 'Tun (tun)'];
 
-String volumeInitValue1 = 'Cubic Meter (m³)';
-String volumeInitValue2 = 'Gallon (US) (gal)';
+const volumeInitValue1 = "24";
+const volumeInitValue2 = "49";
 
 //based on 1 cubic meter
-const List<double> volumeConvArray = [0.0008107132, 0.0097285582, 1e21, 8.52, 8.65, 6.29, 6.29, 6.11, 8.39, 6.98,
+const volumeConvArray = [0.0008107132, 0.0097285582, 1e21, 8.52, 8.65, 6.29, 6.29, 6.11, 8.39, 6.98,
   423.78, 54.99, 52.83, 27.5, 28.38, 100000, 0.2758958338, 1000000, 6.94, 0.001, 1000, 35.31, 61023.74, 1e-9, 1,
   1e18, 2.3991275860e-10, 1000000000, 1e27, 1.31, 4399.38, 4000, 3519.51, 4226.75, 10000, 10, 100, 0.1, 140780.32,
   100000, 270512.19, 20000000, 4.8, 1e-15, 1e18, 1320.86, 227.02, 0.2641720373, 219.97, 264.17, 0.000001, 7039.02,
@@ -34,3 +34,36 @@ const List<double> volumeConvArray = [0.0008107132, 0.0097285582, 1e21, 8.52, 8.
   16230730.88, 1000000000000, 35195.08, 33814.02, 109.98, 113.51, 1e-12, 1e15, 1816.17, 1759.75, 2113.38, 2.04, 2.1,
   33814.03, 908.08, 879.88, 1056.69, 3.44, 0.3531466672, 811536.54, 33814.03, 1, 66666.67, 70390.16, 67628.06,
   200000, 281560.64, 202884.14, 1e-9, 0.0353146667, 1.05];
+
+window.convArray = volumeConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = volumeInitValue1;
+  selectedUnit2.value = volumeInitValue2;
+  originalUnit1 = volumeInitValue1;
+  originalUnit2 = volumeInitValue2;
+}
+
+let option1 = "";
+for(let i=0;i<volumeArray.length;i++){
+  if (i === parseInt(volumeInitValue1)) {
+    option1 +=
+        '<option value="'+ i + '" selected>' + volumeArray[i] + "</option>"
+  } else {
+    option1 +=
+        '<option value="'+ i + '">' + volumeArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option1;
+
+let option2 = "";
+for(let j=0;j<volumeArray.length;j++){
+  if (j === parseInt(volumeInitValue2)) {
+    option2 +=
+        '<option value="'+ j + '" selected>' + volumeArray[j] + "</option>"
+  } else {
+    option2 +=
+        '<option value="'+ j + '">' + volumeArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option2;
