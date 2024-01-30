@@ -1,4 +1,4 @@
-const List<String> volChDenArray = ['Abcoulomb/Cubic Meter (abC/m³)', 'Abcoulomb/Cubic Centimeter (abC/cm³)',
+const volChDenArray = ['Abcoulomb/Cubic Meter (abC/m³)', 'Abcoulomb/Cubic Centimeter (abC/cm³)',
   'Abcoulomb/Liter (abC/l)', 'Abcoulomb/Milliliter (abC/ml)', 'Abcoulomb/Microliter (abC/µl)',
   'Abcoulomb/Cubic Yard (abC/yd³)', 'Abcoulomb/Cubic Foot (abC/ft³)', 'Abcoulomb/Cubic Inch (abC/in³)',
   'Ampere Hour/Cubic Meter (A·h/m³)', 'Ampere Hour/Cubic Centimeter (A·h/cm³)', 'Ampere Hour/Liter (A·h/l)',
@@ -29,11 +29,11 @@ const List<String> volChDenArray = ['Abcoulomb/Cubic Meter (abC/m³)', 'Abcoulom
   'Statcoulomb/Milliliter (stC/ml)', 'Statcoulomb/Microliter (stC/µl)', 'Statcoulomb/Cubic Yard (stC/yd³)',
   'Statcoulomb/Cubic Foot (stC/ft³)', 'Statcoulomb/Cubic Inch (stC/in³)'];
 
-String volChDenInitValue1 = 'Coulomb/Cubic Meter (C/m³)';
-String volChDenInitValue2 = 'Ampere Second/Cubic Centimeter (A·s/cm³)';
+const volChDenInitValue1 = "32";
+const volChDenInitValue2 = "25";
 
 //based on 1 coulomb/cubic meter
-const List<double> volChDenConvArray = [0.1, 1e-7, 0.0001, 1e-7, 1e-10, 0.076455485798, 0.0028316846592,
+const volChDenConvArray = [0.1, 1e-7, 0.0001, 1e-7, 1e-10, 0.076455485798, 0.0028316846592,
   1.6387064e-6, 0.00027777777778, 2.7777777778e-10, 2.7777777778e-7, 2.7777777778e-10, 2.7777777778e-13,
   0.00021237634944, 7.86579072e-63, 4.5519622222e-9, 0.016666666667, 1.6666666667e-8, 1.6666666667e-5,
   1.6666666667e-8, 1.6666666667e-11, 0.012742580966, 0.0004719474432, 2.7311773333e-7, 1, 0.000001, 0.001,
@@ -44,3 +44,36 @@ const List<double> volChDenConvArray = [0.1, 1e-7, 0.0001, 1e-7, 1e-10, 0.076455
   0.000001, 764.55485798, 28.316846592, 0.016387064, 1000000, 1, 1000, 1, 0.001, 764554.85798, 28316.846592,
   16.387064, 2994011976.1, 2994.0119761, 2994011.9761, 2994.0119761, 2.9940119761, 2289086401.2, 84780977.82,
   49063.065868];
+
+window.convArray = volChDenConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = volChDenInitValue1;
+  selectedUnit2.value = volChDenInitValue2;
+  originalUnit1 = volChDenInitValue1;
+  originalUnit2 = volChDenInitValue2;
+}
+
+let option1 = "";
+for(let i=0;i<volChDenArray.length;i++){
+  if (i === parseInt(volChDenInitValue1)) {
+    option1 +=
+        '<option value="'+ i + '" selected>' + volChDenArray[i] + "</option>"
+  } else {
+    option1 +=
+        '<option value="'+ i + '">' + volChDenArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option1;
+
+let option2 = "";
+for(let j=0;j<volChDenArray.length;j++){
+  if (j === parseInt(volChDenInitValue2)) {
+    option2 +=
+        '<option value="'+ j + '" selected>' + volChDenArray[j] + "</option>"
+  } else {
+    option2 +=
+        '<option value="'+ j + '">' + volChDenArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option2;
