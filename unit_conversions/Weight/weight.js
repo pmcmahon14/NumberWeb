@@ -1,4 +1,4 @@
-const List<String> weightArray = ['Atomic Mass Unit (u)', 'Avogram (avogram)', 'Bale (UK) (bale)',
+const weightArray = ['Atomic Mass Unit (u)', 'Avogram (avogram)', 'Bale (UK) (bale)',
   'Bale (US) (bale)', 'Barge (barge)', 'Butter Stick (stick)', 'Carat (ct)', 'Clove (clove)', 'Dalton (Da)',
   'Deuteron Mass (D)', 'Dram (dr)', 'Dyne (Dyne)', 'Earth Mass (e)', 'Electron Mass (me)', 'Electron Volt (eV)',
   'Flask (flask)', 'Gamma (Γ)', 'Gigagram (Gg)', 'Gigaton (Metric) (Gtn)', 'Grain (gr)', 'Gram (g)',
@@ -12,11 +12,11 @@ const List<String> weightArray = ['Atomic Mass Unit (u)', 'Avogram (avogram)', '
   'Sheet (sheet)', 'Shekel (shekel)', 'Slug (slug)', 'Stone (st)', 'Sun Mass (sun)', 'Ton (Long) (tn)',
   'Ton (Metric) (tn)', 'Ton (Short) (tn)'];
 
-String weightInitValue1 = 'Gram (g)';
-String weightInitValue2 = 'Pound (lb)';
+const weightInitValue1 = "20";
+const weightInitValue2 = "47";
 
 //based on 1 gram
-const List<double> weightConvArray = [6.0229552895e23, 6.0221366517e23, 0.0000030619, 0.0000045931, 4.8991613819e-8,
+const weightConvArray = [6.0229552895e23, 6.0221366517e23, 0.0000030619, 0.0000045931, 4.8991613819e-8,
   0.0086956522, 5, 0.0003149606, 6.0229552895e23, 2.9908008955e23, 0.5643833912, 980.67, 1.6733601071e-28,
   1.0977683830e+27, 5.6095883572e32, 0.0000290082, 1000000, 1e-9, 1e-15, 15.43, 1, 0.0000196841, 0.0000220462,
   4.6424836208e-8, 0.0000220462, 0.001, 0.0000098067, 0.0000022046, 1.1023113109e-9, 9.8420652761e-10, 1e-9, 0.000001,
@@ -24,3 +24,36 @@ const List<double> weightConvArray = [6.0229552895e23, 6.0221366517e23, 0.000003
   0.0321507474, 0.6430148652, 45940.89, 500, 0.002, 0.0022046226, 0.002679229, 0.0709888484, 5.9786332055e23,
   0.0000787365, 0.0000881849, 0.7716179176, 1.54, 0.0875656743, 0.0000685218, 0.000157473, 5e-34, 9.8420652761e-7,
   0.000001, 0.0000011023];
+
+window.convArray = weightConvArray;
+
+function clearAngle() {
+  selectedUnit1.value = weightInitValue1;
+  selectedUnit2.value = weightInitValue2;
+  originalUnit1 = weightInitValue1;
+  originalUnit2 = weightInitValue2;
+}
+
+let option1 = "";
+for(let i=0;i<weightArray.length;i++){
+  if (i === parseInt(weightInitValue1)) {
+    option1 +=
+        '<option value="'+ i + '" selected>' + weightArray[i] + "</option>"
+  } else {
+    option1 +=
+        '<option value="'+ i + '">' + weightArray[i] + "</option>"
+  }
+}
+document.getElementById("unit1").innerHTML = option1;
+
+let option2 = "";
+for(let j=0;j<weightArray.length;j++){
+  if (j === parseInt(weightInitValue2)) {
+    option2 +=
+        '<option value="'+ j + '" selected>' + weightArray[j] + "</option>"
+  } else {
+    option2 +=
+        '<option value="'+ j + '">' + weightArray[j] + "</option>"
+  }
+}
+document.getElementById("unit2").innerHTML = option2;
