@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Descriptive Statistics</title>
+    <link type="text/css" rel="stylesheet" href="descriptive_stats.css">
+    <link type="text/css" rel="stylesheet" href="../../all-calc.css">
+</head>
+<body>
+<div class="logo">
+    <a href="../../index.html"><img src="../../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div id="top" style="height: 50px; color: white">
+    <h1>Descriptive Statistics</h1>
+</div>
+<div class="calculator">
+    <div class="column left">
+        <form>
+            <label for="input"></label>
+<!--            <input id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%">-->
+            <textarea id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%"></textarea>
+        </form>
+        <div class="keyboard">
+            <table>
+                <tr>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('7')">7</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('8')">8</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('9')">9</Button>
+                    <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAll()">CA</Button>
+                </tr>
+                <tr>
+                    <Button class="number" style="width :25%" onclick="buttonPressed('4')">4</Button>
+                    <Button class="number" style="width :25%" onclick="buttonPressed('5')">5</Button>
+                    <Button class="number" style="width :25%" onclick="buttonPressed('6')">6</Button>
+                    <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
+                </tr>
+                <tr>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
+                    <Button class="switch" style="width: 25%" onclick="buttonPressed('return')">&#11184;</Button>
+                </tr>
+                <tr>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>
+                    <Button class="number" style="width: 25%" onclick="buttonPressed(',')">,</Button>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="column middle" id="stat1"></div>
+    <div class="column right" id="stat2"></div>
+</div>
+<script src="descriptive_stats.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    background-color: black;
+    font-family: Arial, serif;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 49%;
+}
+
+.middle, .right{
+    width: 24%;
+}
+
+.middle {
+    border-left: 2px solid grey;
+}
+
+.right {
+    text-align: right;
+    color: white;
+}
+
+.stats {
+    color: white;
+}
+
+.odd {
+    background-color: #555555;
+}
+
+.even {
+    background-color: #333333;
+}
+
+#input {
+    height: 40px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    top: -50%;
+}
+
+.stats {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+form {
+    display: inline-block;
+    width: 49%;
+}
+
+/*keyboard*/
+.keyboard {
+    align-content: center;
+    height: 325px;
+    width: 300px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+}
+
+/*buttons*/
+button {
+    display: inline-block;
+    margin-top: 5px;
+    /*width: 10%;*/
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.number {
+    background-color: rgb(50, 50, 50);
+}
+
+.number:hover {
+    background-color: grey;
+}
+
+.clear {
+    background-color: rgb(51, 0, 9);
+}
+
+.clear:hover {
+    background-color: darkmagenta;
+}
+
+.switch {
+    background-color: tan;
+}
+
+.switch:hover {
+    background-color: rgb(255, 235, 205);
+}
+
+.unused {
+    background-color: black;
+    color: black;
+}
