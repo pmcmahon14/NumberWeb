@@ -16,6 +16,8 @@ let hypDisplay = document.getElementById("hypDisp");
 let shiftValue = shiftDisplay.innerHTML;
 let hypValue = hypDisplay.innerHTML;
 
+let decimalUsed = false;
+
 const radianDivide = 1;
 const degreeDivide = (Math.PI/180);
 const gradianDivide = ((Math.PI/180)*(1/9)*10);
@@ -78,23 +80,20 @@ function shiftHypSelectors() {
 
 function trigMeas(button) {
     outputLabel.innerHTML = button.innerText;
+    calculate();
 }
 
 function appendToDisplay(input) {
-    if (inputDisplay.value.length === 15) {
+    if (inputDisplay.value.length === 15 || inputDisplay.value.length === 16) {
         //nothing
     } else if (input === "0" && inputDisplay.value === "0") {
         //nothing
     } else if (inputDisplay.value === "0") {
         inputDisplay.value = input;
     } else {
-        let tempValue = inputDisplay.value;
-        tempValue = tempValue.toString();
-        tempValue+=input;
-        tempValue = parseInt(tempValue).toLocaleString();
-        inputDisplay.value=tempValue;
+        inputDisplay.value = inputDisplay.value+input;
+        calculate();
     }
-    calculate();
 }
 
 function selector() {
@@ -108,6 +107,7 @@ function selector() {
         document.getElementById("select").innerHTML = "DEGREE";
         measure = degreeDivide;
     }
+    calculate();
 }
 
 function clearAll() {
@@ -119,13 +119,29 @@ function clearAll() {
 }
 
 function clearError() {
-    let tempValue = parseInt(inputDisplay.value.replace(/,/g,""));
-    tempValue = Math.floor(tempValue/10);
-    if(tempValue.length === ""){
+    let tempTrig = parseInt(inputDisplay.value.replace(/,/g,""));
+    tempTrig = Math.floor(tempTrig/10);
+    if(tempTrig.length === ""){
         inputDisplay.value = "0";
     } else {
-        tempValue = tempValue.toLocaleString();
-        inputDisplay.value=tempValue;
+        tempTrig = tempTrig.toLocaleString();
+        inputDisplay.value=tempTrig;
+    }
+    calculate();
+}
+
+function decimalCalc() {
+    if (decimalUsed === false) {
+        inputDisplay.value = inputDisplay.value+".";
+        decimalUsed = true;
+    }
+}
+
+function plusMinus() {
+    if (inputDisplay.value.startsWith("-")) {
+        inputDisplay.value = inputDisplay.value.substring(1);
+    } else {
+        inputDisplay.value = "-"+inputDisplay.value;
     }
     calculate();
 }

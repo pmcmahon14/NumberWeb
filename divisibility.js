@@ -73,5 +73,4 @@ function calculate() {
             answerDisplay.value = `${answerDisplay.value}and ${divisorList[count-1]}.`;
         }
     }
-
 }

@@ -44,28 +44,28 @@
     <div class="keyboard">
         <table>
             <tr>
-                <Button class="number" style="width: 25%" value="1" onclick="appendToDisplay('7')">7</Button>
-                <Button class="number" style="width: 25%" value="2" onclick="appendToDisplay('8')">8</Button>
-                <Button class="number" style="width: 25%" value="3" onclick="appendToDisplay('9')">9</Button>
-                <Button class="clear" style="width: 25%" onclick="clearAll()">CA</Button>
+                <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
             </tr>
             <tr>
-                <Button class="number" style="width :25%"  value="q" onclick="appendToDisplay('4')">4</Button>
-                <Button class="number" style="width :25%"  value="w" onclick="appendToDisplay('5')">5</Button>
-                <Button class="number" style="width :25%" value="e" onclick="appendToDisplay('6')">6</Button>
-                <Button class="clear" style="width: 25%" onclick="clearError()">&#9003;</Button>
+                <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('1')">1</Button>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('2')">2</Button>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('3')">3</Button>
+                <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay('3')">3</Button>
 <!--                <Button class="enter" style="width: 25%" onclick="calculate()">&#9166;</Button>-->
                 <Button disabled class="unused">.</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('0')">0</Button>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('.')">.</Button>
-                <Button class="number" style="width: 25%" onclick="appendToDisplay('-')">+/-</Button>
+                <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" onclick="decimalCalc()">.</Button>
+                <Button class="number" onclick="plusMinus()">+/-</Button>
                 <Button disabled class="unused">.</Button>
             </tr>
         </table>

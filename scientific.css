@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+    font-family: Arial, serif;
+}
+
+.calculator {
+    height: 350px;
+    width: 624px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+    /*1080x2106  1.95 ratio*/
+}
+
+#input {
+    width: 98%;
+    height: 40px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    text-align: right;
+    position: relative;
+    top: -50%;
+}
+
+/*for answer*/
+#answer {
+    font-family: Arial, serif;
+    width: 98%;
+    height: 180px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 27px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    overflow-wrap: normal;
+}
+
+/*keyboard*/
+.keyboard {
+    align-content: center;
+}
+
+/*buttons*/
+button {
+    display: inline-block;
+    margin-top: 5px;
+    width: 10%;
+    height: 13%;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.trig {
+    background-color: steelblue;
+}
+
+.number {
+    background-color: rgb(50, 50, 50);
+}
+
+.number:hover {
+    background-color: grey;
+}
+
+.clear {
+    background-color: rgb(51, 0, 9);
+}
+
+.clear:hover {
+    background-color: darkmagenta;
+}
+
+.unused {
+    background-color: black;
+    color: black;
+}
+
+.enter {
+    background-color: tan;
+}
+
+.enter:hover {
+    background-color: antiquewhite;
+}
