@@ -4,7 +4,7 @@ body {
 }
 
 .calculator {
-    height: 350px;
+    height: 250px;
     width: 624px;
     border: solid white 1px;
     margin-left: auto;
@@ -51,8 +51,8 @@ body {
 button {
     display: inline-block;
     margin-top: 5px;
-    width: 10%;
-    height: 13%;
+    width: 9.09%;
+    height: 18%;
     border: none;
     border-radius: 50%;
     font-size: 16px;
@@ -86,10 +86,26 @@ button {
     color: black;
 }
 
-.enter {
+.equal {
     background-color: tan;
 }
 
 .enter:hover {
     background-color: antiquewhite;
+}
+
+.operation {
+    background-color: darkorange;
+}
+
+.operation:hover {
+    background-color: lightcoral;
+}
+
+.math {
+    background-color: grey;
+}
+
+.math:hover {
+    background-color: darkgray;
 }

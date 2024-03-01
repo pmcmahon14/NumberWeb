@@ -20,93 +20,99 @@
     <!--row 1-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">sin</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">cos</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">tan</Button>
+            <Button class="trig" id="degree" onclick="selector()">DEG</Button>
+            <Button class="trig" onclick="hyp()">HYP</Button>
+            <Button class="trig" onclick="appendToDisplay('9')">&#960;</Button>
             <Button class="number" onclick="appendToDisplay('7')">7</Button>
             <Button class="number" onclick="appendToDisplay('8')">8</Button>
             <Button class="number" onclick="appendToDisplay('9')">9</Button>
             <Button class="clear" onclick="clearAll()">CA</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
+            <Button class="operation" onclick="appendToDisplay('7')">&#247;</Button>
+            <Button class="math" onclick="appendToDisplay('8')">x&#8730;y</Button>
+            <Button class="math" onclick="appendToDisplay('9')">^</Button>
+            <Button class="math" onclick="appendToDisplay('9')">10<sup>x</sup></Button>
         </tr>
     </table>
     <!--row 2-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">asin</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">acos</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">atan</Button>
+            <Button class="trig" id="sin" onclick="appendToDisplay('7')">sin</Button>
+            <Button class="trig" id="cos" onclick="appendToDisplay('8')">cos</Button>
+            <Button class="trig" id="tan" onclick="appendToDisplay('9')">tan</Button>
             <Button class="number" onclick="appendToDisplay('4')">4</Button>
             <Button class="number" onclick="appendToDisplay('5')">5</Button>
             <Button class="number" onclick="appendToDisplay('6')">6</Button>
             <Button class="clear" onclick="clearError()">&#9003;</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
+            <Button class="operation" onclick="appendToDisplay('4')">x</Button>
+            <Button class="math" onclick="appendToDisplay('5')">e</Button>
+            <Button class="math" onclick="appendToDisplay('6')">1/x</Button>
+            <Button class="math" onclick="appendToDisplay('9')">n!</Button>
         </tr>
     </table>
     <!--row 3-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">sec</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">csc</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">cot</Button>
+            <Button class="trig" id="asin" onclick="appendToDisplay('7')">asin</Button>
+            <Button class="trig" id="acos" onclick="appendToDisplay('8')">acos</Button>
+            <Button class="trig" id="atan" onclick="appendToDisplay('9')">atan</Button>
             <Button class="number" onclick="appendToDisplay('1')">1</Button>
             <Button class="number" onclick="appendToDisplay('2')">2</Button>
             <Button class="number" onclick="appendToDisplay('3')">3</Button>
-            <Button class="enter" onclick="calculate()">&#9166;</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
+            <Button class="equal" onclick="calculate()">=</Button>
+            <Button class="operation" onclick="appendToDisplay('1')">-</Button>
+            <Button class="math" onclick="appendToDisplay('2')">ln</Button>
+            <Button class="math" onclick="appendToDisplay('3')">log</Button>
+            <Button class="math" onclick="appendToDisplay('9')">&Sigma;</Button>
         </tr>
     </table>
     <!--row 4-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">sinh</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">cosh</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">tanh</Button>
+            <Button class="trig" id="sec" onclick="appendToDisplay('7')">sec</Button>
+            <Button class="trig" id="csc" onclick="appendToDisplay('8')">csc</Button>
+            <Button class="trig" id="cot" onclick="appendToDisplay('9')">cot</Button>
             <Button class="number" onclick="appendToDisplay('0')">0</Button>
+            <Button class="number" onclick="appendToDisplay('00')">00</Button>
             <Button class="number">.</Button>
             <Button class="number">+/-</Button>
-            <Button disabled class="unused">.</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
+            <Button class="operation" onclick="appendToDisplay('7')">+</Button>
+            <Button class="math" onclick="appendToDisplay('8')">(</Button>
+            <Button class="math" onclick="appendToDisplay('9')">)</Button>
+            <Button class="math" onclick="appendToDisplay('9')">%</Button>
         </tr>
     </table>
     <!--row 5-->
-    <table class="keyboard">
-        <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">asinh</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">acosh</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">atanh</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-        </tr>
-    </table>
-    <!--row 6-->
-    <table class="keyboard">
-        <tr>
-            <Button class="trig" onclick="appendToDisplay('7')">sech</Button>
-            <Button class="trig" onclick="appendToDisplay('8')">csch</Button>
-            <Button class="trig" onclick="appendToDisplay('9')">coth</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-            <Button class="number" onclick="appendToDisplay('7')">7</Button>
-            <Button class="number" onclick="appendToDisplay('8')">8</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-            <Button class="number" onclick="appendToDisplay('9')">9</Button>
-        </tr>
-    </table>
+<!--    <table class="keyboard">-->
+<!--        <tr>-->
+<!--            <Button class="trig" onclick="appendToDisplay('7')">asinh</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('8')">acosh</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('9')">atanh</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Phi;</Button>&lt;!&ndash;1.618033988 749894&ndash;&gt;-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Sigma;</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Gamma;</Button>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    &lt;!&ndash;row 6&ndash;&gt;-->
+<!--    <table class="keyboard">-->
+<!--        <tr>-->
+<!--            <Button class="trig" onclick="appendToDisplay('7')">sech</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('8')">csch</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('9')">coth</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--        </tr>-->
+<!--    </table>-->
 </div>
 <script src="scientific.js"></script>
 </body>

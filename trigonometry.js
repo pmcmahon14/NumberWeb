@@ -20,8 +20,10 @@ let decimalUsed = false;
 
 const radianDivide = 1;
 const degreeDivide = (Math.PI/180);
+const altDegreeDivide = (180/Math.PI);
 const gradianDivide = ((Math.PI/180)*(1/9)*10);
 let measure = degreeDivide;
+let altMeasure = altDegreeDivide;
 
 const sinArray = ["sin", "cos", "tan"];
 const secArray = ["sec", "csc", "cot"];
@@ -116,12 +118,17 @@ function clearAll() {
     inputDisplay.value ='0';
     outputDisplay.value = '0';
     outputLabel.innerText = "sin";
+    decimalUsed = false;
 }
 
 function clearError() {
-    let tempTrig = parseInt(inputDisplay.value.replace(/,/g,""));
-    tempTrig = Math.floor(tempTrig/10);
-    if(tempTrig.length === ""){
+    // let tempTrig = parseInt(inputDisplay.value.replace(/,/g,""));
+    // tempTrig = Math.floor(tempTrig/10);
+    if (inputDisplay.value.slice(".")) {
+        decimalUsed = false;
+    }
+    let tempTrig = inputDisplay.value.substring(0, inputDisplay.value.length-1);
+    if(tempTrig === ""){
         inputDisplay.value = "0";
     } else {
         tempTrig = tempTrig.toLocaleString();
@@ -158,13 +165,13 @@ function calculate() {
             outputDisplay.value = Math.tan(inputDisplay.value*measure).toFixed(10);
             break;
         case "asin":
-            outputDisplay.value = Math.asin(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.asin(inputDisplay.value)*altMeasure.toFixed(10);
             break;
         case "acos":
-            outputDisplay.value = Math.acos(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.acos(inputDisplay.value*altMeasure).toFixed(10);
             break;
         case "atan":
-            outputDisplay.value = Math.atan(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.atan(inputDisplay.value*altMeasure).toFixed(10);
             break;
         case "sec":
             outputDisplay.value = (1/(Math.sin(inputDisplay.value*measure))).toFixed(10);
@@ -185,22 +192,26 @@ function calculate() {
             outputDisplay.value = Math.tanh(inputDisplay.value*measure).toFixed(10);
             break;
         case "asinh":
-            outputDisplay.value = Math.asinh(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.asinh(inputDisplay.value*altMeasure).toFixed(10);
             break;
         case "acosh":
-            outputDisplay.value = Math.acosh(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.acosh(inputDisplay.value*altMeasure).toFixed(10);
             break;
         case "atanh":
-            outputDisplay.value = Math.atanh(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = Math.atanh(inputDisplay.value*altMeasure).toFixed(10);
             break;
         case "sech":
-            outputDisplay.value = Math.asin(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = (1/(Math.sinh(inputDisplay.value*measure))).toFixed(10);
             break;
         case "csch":
-            outputDisplay.value = Math.acos(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = (1/(Math.cosh(inputDisplay.value*measure))).toFixed(10);
             break;
         case "coth":
-            outputDisplay.value = Math.atan(inputDisplay.value*measure).toFixed(10);
+            outputDisplay.value = (1/(Math.tanh(inputDisplay.value*measure))).toFixed(10);
             break;
+
+            //todo add acsch, asech, acoth
+        case "acsch":
+            outputDisplay.value = (Math.log(Math.sqrt(1+(1/(45*deg)))+(1/(45*deg)))).toFixed(10);
     }
 }
