@@ -3,8 +3,8 @@ body {
     font-family: Arial, serif;
 }
 
-.calculator {
-    height: 634px;
+.keyboard {
+    height: 420px;
     width: 325px;
     border: solid white 1px;
     margin-left: auto;
@@ -17,13 +17,34 @@ body {
 
 /*this container explains input range*/
 #guideline {
-    height: 5%;
+    height: 30px;
 }
 
 #instruction {
-    font-size: 13px;
+    font-size: 15px;
     color: white;
     text-align: center;
+}
+
+.column {
+    float: left;
+}
+
+.left, .middle, .right{
+    width: 33%;
+}
+
+#divisibility, #prime {
+    font-family: Arial, serif;
+    width: 98%;
+    height: 180px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    overflow-wrap: normal;
 }
 
 #input {
@@ -39,20 +60,6 @@ body {
     top: -50%;
 }
 
-/*for answer*/
-#answer {
-    font-family: Arial, serif;
-    width: 98%;
-    height: 180px;
-    border: solid white 1px;
-    border-radius: 15px;
-    font-size: 27px;
-    background-color: black;
-    color: white;
-    text-align: left;
-    overflow-wrap: normal;
-}
-
 /*keyboard*/
 .keyboard {
     align-content: center;
@@ -63,7 +70,7 @@ button {
     display: inline-block;
     margin-top: 5px;
     width: 25%;
-    height: 13%;
+    height: 75px;
     border: none;
     border-radius: 50%;
     font-size: 24px;

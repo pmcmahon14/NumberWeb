@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisibility Calculator</title>
+    <link type="text/css" rel="stylesheet" href="divisibility.css">
+</head>
+<body>
+    <div class="top">
+        <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+    </div>
+<div class="top" style="height: 50px; color: white; margin-bottom: 50px">
+    <h1>Divisibility Calculator</h1>
+</div>
+<div class="calculator">
+    <div class="column left">
+        <form>
+            <label for="divisibility" style="color: white; font-size: 20px">Divisibility</label>
+            <textarea id="divisibility" type="text" readonly></textarea>
+        </form>
+    </div>
+    <div class="column middle">
+        <div class="keyboard">
+            <div id="guideline">
+                <p id="instruction">Enter a number between 2 and 999,999,999.</p>
+            </div>
+            <form>
+                <label for="input"></label>
+                <input id="input" type="text" value="0" readonly>
+            </form>
+            <table>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('7')"22>7</Button>
+                    <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                    <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                    <Button class="clear" onclick="clearAll()">CA</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                    <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                    <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                    <Button class="clear" onclick="clearError()">&#9003;</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                    <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                    <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                    <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button disabled class="unused">.</Button>
+                    <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                    <Button disabled class="unused">.</Button>
+                    <Button disabled class="unused">.</Button>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="column right">
+        <form>
+            <label for="prime" style="color: white">Prime Factors</label>
+            <textarea id="prime" type="text" readonly></textarea>
+        </form>
+    </div>
+</div>
+<script src="divisibility.js"></script>
+</body>
+</html>
