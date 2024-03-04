@@ -13,88 +13,17 @@
 <div class="top" style="height: 50px; color: white">
     <h1>Base Number Converter</h1>
 </div>
-<div class="calculator">
-    <div style="height: 10%">
-        <p style="font-size: 20px; color: white;">Tabs go here.</p>
-    </div>
+<div class="calculator" style="margin-top: 50px">
     <div class="baseDropdown" style="text-align: center; height: 7%">
-        <label for="base1" style="color: white">BASE:</label>
-        <select name="base1" id="base1" onchange="changeBase(selectedBase1.value)" style="background-color: black; color: white">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10" selected>10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-            <option value="32">32</option>
-            <option value="33">33</option>
-            <option value="34">34</option>
-            <option value="35">35</option>
-            <option value="36">36</option>
+        <label for="base1" style="color: white; font-size: 20px">BASE:</label>
+        <select name="base1" id="base1" onchange="changeBase(selectedBase1.value)"
+                style="background-color: black; color: white; font-size: 20px">
         </select>
     </div>
     <div  class="baseDropdown" style="text-align: center; height: 7%">
-        <label for="base2" style="color: white">BASE:</label>
-        <select name="cars" id="base2" onchange="changeBase(selectedBase2.value)" style="background-color: black; color: white">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10" selected>10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-            <option value="32">32</option>
-            <option value="33">33</option>
-            <option value="34">34</option>
-            <option value="35">35</option>
-            <option value="36">36</option>
+        <label for="base2" style="color: white; font-size: 20px">BASE:</label>
+        <select name="cars" id="base2" onchange="changeBase(selectedBase2.value)"
+                style="background-color: black; color: white; font-size: 20px">
         </select>
     </div>
     <div>
@@ -107,52 +36,51 @@
             <input id="baseOutput" type="text" value="0" style="text-align: center" readonly>
         </form>
     </div>
-
     <div class="keyboard">
         <table>
             <tr>
-                <Button class="number" style="width: 10%" value="1" onclick="appendToDisplay('1')">1</Button>
-                <Button class="number" style="width: 10%" value="2" onclick="appendToDisplay('2')">2</Button>
-                <Button class="number" style="width: 10%" value="3" onclick="appendToDisplay('3')">3</Button>
-                <Button class="number" style="width: 10%" value="4" onclick="appendToDisplay('4')">4</Button>
-                <Button class="number" style="width: 10%" value="5" onclick="appendToDisplay('5')">5</Button>
-                <Button class="number" style="width: 10%" value="6" onclick="appendToDisplay('6')">6</Button>
-                <Button class="number" style="width: 10%" value="7" onclick="appendToDisplay('7')">7</Button>
-                <Button class="number" style="width: 10%" value="8" onclick="appendToDisplay('8')">8</Button>
-                <Button class="number" style="width: 10%" value="9" onclick="appendToDisplay('9')">9</Button>
-                <Button class="number" style="width: 10%" value="0" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" style="width: 10%" id="2" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" style="width: 10%" id="3" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" style="width: 10%" id="4" onclick="appendToDisplay('3')">3</Button>
+                <Button class="number" style="width: 10%" id="5" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" style="width: 10%" id="6" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" style="width: 10%" id="7" onclick="appendToDisplay('6')">6</Button>
+                <Button class="number" style="width: 10%" id="8" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" style="width: 10%" id="9" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" style="width: 10%" id="10" onclick="appendToDisplay('9')">9</Button>
+                <Button class="number" style="width: 10%" id="1" onclick="appendToDisplay('0')">0</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 10%"  value="q" onclick="appendToDisplay('q')" disabled="false">q</Button>
-                <Button class="number" style="width: 10%"  value="w" onclick="appendToDisplay('w')">w</Button>
-                <Button class="number" style="width: 10%" value="e" onclick="appendToDisplay('e')">e</Button>
-                <Button class="number" style="width: 10%" value="r" onclick="appendToDisplay('r')">r</Button>
-                <Button class="number" style="width: 10%" value="t" onclick="appendToDisplay('t')">t</Button>
-                <Button class="number" style="width: 10%" value="y" onclick="appendToDisplay('y')">y</Button>
-                <Button class="number" style="width: 10%" value="u" onclick="appendToDisplay('u')">u</Button>
-                <Button class="number" style="width: 10%" value="i" onclick="appendToDisplay('i')">i</Button>
-                <Button class="number" style="width: 10%" value="o" onclick="appendToDisplay('o')">o</Button>
-                <Button class="number" style="width: 10%" value="p" onclick="appendToDisplay('p')">p</Button>
+                <Button class="number" style="width: 10%" id="27" onclick="appendToDisplay('q')">q</Button>
+                <Button class="number" style="width: 10%" id="33" onclick="appendToDisplay('w')">w</Button>
+                <Button class="number" style="width: 10%" id="15" onclick="appendToDisplay('e')">e</Button>
+                <Button class="number" style="width: 10%" id="28" onclick="appendToDisplay('r')">r</Button>
+                <Button class="number" style="width: 10%" id="30" onclick="appendToDisplay('t')">t</Button>
+                <Button class="number" style="width: 10%" id="35" onclick="appendToDisplay('y')">y</Button>
+                <Button class="number" style="width: 10%" id="31" onclick="appendToDisplay('u')">u</Button>
+                <Button class="number" style="width: 10%" id="19" onclick="appendToDisplay('i')">i</Button>
+                <Button class="number" style="width: 10%" id="25" onclick="appendToDisplay('o')">o</Button>
+                <Button class="number" style="width: 10%" id="26" onclick="appendToDisplay('p')">p</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('a')">a</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('s')">s</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('d')">d</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('f')">f</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('g')">g</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('h')">h</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('j')">j</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('k')">k</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('l')">l</Button>
+                <Button class="number" style="width: 11%" id="11" onclick="appendToDisplay('a')">a</Button>
+                <Button class="number" style="width: 11%" id="29" onclick="appendToDisplay('s')">s</Button>
+                <Button class="number" style="width: 11%" id="14" onclick="appendToDisplay('d')">d</Button>
+                <Button class="number" style="width: 11%" id="16" onclick="appendToDisplay('f')">f</Button>
+                <Button class="number" style="width: 11%" id="17" onclick="appendToDisplay('g')">g</Button>
+                <Button class="number" style="width: 11%" id="18" onclick="appendToDisplay('h')">h</Button>
+                <Button class="number" style="width: 11%" id="20" onclick="appendToDisplay('j')">j</Button>
+                <Button class="number" style="width: 11%" id="21" onclick="appendToDisplay('k')">k</Button>
+                <Button class="number" style="width: 11%" id="22" onclick="appendToDisplay('l')">l</Button>
             </tr>
             <tr>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('z')">z</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('x')">x</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('c')">c</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('v')">v</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('b')">b</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('n')">n</Button>
-                <Button class="number" style="width: 11%" onclick="appendToDisplay('m')">m</Button>
+                <Button class="number" style="width: 11%" id="36" onclick="appendToDisplay('z')">z</Button>
+                <Button class="number" style="width: 11%" id="34" onclick="appendToDisplay('x')">x</Button>
+                <Button class="number" style="width: 11%" id="13" onclick="appendToDisplay('c')">c</Button>
+                <Button class="number" style="width: 11%" id="32" onclick="appendToDisplay('v')">v</Button>
+                <Button class="number" style="width: 11%" id="12" onclick="appendToDisplay('b')">b</Button>
+                <Button class="number" style="width: 11%" id="24" onclick="appendToDisplay('n')">n</Button>
+                <Button class="number" style="width: 11%" id="23" onclick="appendToDisplay('m')">m</Button>
                 <Button class="clear" style="width: 11%" onclick="clearError()">&#9003;</Button>
                 <Button class="clear" style="width: 11%" onclick="clearAll()">CA</Button>
             </tr>

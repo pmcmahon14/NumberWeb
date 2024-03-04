@@ -1,17 +1,3 @@
-// function openCity(evt, cityName) {
-//     var i, tabcontent, tablinks;
-//     tabcontent = document.getElementsByClassName("tabcontent");
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("tablinks");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//     document.getElementById(cityName).style.display = "block";
-//     evt.currentTarget.className += " active";
-// }
-
 const inputDisplay = document.getElementById("baseInput");
 const outputDisplay = document.getElementById("baseOutput");
 let selectedBase1 = document.getElementById("base1");
@@ -19,13 +5,58 @@ let selectedBase2 = document.getElementById("base2");
 let originalBase1 = "10";
 let originalBase2 = "10";
 
+// document.getElementById("1").enabled = true;
+// document.getElementById("2").enabled = true;
+// document.getElementById("3").enabled = true;
+// document.getElementById("4").enabled = true;
+// document.getElementById("5").enabled = true;
+// document.getElementById("6").enabled = true;
+// document.getElementById("7").enabled = true;
+// document.getElementById("8").enabled = true;
+// document.getElementById("9").enabled = true;
+// document.getElementById("10").enabled = true;
+// document.getElementById("11").enabled = false;
+// document.getElementById("12").enabled = false;
+// document.getElementById("13").enabled = false;
+// document.getElementById("14").enabled = false;
+// document.getElementById("15").enabled = false;
+// document.getElementById("16").enabled = false;
+// document.getElementById("17").enabled = false;
+// document.getElementById("18").enabled = false;
+// document.getElementById("19").enabled = false;
+// document.getElementById("20").enabled = false;
+// document.getElementById("21").enabled = false;
+// document.getElementById("22").enabled = false;
+// document.getElementById("23").enabled = false;
+// document.getElementById("24").enabled = false;
+// document.getElementById("25").enabled = false;
+// document.getElementById("26").enabled = false;
+// document.getElementById("27").enabled = false;
+// document.getElementById("28").enabled = false;
+// document.getElementById("29").enabled = false;
+// document.getElementById("30").enabled = false;
+// document.getElementById("31").enabled = false;
+// document.getElementById("32").enabled = false;
+// document.getElementById("33").enabled = false;
+// document.getElementById("34").enabled = false;
+// document.getElementById("35").enabled = false;
+// document.getElementById("36").enabled = false;
+
 let tempValue = 0;
 
-//todo dynamically generate buttons
+function disableButton() {
+    for (let b=1; b<37; b++) {
+        if (b<=parseInt(selectedBase1.value)) {
+            document.getElementById(`${b}`).disabled = false;
+        } else {
+            document.getElementById(`${b}`).disabled = true;
+        }
+    }
+}
 
 function appendToDisplay(input) {
     if (parseInt(input, selectedBase1.value).toString(selectedBase2.value) === "NaN") {
-        inputDisplay.value === inputDisplay.value;
+        //inputDisplay.value === inputDisplay.value;
     } else if (inputDisplay.value === '0' && input === '0') {
         inputDisplay.value = '0';
     } else if (inputDisplay.value === '0') {
@@ -49,6 +80,7 @@ function clearAll() {
     outputDisplay.value = "0";
     originalBase1 = "10";
     originalBase2 = "10";
+    disableButton();
 }
 
 function clearError() {
@@ -72,42 +104,31 @@ function changeBase(selectedBase1) {
     let convertBase1 = parseInt(inputDisplay.value, parseInt(originalBase1)).toString(selectedBase1);
     inputDisplay.value = parseInt(convertBase1.toString(), selectedBase1);
     baseConverter1();
+    disableButton();
 }
 
-// console.log(parseInt('2143', 5).toString(9) );
-
-// const selectedBase = document.getElementById("base1").value;
-// const inputButton = document.getElementsByClassName("numberButton");
-// const buttonValue = document.getElementsByClassName("numberButton").value;
-
-function selectBase() {
-    //let b1value = document.getElementById("base1").value;
-    // for (let i=2; i<37; i++) {
-    //     selectedBase.addEventListener("change", (e) => {
-    //         console.log('hit');
-    //         const baseValue = e.currentTarget.value;
-    //         inputButton[i].disabled = true;
-    //         if (baseValue <= buttonValue) {
-    //             console.log(buttonValue);
-    //             inputButton.disabled = false;
-    //         }
-    //     })
-    // }
-
-    //this one tests correctly
-    // let n = "ada";
-    // let base1 = 13;
-    // let base2 = 9;
-    // for (let i=0; i<n.length; i++) {
-    //     if ((parseInt(n[i], base1).toString(base2)) == "NaN") {
-    //         console.log((parseInt(n[i], base1).toString(base2)));
-    //         console.log(parseInt(n[i])+' no!');
-    //         console.log('try again dammit!');
-    //         break;
-    //     } else {
-    //         console.log(parseInt(n[i]));
-    //         console.log('yay it worked');
-    //     }
-    // }
+let baseNumber1 = "";
+for (let i=2; i<37; i++) {
+    if (i===10) {
+        baseNumber1 +=
+            '<option value="'+ i + '" selected>' + i + "</option>"
+    } else {
+        baseNumber1 +=
+            '<option value="'+ i + '">' + i + "</option>"
+    }
 }
+document.getElementById("base1").innerHTML = baseNumber1;
 
+let baseNumber2 = "";
+for(let j=2; j<37; j++) {
+    if (j === 10) {
+        baseNumber2 +=
+            '<option value="'+ j + '" selected>' + j + "</option>"
+    } else {
+        baseNumber2 +=
+            '<option value="'+ j + '">' + j + "</option>"
+    }
+}
+document.getElementById("base2").innerHTML = baseNumber2;
+
+disableButton();

@@ -3,6 +3,10 @@ body {
     font-family: Arial, serif;
 }
 
+button:disabled {
+    color: #555555;
+}
+
 /*.calculator {*/
 /*    height: 634px;*/
 /*    width: 325px;*/
