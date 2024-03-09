@@ -1,54 +1,62 @@
-// function openCity(evt, cityName) {
-//     var i, tabcontent, tablinks;
-//     tabcontent = document.getElementsByClassName("tabcontent");
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-//     tablinks = document.getElementsByClassName("tablinks");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//     document.getElementById(cityName).style.display = "block";
-//     evt.currentTarget.className += " active";
-// }
-
-const inputDisplay = document.getElementById("baseInput");
+const input1Display = document.getElementById("baseInput1");
+const input2Display = document.getElementById("baseInput2");
+const opDisplay = document.getElementById("operationInput");
 const outputDisplay = document.getElementById("baseOutput");
-let selectedBase1 = document.getElementById("base1");
-let selectedBase2 = document.getElementById("base2");
-let originalBase1 = "10";
-let originalBase2 = "10";
+let selectedBase = document.getElementById("base1");
+let originalBase = "10";
+let equalUsed = false;
 
 let tempValue = 0;
+let currentDisplay = input1Display;
 
-//todo dynamically generate buttons
-
-function appendToDisplay(input) {
-    if (parseInt(input, selectedBase1.value).toString(selectedBase2.value) === "NaN") {
-        inputDisplay.value === inputDisplay.value;
-    } else if (inputDisplay.value === '0' && input === '0') {
-        inputDisplay.value = '0';
-    } else if (inputDisplay.value === '0') {
-        inputDisplay.value = input;
-        baseConverter1();
-    } else {
-        //todo need to include base for testing
-        let testInput = inputDisplay.value + input;
-        let convertBase = parseInt(testInput, parseInt(selectedBase1.value));
-        if (convertBase <= parseInt("9223372036854775807", 10)) {
-            inputDisplay.value = testInput;
-            baseConverter1();
+function disableButton() {
+    for (let b=1; b<37; b++) {
+        if (b<=parseInt(selectedBase.value)) {
+            document.getElementById(`${b}`).disabled = false;
+        } else {
+            document.getElementById(`${b}`).disabled = true;
         }
     }
 }
 
+function appendToDisplay(input) {
+    if (equalUsed === true) {
+        //nothing
+    } else {
+        if (opDisplay.value !== "") {
+            currentDisplay = input2Display;
+        } else {
+
+        }
+        if (currentDisplay.value === '0' && input === '0') {
+            currentDisplay.value = '0';
+        } else if (currentDisplay.value === '0') {
+            currentDisplay.value = input;
+            console.log(currentDisplay.value);
+            //baseConverter1();
+        } else {
+            //todo need to include base for testing
+            let testInput = currentDisplay.value + input;
+            console.log(currentDisplay.value);
+            let convertBase = parseInt(testInput, parseInt(selectedBase.value));
+            if (convertBase <= parseInt("9223372036854775807", 10)) {
+                currentDisplay.value = testInput;
+                //baseConverter1();
+            }
+        }
+    }
+
+}
+
 function clearAll() {
-    selectedBase1.value = '10';
-    selectedBase2.value = '10';
-    inputDisplay.value = "0";
+    selectedBase.value = '10';
+    input1Display.value = "0";
+    input2Display.value = "0";
+    opDisplay.value = "";
     outputDisplay.value = "0";
-    originalBase1 = "10";
-    originalBase2 = "10";
+    originalBase = "10";
+    currentDisplay = input1Display;
+    equalUsed = false;
 }
 
 function clearError() {
@@ -59,59 +67,52 @@ function clearError() {
         tempValue = tempValue.toLocaleString();
         inputDisplay.value=tempValue;
     }
-    baseConverter1();
+    //baseConverter1();
 }
 
 function baseConverter1() {
-    outputDisplay.value = parseInt(inputDisplay.value, parseInt(selectedBase1.value)).toString(parseInt(selectedBase2.value));
+    console.log(originalBase);
+    currentDisplay.value = parseInt(currentDisplay.value, parseInt(originalBase.value)).toString(selectedBase.value);
 }
 
-function changeBase(selectedBase1) {
-    originalBase1 = selectedBase1.value;
-    selectedBase1 = selectedBase1.value;
-    let convertBase1 = parseInt(inputDisplay.value, parseInt(originalBase1)).toString(selectedBase1);
-    inputDisplay.value = parseInt(convertBase1.toString(), selectedBase1);
-    baseConverter1();
+function calculate() {
+    const first = parseInt(input1Display.value, parseInt((selectedBase.value)));
+    const second = parseInt(input2Display.value, parseInt((selectedBase.value)));
+    if (opDisplay.value === "+") {
+        outputDisplay.value = (first+second).toString(selectedBase.value);
+    } else if (opDisplay.value === "-") {
+        outputDisplay.value = (first-second).toString(selectedBase.value);
+    } else if (opDisplay.value === "X") {
+        outputDisplay.value = (first*second).toString(selectedBase.value);
+    } else {
+        outputDisplay.value = (first/second).toString(selectedBase.value);
+    }
+    equalUsed = true;
 }
 
-function operationDisplay() {
-
+function changeBase(selectedBase) {
+    input1Display.value = parseInt(input1Display.value, parseInt(originalBase)).toString(selectedBase.value);
+    input2Display.value = parseInt(input2Display.value, parseInt(originalBase)).toString(selectedBase.value);
+    outputDisplay.value = parseInt(outputDisplay.value, parseInt(originalBase)).toString(selectedBase.value);
+    //baseConverter1();
+    disableButton();
+    originalBase = selectedBase.value;
 }
 
-// console.log(parseInt('2143', 5).toString(9) );
-
-// const selectedBase = document.getElementById("base1").value;
-// const inputButton = document.getElementsByClassName("numberButton");
-// const buttonValue = document.getElementsByClassName("numberButton").value;
-
-function selectBase() {
-    //let b1value = document.getElementById("base1").value;
-    // for (let i=2; i<37; i++) {
-    //     selectedBase.addEventListener("change", (e) => {
-    //         console.log('hit');
-    //         const baseValue = e.currentTarget.value;
-    //         inputButton[i].disabled = true;
-    //         if (baseValue <= buttonValue) {
-    //             console.log(buttonValue);
-    //             inputButton.disabled = false;
-    //         }
-    //     })
-    // }
-
-    //this one tests correctly
-    // let n = "ada";
-    // let base1 = 13;
-    // let base2 = 9;
-    // for (let i=0; i<n.length; i++) {
-    //     if ((parseInt(n[i], base1).toString(base2)) == "NaN") {
-    //         console.log((parseInt(n[i], base1).toString(base2)));
-    //         console.log(parseInt(n[i])+' no!');
-    //         console.log('try again dammit!');
-    //         break;
-    //     } else {
-    //         console.log(parseInt(n[i]));
-    //         console.log('yay it worked');
-    //     }
-    // }
+function operationDisplay(input) {
+    opDisplay.value = input;
 }
 
+let baseNumber = "";
+for (let i=2; i<37; i++) {
+    if (i===10) {
+        baseNumber +=
+            '<option value="'+ i + '" selected>' + i + "</option>"
+    } else {
+        baseNumber +=
+            '<option value="'+ i + '">' + i + "</option>"
+    }
+}
+document.getElementById("base1").innerHTML = baseNumber;
+
+disableButton();

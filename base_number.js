@@ -5,43 +5,6 @@ let selectedBase2 = document.getElementById("base2");
 let originalBase1 = "10";
 let originalBase2 = "10";
 
-// document.getElementById("1").enabled = true;
-// document.getElementById("2").enabled = true;
-// document.getElementById("3").enabled = true;
-// document.getElementById("4").enabled = true;
-// document.getElementById("5").enabled = true;
-// document.getElementById("6").enabled = true;
-// document.getElementById("7").enabled = true;
-// document.getElementById("8").enabled = true;
-// document.getElementById("9").enabled = true;
-// document.getElementById("10").enabled = true;
-// document.getElementById("11").enabled = false;
-// document.getElementById("12").enabled = false;
-// document.getElementById("13").enabled = false;
-// document.getElementById("14").enabled = false;
-// document.getElementById("15").enabled = false;
-// document.getElementById("16").enabled = false;
-// document.getElementById("17").enabled = false;
-// document.getElementById("18").enabled = false;
-// document.getElementById("19").enabled = false;
-// document.getElementById("20").enabled = false;
-// document.getElementById("21").enabled = false;
-// document.getElementById("22").enabled = false;
-// document.getElementById("23").enabled = false;
-// document.getElementById("24").enabled = false;
-// document.getElementById("25").enabled = false;
-// document.getElementById("26").enabled = false;
-// document.getElementById("27").enabled = false;
-// document.getElementById("28").enabled = false;
-// document.getElementById("29").enabled = false;
-// document.getElementById("30").enabled = false;
-// document.getElementById("31").enabled = false;
-// document.getElementById("32").enabled = false;
-// document.getElementById("33").enabled = false;
-// document.getElementById("34").enabled = false;
-// document.getElementById("35").enabled = false;
-// document.getElementById("36").enabled = false;
-
 let tempValue = 0;
 
 function disableButton() {
@@ -95,16 +58,27 @@ function clearError() {
 }
 
 function baseConverter1() {
-    outputDisplay.value = parseInt(inputDisplay.value, parseInt(selectedBase1.value)).toString(parseInt(selectedBase2.value));
+    outputDisplay.value = parseInt(inputDisplay.value,
+        parseInt(selectedBase1.value)).toString(parseInt(selectedBase2.value));
 }
 
-function changeBase(selectedBase1) {
-    originalBase1 = selectedBase1.value;
-    selectedBase1 = selectedBase1.value;
-    let convertBase1 = parseInt(inputDisplay.value, parseInt(originalBase1)).toString(selectedBase1);
-    inputDisplay.value = parseInt(convertBase1.toString(), selectedBase1);
-    baseConverter1();
+function baseConverter2() {
+    console.log('od1 '+outputDisplay.value);
+    console.log('sb1 '+selectedBase1.value);
+    console.log('sb2 '+selectedBase2.value);
+    outputDisplay.value = parseInt(outputDisplay.value,
+        parseInt(selectedBase1.value)).toString(parseInt(selectedBase2.value));
+}
+
+function changeBase1() {
+    inputDisplay.value = parseInt(inputDisplay.value, parseInt(originalBase1)).toString(selectedBase1.value);
     disableButton();
+    originalBase1 = selectedBase1.value;
+}
+
+function changeBase2() {
+    outputDisplay.value = parseInt(outputDisplay.value, parseInt(originalBase2)).toString(selectedBase2.value);
+    originalBase2 = selectedBase2.value;
 }
 
 let baseNumber1 = "";
