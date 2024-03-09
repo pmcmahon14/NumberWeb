@@ -57,17 +57,22 @@ function clearAll() {
     originalBase = "10";
     currentDisplay = input1Display;
     equalUsed = false;
+    disableButton();
 }
 
 function clearError() {
-    tempValue = Math.floor(inputDisplay.value/10);
-    if(tempValue.length === ""){
-        inputDisplay.value = "0";
+    if (equalUsed) {
+        //nothing
     } else {
-        tempValue = tempValue.toLocaleString();
-        inputDisplay.value=tempValue;
+        tempValue = currentDisplay.value.substring(0, currentDisplay.value.length-1);
+        if(tempValue === ""){
+            currentDisplay.value = "0";
+        } else {
+            tempValue = tempValue.toLocaleString();
+            currentDisplay.value=tempValue;
+        }
     }
-    //baseConverter1();
+    baseConverter1();
 }
 
 function baseConverter1() {
