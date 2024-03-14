@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Divisibility Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisibility/Prime Factor Calculator</title>
     <link type="text/css" rel="stylesheet" href="divisibility.css">
 </head>
 <body>
-    <div class="top">
-        <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+    <div>
+        <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
     </div>
-<div class="top" style="height: 50px; color: white; margin-bottom: 50px">
-    <h1>Divisibility Calculator</h1>
+<div class="top">
+    <h1>Divisibility/Prime Factor Calculator</h1>
 </div>
 <div class="calculator">
     <div class="column left">
         <form>
-            <label for="divisibility" style="color: white; font-size: 20px">Divisibility</label>
+            <label for="divisibility" style="color: white; font-size: 24px; margin-left: 5%">Divisibility</label>
             <textarea id="divisibility" type="text" readonly></textarea>
         </form>
     </div>
@@ -30,7 +31,7 @@
             </form>
             <table>
                 <tr>
-                    <Button class="number" onclick="appendToDisplay('7')"22>7</Button>
+                    <Button class="number" onclick="appendToDisplay('7')">7</Button>
                     <Button class="number" onclick="appendToDisplay('8')">8</Button>
                     <Button class="number" onclick="appendToDisplay('9')">9</Button>
                     <Button class="clear" onclick="clearAll()">CA</Button>
@@ -64,7 +65,7 @@
     </div>
     <div class="column right">
         <form>
-            <label for="prime" style="color: white">Prime Factors</label>
+            <label for="prime" style="color: white; font-size: 24px; margin-left: 5%">Prime Factors</label>
             <textarea id="prime" type="text" readonly></textarea>
         </form>
     </div>

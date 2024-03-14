@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculator</title>
+    <link type="text/css" rel="stylesheet" href="basic.css">
+</head>
+<body>
+<div class="top">
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div class="top" style="height: 50px; color: white; margin-bottom: 50px">
+    <h1>Basic Calculator</h1>
+</div>
+<div class="calculator">
+    <div class="display">
+        <form>
+            <label for="input"></label>
+            <input id="input" type="text" value="0" readonly>
+        </form>
+    </div>
+    <div class="keyboard">
+<!--        <form>-->
+<!--            <label for="input"></label>-->
+<!--            <input id="input" type="text" value="0" readonly>-->
+<!--        </form>-->
+        <!--row 1-->
+        <table>
+            <tr>
+                <Button class="math" onclick="appendToDisplay('7')">&#8731;</Button>
+                <Button class="math" onclick="appendToDisplay('8')">&#8730;</Button>
+                <Button class="math" onclick="appendToDisplay('9')">^</Button>
+                <Button class="math" onclick="clearAll()">(</Button>
+                <Button class="math" onclick="clearAll()">)</Button>
+            </tr>
+        </table>
+        <!--row 2-->
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
+                <Button class="operation" onclick="clearAll()">&#247;</Button>
+            </tr>
+        </table>
+        <!--row 3-->
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
+                <Button class="operation" onclick="clearAll()">X</Button>
+            </tr>
+        </table>
+        <!--row 4-->
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+                <Button class="operation" onclick="clearAll()">-</Button>
+            </tr>
+        </table>
+        <!--row 5-->
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" onclick="appendToDisplay('.')">.</Button>
+                <Button class="number" onclick="appendToDisplay('.')">+/-</Button>
+                <Button disabled class="unused">.</Button>
+                <Button class="operation" onclick="clearAll()">+</Button>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="basic.js"></script>
+</body>
+</html>
