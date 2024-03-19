@@ -3,58 +3,37 @@ body {
     font-family: Arial, serif;
 }
 
-button:disabled {
-    color: #555555;
-}
-
-/*.calculator {*/
-/*    height: 634px;*/
-/*    width: 325px;*/
-/*    border: solid white 1px;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    margin-top: 5%;*/
-/*    border-radius: 25px;*/
-/*    background-color: black;*/
-/*    !*1080x2106  1.95 ratio*!*/
-/*}*/
-
-/* Style the tab */
-.tab {
-    height: 8%;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
+.column {
     float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
+.left {
+    width: 49%;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
+.middle {
+    width: 12%;
+    border-left: 2px solid grey;
 }
 
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+.right {
+    width: 36%;
+    text-align: right;
+    color: white;
+}
+
+.numbers {
+    color: white;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.odd {
+    background-color: #555555;
+}
+
+.even {
+    background-color: #333333;
 }
 
 #baseInput {
@@ -65,42 +44,38 @@ button:disabled {
     font-size: 32px;
     background-color: black;
     color: white;
-    text-align: right;
+    text-align: center;
     position: relative;
-    top: -50%;
-}
-
-#baseOutput {
-    width: 98%;
-    height: 40px;
-    border: solid white 1px;
-    border-radius: 15px;
-    font-size: 32px;
-    background-color: black;
-    color: white;
-    text-align: right;
-    position: relative;
-    top: -50%;
 }
 
 .baseDropdown {
     display: inline-block;
+    width: 98%;
+    text-align: center;
+    height: 7%;
 }
 
-.baseDropdown {
-    width: 49%;
+label {
+    color: white;
+    font-size: 20px;
+}
+
+select {
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
 form {
     display: inline-block;
-    width: 49%;
+    width: 98%;
 }
 
 /*keyboard*/
 .keyboard {
     align-content: center;
-    height: 325px;
-    width: 600px;
+    height: 35%;
+    width: 90%;
     border: solid white 1px;
     margin-left: auto;
     margin-right: auto;
@@ -113,8 +88,8 @@ form {
 button {
     display: inline-block;
     margin-top: 5px;
-    /*width: 10%;*/
-    height: 75px;
+    width: 10%;
+    height: 9vh;
     border: none;
     border-radius: 50%;
     font-size: 24px;
@@ -123,7 +98,11 @@ button {
     cursor: pointer;
 }
 
-.number {
+button:disabled {
+    color: #555555;
+}
+
+.number, .number:hover:disabled {
     background-color: rgb(50, 50, 50);
 }
 
@@ -139,11 +118,39 @@ button {
     background-color: darkmagenta;
 }
 
-.unused {
-    background-color: black;
-    color: black;
-}
+@media screen and (max-width: 1000px) {
+    .baseDropdown {
+        /*display: inline-block;*/
+        width: 98%;
+        text-align: center;
+        height: 7%;
+    }
 
-.enter {
-    background-color: tan;
+    .left  {
+        width: 98%;
+    }
+
+    .middle {
+        width: 20%;
+    }
+
+    .right {
+        width: 78%;
+    }
+
+    .keyboard {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #baseInput {
+        width: 98%;
+        height: 40px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-size: 32px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
 }

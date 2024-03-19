@@ -1,9 +1,11 @@
+/*lines up app icons in single row*/
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #303030;
+    background-color: black;
+    font-family: Arial, serif;
 }
 
 html {
@@ -81,7 +83,6 @@ a:hover {
     /*padding-left: 60px;*/
 }
 
-
 .calculator {
     height: 422px;
     border: 1px solid blue;
@@ -97,14 +98,7 @@ a:hover {
     [class*="calccol-"] {
         width: 100%
     }
-
 }
-
-
-
-
-
-
 
 .desc {
     text-align: left;
@@ -131,40 +125,34 @@ button {
     font-size: 20px;
 }
 
-/*hover*/
-/*.image {
-    opacity: 1;
-    display: block;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
+.number {
+    background-color: rgb(50, 50, 50);
 }
 
-.overlay {
-    transition: .5s ease;
-    opacity: 0;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+.number:hover {
+    background-color: grey;
 }
 
-.calculator:hover {
-    opacity: 0.3;
+.clear {
+    background-color: rgb(51, 0, 9);
 }
 
-.calculator:hover .overlay {
-    opacity: 1;
+.clear:hover {
+    background-color: darkmagenta;
 }
 
-.tryit {
-    background-color: #04AA6D;
+.unused {
+    background-color: black;
     color: black;
-    font-size: 16px;
-    padding: 16px 32px;
-}*/
+}
+
+.enter {
+    background-color: tan;
+}
+
+.enter:hover {
+    background-color: antiquewhite;
+}
 
 .center {
     margin: auto;
