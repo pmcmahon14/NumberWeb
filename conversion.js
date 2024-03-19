@@ -121,91 +121,91 @@ function numberCalc(buttonText) {
 }
 
 function tempConversion() {
-  if (selectedUnit1.value === "0") {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = inputDisplay.value;
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = (-273.15+Number(inputDisplay.value));
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = (Number(inputDisplay.value)*1.8-459.67);
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = (Number(inputDisplay.value)*(9/5));
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*0.8));
+    if (selectedUnit1.value === "0") {
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = inputDisplay.value;
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = (-273.15+Number(inputDisplay.value));
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = (Number(inputDisplay.value)*1.8-459.67);
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = (Number(inputDisplay.value)*(9/5));
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = (-218.52+(Number(inputDisplay.value)*0.8));
+        } else {
+            hiddenAnswer = (0.0036608581*Number(inputDisplay.value));
+        }
+    } else if (selectedUnit1.value === "1") {
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = Number(inputDisplay.value)+273.15;
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = Number(inputDisplay.value);
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = (Number(inputDisplay.value)*1.8)+32;
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = 491.67+(Number(inputDisplay.value)*(9/5));
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = Number(inputDisplay.value)*0.8;
+        } else {
+            hiddenAnswer = 0.9999633914+(Number(inputDisplay.value)*0.0036608581);
+        }
+    } else if (selectedUnit1.value === "2") {
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = (255.37222222+Number(inputDisplay.value)*(5/9));
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = ((-17-(7/9))+(Number(inputDisplay.value)*(5/9)));
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = Number(inputDisplay.value);
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = (459.67+Number(inputDisplay.value));
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = ((-14-(2/9))+(Number(inputDisplay.value)*(4/9)));
+        } else {
+            hiddenAnswer = (0.9348814695+(Number(inputDisplay.value)*0.0020338101));
+        }//done
+    } else if (selectedUnit1.value === "3") {
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = (Number(inputDisplay.value)*(5/9));
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = (-273.15+(Number(inputDisplay.value)*(5/9)));
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = (-459.67+Number(inputDisplay.value));
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = Number(inputDisplay.value);
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = (-218.52+(Number(inputDisplay.value)*(4/9)));
+        } else {
+            hiddenAnswer = (Number(inputDisplay.value)*0.0020338101);
+        }
+    } else if (selectedUnit1.value === "4") {
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = (273.15+(Number(inputDisplay.value)*1.25));
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = (Number(inputDisplay.value)*1.25);
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = (32+(Number(inputDisplay.value)*2.25));
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = (491.67+(Number(inputDisplay.value)*2.25));
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = Number(inputDisplay.value);
+        } else {
+            hiddenAnswer = (0.9999633914+(Number(inputDisplay.value)*0.0045760727));
+        }
     } else {
-      hiddenAnswer = (0.0036608581*Number(inputDisplay.value));
+        if (selectedUnit2.value === "0") {
+            hiddenAnswer = ((Number(inputDisplay.value)*273.16));
+        } else if (selectedUnit2.value === "1") {
+            hiddenAnswer = (-273.15+(Number(inputDisplay.value)*273.16));
+        } else if (selectedUnit2.value === "2") {
+            hiddenAnswer = (-459.67+(Number(inputDisplay.value)*491.688));
+        } else if (selectedUnit2.value === "3") {
+            hiddenAnswer = (Number(inputDisplay.value)*491.688);
+        } else if (selectedUnit2.value === "4") {
+            hiddenAnswer = (-218.52+(Number(inputDisplay.value)*218.528));
+        } else {
+            hiddenAnswer = Number(inputDisplay.value);
+        }
     }
-  } else if (selectedUnit1.value === "1") {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = Number(inputDisplay.value)+273.15;
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = Number(inputDisplay.value);
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = (Number(inputDisplay.value)*1.8)+32;
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = 491.67+(Number(inputDisplay.value)*(9/5));
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = Number(inputDisplay.value)*0.8;
-    } else {
-      hiddenAnswer = 0.9999633914+(Number(inputDisplay.value)*0.0036608581);
-    }
-  } else if (selectedUnit1.value === "2") {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = (255.37222222+Number(inputDisplay.value)*(5/9));
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = ((-17-(7/9))+(Number(inputDisplay.value)*(5/9)));
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = Number(inputDisplay.value);
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = (459.67+Number(inputDisplay.value));
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = ((-14-(2/9))+(Number(inputDisplay.value)*(4/9)));
-    } else {
-      hiddenAnswer = (0.9348814695+(Number(inputDisplay.value)*0.0020338101));
-    }//done
-  } else if (selectedUnit1.value === "3") {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = (Number(inputDisplay.value)*(5/9));
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = (-273.15+(Number(inputDisplay.value)*(5/9)));
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = (-459.67+Number(inputDisplay.value));
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = Number(inputDisplay.value);
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*(4/9)));
-    } else {
-      hiddenAnswer = (Number(inputDisplay.value)*0.0020338101);
-    }
-  } else if (selectedUnit1.value === "4") {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = (273.15+(Number(inputDisplay.value)*1.25));
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = (Number(inputDisplay.value)*1.25);
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = (32+(Number(inputDisplay.value)*2.25));
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = (491.67+(Number(inputDisplay.value)*2.25));
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = Number(inputDisplay.value);
-    } else {
-      hiddenAnswer = (0.9999633914+(Number(inputDisplay.value)*0.0045760727));
-    }
-  } else {
-    if (selectedUnit2.value === "0") {
-      hiddenAnswer = ((Number(inputDisplay.value)*273.16));
-    } else if (selectedUnit2.value === "1") {
-      hiddenAnswer = (-273.15+(Number(inputDisplay.value)*273.16));
-    } else if (selectedUnit2.value === "2") {
-      hiddenAnswer = (-459.67+(Number(inputDisplay.value)*491.688));
-    } else if (selectedUnit2.value === "3") {
-      hiddenAnswer = (Number(inputDisplay.value)*491.688);
-    } else if (selectedUnit2.value === "4") {
-      hiddenAnswer = (-218.52+(Number(inputDisplay.value)*218.528));
-    } else {
-      hiddenAnswer = Number(inputDisplay.value);
-    }
-  }
 }
 
 function switchCalc() {

@@ -20,12 +20,6 @@ body {
 /*    background-color: green;*/
 /*}*/
 
-h1 {
-    display: inline-block;
-    width: 49%;
-    text-align: center;
-}
-
 .trig {
     background-color: deepskyblue;
     color: black;
