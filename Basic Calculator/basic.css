@@ -4,7 +4,7 @@ body {
 }
 
 .keyboard {
-    height: 450px;
+    height: 410px;
     width: 410px;
     border: solid white 1px;
     margin-left: auto;
@@ -15,28 +15,21 @@ body {
     /*1080x2106  1.95 ratio*/
 }
 
-.display {
-    display: block;
-    text-align: center;
-}
-
 form {
-    display: inline-block;
+    /*display: inline-block;*/
     margin-left: auto;
     margin-right: auto;
 }
 
 #input {
     width: 100%;
-    height: 40px;
+    height: 60px;
     border: solid white 1px;
     border-radius: 15px;
-    font-size: 32px;
+    font-size: 40px;
     background-color: black;
     color: white;
     text-align: right;
-    position: relative;
-    top: -50%;
 }
 
 /*keyboard*/

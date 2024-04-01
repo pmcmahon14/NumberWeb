@@ -27,11 +27,11 @@
         <!--row 1-->
         <table>
             <tr>
-                <Button class="math" onclick="appendToDisplay('7')">&#8731;</Button>
-                <Button class="math" onclick="appendToDisplay('8')">&#8730;</Button>
-                <Button class="math" onclick="appendToDisplay('9')">^</Button>
-                <Button class="math" onclick="clearAll()">(</Button>
-                <Button class="math" onclick="clearAll()">)</Button>
+                <Button class="math" onclick="roots('\u221b')">&#8731;</Button>
+                <Button class="math" onclick="roots('\u221a')">&#8730;</Button>
+                <Button class="math" onclick="exp('^')">^</Button>
+                <Button class="math" onclick="parentheses()">()</Button>
+                <Button class="math" onclick="percent('%')">%</Button>
             </tr>
         </table>
         <!--row 2-->
@@ -41,7 +41,7 @@
                 <Button class="number" onclick="appendToDisplay('8')">8</Button>
                 <Button class="number" onclick="appendToDisplay('9')">9</Button>
                 <Button class="clear" onclick="clearAll()">CA</Button>
-                <Button class="operation" onclick="clearAll()">&#247;</Button>
+                <Button class="operation" onclick="operationCalc('/')">&#247;</Button>
             </tr>
         </table>
         <!--row 3-->
@@ -51,7 +51,7 @@
                 <Button class="number" onclick="appendToDisplay('5')">5</Button>
                 <Button class="number" onclick="appendToDisplay('6')">6</Button>
                 <Button class="clear" onclick="clearError()">&#9003;</Button>
-                <Button class="operation" onclick="clearAll()">X</Button>
+                <Button class="operation" onclick="operationCalc('*')">X</Button>
             </tr>
         </table>
         <!--row 4-->
@@ -60,18 +60,18 @@
                 <Button class="number" onclick="appendToDisplay('1')">1</Button>
                 <Button class="number" onclick="appendToDisplay('2')">2</Button>
                 <Button class="number" onclick="appendToDisplay('3')">3</Button>
-                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
-                <Button class="operation" onclick="clearAll()">-</Button>
+                <Button class="enter" onclick="calculate()">&#9166;</Button>
+                <Button class="operation" onclick="operationCalc('-')">-</Button>
             </tr>
         </table>
         <!--row 5-->
         <table>
             <tr>
+                <Button class="number" onclick="appendToDisplay('00')">00</Button>
                 <Button class="number" onclick="appendToDisplay('0')">0</Button>
-                <Button class="number" onclick="appendToDisplay('.')">.</Button>
-                <Button class="number" onclick="appendToDisplay('.')">+/-</Button>
-                <Button disabled class="unused">.</Button>
-                <Button class="operation" onclick="clearAll()">+</Button>
+                <Button class="number" onclick="decimalCalc('.')">.</Button>
+                <Button class="number" onclick="plusMinus()">+/-</Button>
+                <Button class="operation" onclick="operationCalc('+')">+</Button>
             </tr>
         </table>
     </div>
