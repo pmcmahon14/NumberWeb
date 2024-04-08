@@ -42,6 +42,7 @@ const gradianDivide = ((Math.PI/180)*(1/9)*10);
 let measure = degreeDivide;
 let decimalUsed = false;
 
+//sets up trig measurements for degrees, radians, or gradians
 function selector() {
     if (deg.innerHTML === "DEG") {
         deg.innerHTML = "RAD";

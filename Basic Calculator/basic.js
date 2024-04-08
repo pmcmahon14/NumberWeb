@@ -4,11 +4,13 @@ let equation = ["0"];
 let decimalUsed = false;
 let parenthesesUsed = false;
 let eqParenthesesUsed = false;
+let rootUsed = false;
 
 function clearAll() {
     inputDisplay.value = "0";
     decimalUsed = false;
     parenthesesUsed = false;
+    rootUsed = false;
     equation = ["0"];
 }
 
@@ -83,7 +85,9 @@ function exp(input) {
 }
 
 function operationCalc(input) {
-    if (eqParenthesesUsed) {
+    if (rootUsed === true) {
+        //return
+    } else if (eqParenthesesUsed) {
         equation.push(")");
         eqParenthesesUsed = false;
     }
@@ -107,17 +111,30 @@ function parentheses() {
             equation.push("(");
         } else {
             inputDisplay.value+="(";
-            if (equation[equation.length-1] !== "+" || equation[equation.length-1] !== "-"
-                || equation[equation.length-1] !== "*" || equation[equation.length-1] !== "/") {
+            if (equation[equation.length-1] === "+" || equation[equation.length-1] === "-"
+                || equation[equation.length-1] === "*" || equation[equation.length-1] === "/") {
+                console.log(equation[equation.length-1]);
+                equation.push("(");
+            } else if (rootUsed === true) {
+                //return
+            } else {
+                //todo set up variable for root being used
                 equation.push("*(");
             }
         }
         parenthesesUsed = true;
     } else {
-        inputDisplay.value+=")";
-        equation.push(")");
-        parenthesesUsed = false;
+        if (rootUsed === true) {
+            inputDisplay.value+=")";
+            parenthesesUsed = false;
+            rootUsed = false;
+        } else {
+            inputDisplay.value+=")";
+            equation.push(")");
+            parenthesesUsed = false;
+        }
     }
+    console.log(equation);
 }
 
 function percent(input) {
@@ -142,8 +159,9 @@ function plusMinus() {
 }
 
 function roots(input) {
-    //todo problem with cube root (4+4)
-    if (inputDisplay.value === "0") {
+    if (rootUsed === true) {
+        //return
+    } else if (inputDisplay.value === "0") {
         inputDisplay.value = input;
         if (input === '\u221b') {
             equation[0] = "Math.cbrt(";
@@ -167,4 +185,5 @@ function roots(input) {
         }
     }
     eqParenthesesUsed = true;
+    rootUsed = true;
 }
