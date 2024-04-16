@@ -23,63 +23,63 @@
         <tr>
             <Button class="trig" id="degree" onclick="selector()">DEG</Button>
             <Button class="trig" onclick="hyp()">HYP</Button>
-            <Button class="trig" onclick="appendToDisplay('&#960;')">&#960;</Button>
+            <Button class="trig" onclick="piCalc()">&#960;</Button>
             <Button class="number" onclick="appendToDisplay('7')">7</Button>
             <Button class="number" onclick="appendToDisplay('8')">8</Button>
             <Button class="number" onclick="appendToDisplay('9')">9</Button>
             <Button class="clear" onclick="clearAll()">CA</Button>
-            <Button class="operation" onclick="appendToDisplay('&#247;')">&#247;</Button>
-            <Button class="math" onclick="appendToDisplay('8')">x&#8730;y</Button>
-            <Button class="math" onclick="appendToDisplay('^')">^</Button>
-            <Button class="math" onclick="appendToDisplay('10^')">10<sup>x</sup></Button>
+            <Button class="operation" onclick="operationCalc('/')">&#247;</Button>
+            <Button class="math" onclick="expCalc('&#8730;')">x&#8730;y</Button>
+            <Button class="math" onclick="expCalc('^')">y<sup>x</sup></Button>
+            <Button class="math" onclick="eulerCalc()">e<sup>x</sup></Button>
         </tr>
     </table>
     <!--row 2-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" id="sin" onclick="appendToDisplay(topArray[0]+'(')">sin</Button>
-            <Button class="trig" id="cos" onclick="appendToDisplay(topArray[1]+'(')">cos</Button>
-            <Button class="trig" id="tan" onclick="appendToDisplay(topArray[2]+'(')">tan</Button>
+            <Button class="trig" id="sin" onclick="trigCalc(topArray[0])">sin</Button>
+            <Button class="trig" id="cos" onclick="trigCalc(topArray[1])">cos</Button>
+            <Button class="trig" id="tan" onclick="trigCalc(topArray[2])">tan</Button>
             <Button class="number" onclick="appendToDisplay('4')">4</Button>
             <Button class="number" onclick="appendToDisplay('5')">5</Button>
             <Button class="number" onclick="appendToDisplay('6')">6</Button>
             <Button class="clear" onclick="clearError()">&#9003;</Button>
-            <Button class="operation" onclick="appendToDisplay('x')">x</Button>
-            <Button class="math" onclick="appendToDisplay('e')">e</Button>
-            <Button class="math" id="ncr" onclick="appendToDisplay('6')">nCr</Button>
-            <Button class="math" onclick="appendToDisplay('!')">n!</Button>
+            <Button class="operation" onclick="operationCalc('*')">x</Button>
+            <Button class="math" onclick="permCalc('nPr')">nPr</Button>
+            <Button class="math" onclick="permCalc('nCr')">nCr</Button>
+            <Button class="math" onclick="factorialCalc()">n!</Button>
         </tr>
     </table>
     <!--row 3-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" id="asin" onclick="appendToDisplay(middleArray[0]+'(')">asin</Button>
-            <Button class="trig" id="acos" onclick="appendToDisplay(middleArray[1]+'(')">acos</Button>
-            <Button class="trig" id="atan" onclick="appendToDisplay(middleArray[2]+'(')">atan</Button>
+            <Button class="trig" id="asin" onclick="trigCalc(middleArray[0])">asin</Button>
+            <Button class="trig" id="acos" onclick="trigCalc(middleArray[1])">acos</Button>
+            <Button class="trig" id="atan" onclick="trigCalc(middleArray[2])">atan</Button>
             <Button class="number" onclick="appendToDisplay('1')">1</Button>
             <Button class="number" onclick="appendToDisplay('2')">2</Button>
             <Button class="number" onclick="appendToDisplay('3')">3</Button>
-            <Button class="equal" onclick="calculate()">=</Button>
-            <Button class="operation" onclick="appendToDisplay('-')">-</Button>
-            <Button class="math" onclick="appendToDisplay('ln(')">ln</Button>
-            <Button class="math" onclick="appendToDisplay('log(')">log</Button>
-            <Button class="math" onclick="appendToDisplay('\u{2211}')">&Sigma;</Button>
+            <Button class="equal" onclick="equal()">=</Button>
+            <Button class="operation" onclick="operationCalc('-')">-</Button>
+            <Button class="math" onclick="logCalc('ln')">ln</Button>
+            <Button class="math" onclick="logCalc('log')">log</Button>
+            <Button class="math" onclick="sumCalc()">&Sigma;</Button>
         </tr>
     </table>
     <!--row 4-->
     <table class="keyboard">
         <tr>
-            <Button class="trig" id="sec" onclick="appendToDisplay(bottomArray[0]+'(')">sec</Button>
-            <Button class="trig" id="csc" onclick="appendToDisplay(bottomArray[1]+'(')">csc</Button>
-            <Button class="trig" id="cot" onclick="appendToDisplay(bottomArray[2]+'(')">cot</Button>
+            <Button class="trig" id="sec" onclick="trigCalc(bottomArray[0])">sec</Button>
+            <Button class="trig" id="csc" onclick="trigCalc(bottomArray[1])">csc</Button>
+            <Button class="trig" id="cot" onclick="trigCalc(bottomArray[2])">cot</Button>
             <Button class="number" onclick="appendToDisplay('0')">0</Button>
             <Button class="number" onclick="appendToDisplay('00')">00</Button>
             <Button class="number" onclick="decimalDisplay('.')">.</Button>
             <Button class="number" onclick="plusMinus()">+/-</Button>
-            <Button class="operation" onclick="appendToDisplay('+')">+</Button>
-            <Button class="math" onclick="appendToDisplay('(')">(</Button>
-            <Button class="math" onclick="appendToDisplay(')')">)</Button>
-            <Button class="math" onclick="appendToDisplay('%')">%</Button>
+            <Button class="operation" onclick="operationCalc('+')">+</Button>
+            <Button class="math" onclick="parentheses()">()</Button>
+            <Button class="math" onclick="reciprocalCalc()">1/x</Button>
+            <Button class="math" onclick="percentCalc()">%</Button>
         </tr>
     </table>
     <!--row 5-->

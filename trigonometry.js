@@ -220,10 +220,10 @@ function calculate() {
             outputDisplay.value = Math.atanh(inputDisplay.value)*altMeasure.toFixed(10);
             break;
         case "sech":
-            outputDisplay.value = (1/(Math.sinh(inputDisplay.value*measure))).toFixed(10);
+            outputDisplay.value = (1/(Math.cosh(inputDisplay.value*measure))).toFixed(10);
             break;
         case "csch":
-            outputDisplay.value = (1/(Math.cosh(inputDisplay.value*measure))).toFixed(10);
+            outputDisplay.value = (1/(Math.sinh(inputDisplay.value*measure))).toFixed(10);
             break;
         case "coth":
             outputDisplay.value = (1/(Math.tanh(inputDisplay.value*measure))).toFixed(10);
@@ -258,6 +258,8 @@ function calculate() {
     }
     if (outputDisplay.value.endsWith("0000000000")) {
         outputDisplay.value = Math.round(outputDisplay.value);
+    } else if (outputDisplay.value.endsWith("000000000")) {
+        outputDisplay.value = outputDisplay.value.substring(0, outputDisplay.value.length-9);
     } else if (outputDisplay.value === "NaN") {
         outputDisplay.value = "error";
     }
