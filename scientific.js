@@ -46,8 +46,12 @@ let rootUsed = false;
 let parenthesesUsed = false;
 let operationValue = null;
 
+//for calculations with no parentheses
 let firstValue = null;
 let secondValue = null;
+
+//for calculations with parentheses
+let eq = [];
 
 //for exponents and roots
 let y = 0;
@@ -114,6 +118,10 @@ function clearError() {
         decimalUsed = false;
     } else if (inputDisplay.value === "-") {
         inputDisplay.value = "0";
+    }
+    if (inputDisplay.value.endsWith("+") || inputDisplay.value.endsWith("-")
+        || inputDisplay.value.endsWith("*") || inputDisplay.value.endsWith("/")) {
+        firstValue = null;
     }
     let tempTrig = inputDisplay.value.substring(0, inputDisplay.value.length-1);
     if(tempTrig === ""){
@@ -225,6 +233,7 @@ function decimalDisplay(input) {
 
 function eulerCalc() {
     inputDisplay.value = Math.pow(Math.E, inputDisplay.value);
+    inputDisplay.value = inputDisplay.value.replace("+", "");
 }
 
 function expCalc(input) {
@@ -275,8 +284,6 @@ function operationCalc(input) {
     if (parenthesesUsed === true) {
         //return
     } else if (firstValue !== null) {
-        console.log(firstValue);
-
         calculate(input);
         operationValue = input;
     } else if (inputDisplay.value.endsWith("+") || inputDisplay.value.endsWith("-") ||
@@ -294,14 +301,25 @@ function parentheses() {
     if (parenthesesUsed === false) {
         if (inputDisplay.value === "0") {
             inputDisplay.value = "(";
+        } else if (inputDisplay.value[inputDisplay.value.length-1] !== "+"
+            && inputDisplay.value[inputDisplay.value.length-1] !== "-"
+            && inputDisplay.value[inputDisplay.value.length-1] !== "*"
+            && inputDisplay.value[inputDisplay.value.length-1] !== "/") {
+            console.log(inputDisplay.value[inputDisplay.value.length-1] !== "+");
+            inputDisplay.value+="*(";
         } else {
             inputDisplay.value+="(";
         }
+        //todo add test for operation before start parentheses
         parenthesesUsed = true;
     } else {
         inputDisplay.value+=")";
+        eq.push(inputDisplay.value);
+        inputDisplay.value = Function(`'use strict'; return(${eq})`)();
+        eq = [];
         parenthesesUsed = false;
     }
+    firstValue = null;
 }
 
 function percentCalc() {
