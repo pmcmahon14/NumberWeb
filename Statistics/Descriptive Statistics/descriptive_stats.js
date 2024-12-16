@@ -6,15 +6,15 @@ const inputDisplay = document.getElementById("input");
 let decimalUsed = false;
 let returnUsed = false;
 
-const a = ["Size", "Range", "Maximum", "Minimum", "Arithmetic Mean", "Geometric Mean",
-    "Median", "Mode", "Sum", "Sum of Squares", "Standard Deviation Sample", "Standard Deviation Population",
-    "Variance Sample", "Variance Population",
-    "Coefficient Variance Sample", "Coefficient Variance Population", "First Quartile",
-    "Second Quartile", "Third Quartile", "IQR", "Mid Range", "Outliers",
-    "Mean Absolute Deviation", "Root Mean Square", "SE of the Mean Sample",
-    "SE of the Mean Population",
-    "Skewness Sample", "Skewness Population", "Kurtosis Sample", "Kurtosis Population",
-    "Kurtosis Excess Sample", "Kurtosis Excess Population",
+const a = ["Size", "Range", "Maximum", "Minimum", "Ar Mean", "Geo Mean",
+    "Median", "Mode", "Sum", "Sum^2", "St Dev Sample", "St Dev Pop",
+    "Var Sample", "Var Pop",
+    "Coeff Var Sample", "Coeff Var Pop", "Quartile 1",
+    "Quartile 2", "Quartile 3", "IQR", "Mid Range", "Outliers",
+    "Mean Abs Dev", "Root Mean^2", "SE Mean Sample",
+    "SE Mean Pop",
+    "Skewness Sample", "Skewness Pop", "Kurt Sample", "Kurt Pop",
+    "Kurt Exc Sample", "Kurt Exc Pop",
     "RSD Sample", "RSD Population"];
 
 let stat1 = "";
@@ -213,13 +213,12 @@ function meanCalc() {
 
 function medianCalc() {
     arrayX.sort();
-    let medianCount = arraySize-1;
-    let first = Math.floor(medianCount/2);
+    let first = Math.floor(arraySize/2);
     let second = first+1;
-    if (medianCount%2 === 0) {
-        median.innerHTML = arrayX[first];
-    } else {
+    if (arraySize%2 === 0) {
         median.innerHTML = ((arrayX[first]+arrayX[second])/2).toString();
+    } else {
+        median.innerHTML = arrayX[first];
     }
     modeCalc();
 }

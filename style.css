@@ -14,13 +14,16 @@ html {
     color: white;
 }
 
-[class*="logocol-"] {
+/*for desktops*/
+.logocol-1 {
+    width: 20%;
     float: left;
     padding: 15px;
 }
 
-/*for desktops*/
-.logocol-1 {width: 16.66%}
+.logocol-1:hover {
+    border: 1px solid whitesmoke;
+}
 
 .calccol-1 {width: 8.33%;}
 .calccol-2 {width: 16.66%;}
@@ -63,6 +66,32 @@ a:hover {
     }
 }
 
+#topleft {
+    width: 50%;
+    border-bottom: 2px black solid;
+    #greeting {
+        font-size: 60px;
+    }
+    & span {
+        font-family: Charm, Arial, serif;
+    }
+    #sub-headline {
+        font-size: 40px;
+    }
+}
+
+#topright {
+    width: 49%;
+    opacity: 0.3;
+}
+
+#header {
+    font-family: Charm, Arial, serif;
+    font-size: 40px;
+    text-align: inherit;
+    color: white;
+}
+
 .math {
     float: left;
     width: 25%;
@@ -77,10 +106,8 @@ a:hover {
 
 /*calculator lists*/
 .calclist {
-    /*text-align: left;*/
     font-size: 28px;
     font-weight: bold;
-    /*padding-left: 60px;*/
 }
 
 .calculator {
@@ -161,4 +188,16 @@ button {
 #flutter_target {
     border: 1px solid;
     transition: all 150ms ease-in;
+}
+
+#logograd {
+    margin-top: -40px;
+    height: 60px;
+    background-color: dodgerblue;
+    background-image: linear-gradient(to right, blue, lightskyblue);
+}
+
+#trademark {
+    font-size: 24px;
+    font-family: Arial, serif;
 }

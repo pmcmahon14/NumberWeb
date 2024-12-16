@@ -113,3 +113,40 @@ button {
     background-color: black;
     color: black;
 }
+
+@media screen and (max-width: 1000px) {
+    .baseDropdown {
+        /*display: inline-block;*/
+        width: 98%;
+        text-align: center;
+        height: 7%;
+    }
+
+    .left  {
+        width: 98%;
+    }
+
+    .middle {
+        width: 49%;
+    }
+
+    .right {
+        width: 49%;
+    }
+
+    .keyboard {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #baseInput {
+        width: 98%;
+        height: 40px;
+        border: solid white 1px;
+        border-radius: 15px;
+        font-size: 32px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+}
