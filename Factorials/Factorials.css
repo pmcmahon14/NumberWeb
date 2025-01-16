@@ -1,0 +1,157 @@
+body {
+    background-color: black;
+    font-family: Arial, serif;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 49%;
+}
+
+.middle, .right{
+    width: 24%;
+}
+
+.middle {
+    border-left: 2px solid grey;
+}
+
+.right {
+    text-align: right;
+    color: white;
+}
+
+.factorials {
+    color: white;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.odd {
+    background-color: #555555;
+}
+
+.even {
+    background-color: #333333;
+}
+
+#input {
+    width: 98%;
+    height: 40px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    text-align: right;
+    position: relative;
+    top: -50%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top {
+    height: 50px;
+    color: white;
+    margin-bottom: 75px;
+}
+
+.keyboard {
+    height: 420px;
+    width: 245px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+    /*1080x2106  1.95 ratio*/
+}
+
+/*this container explains input range*/
+#guideline {
+    height: 30px;
+}
+
+#instruction {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .left, .right{
+        width: 100%;
+    }
+
+    .keyboard {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.header {
+    margin-top: -30px;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+#clear {
+    margin-right: 150px;
+}
+
+/*keyboard*/
+.keyboard {
+    align-content: center;
+}
+
+/*buttons*/
+button {
+    display: inline-block;
+    margin-top: 5px;
+    width: 33%;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.number {
+    background-color: rgb(50, 50, 50);
+}
+
+.number:hover {
+    background-color: grey;
+}
+
+.clear {
+    background-color: rgb(51, 0, 9);
+}
+
+.clear:hover {
+    background-color: darkmagenta;
+}
+
+.unused {
+    background-color: black;
+    color: black;
+}
+
+.enter {
+    background-color: tan;
+}
+
+.enter:hover {
+    background-color: antiquewhite;
+}

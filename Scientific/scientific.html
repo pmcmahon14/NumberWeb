@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scientific Calculator</title>
+    <link type="text/css" rel="stylesheet" href="scientific.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.js">
+</head>
+<body>
+<div class="top">
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+</div>
+<div class="top" style="height: 50px; color: white">
+    <h1>Scientific Calculator</h1>
+</div>
+<div class="calculator">
+    <form>
+        <label for="input"></label>
+        <input id="input" type="text" value="0" readonly>
+    </form>
+    <!--row 1-->
+    <table class="keyboard">
+        <tr>
+            <Button class="trig" id="degree" onclick="selector()">DEG</Button>
+            <Button class="trig" onclick="hyp()">HYP</Button>
+            <Button class="trig" onclick="piCalc()">&#960;</Button>
+            <Button class="number" onclick="appendToDisplay('7')">7</Button>
+            <Button class="number" onclick="appendToDisplay('8')">8</Button>
+            <Button class="number" onclick="appendToDisplay('9')">9</Button>
+            <Button class="clear" onclick="clearAll()">CA</Button>
+            <Button class="operation" onclick="operationCalc('/')">&#247;</Button>
+            <Button class="math" onclick="expCalc('&#8730;')">x&#8730;y</Button>
+            <Button class="math" onclick="expCalc('^')">y<sup>x</sup></Button>
+            <Button class="math" onclick="eulerCalc()">e<sup>x</sup></Button>
+        </tr>
+    </table>
+    <!--row 2-->
+    <table class="keyboard">
+        <tr>
+            <Button class="trig" id="sin" onclick="trigCalc(topArray[0])">sin</Button>
+            <Button class="trig" id="cos" onclick="trigCalc(topArray[1])">cos</Button>
+            <Button class="trig" id="tan" onclick="trigCalc(topArray[2])">tan</Button>
+            <Button class="number" onclick="appendToDisplay('4')">4</Button>
+            <Button class="number" onclick="appendToDisplay('5')">5</Button>
+            <Button class="number" onclick="appendToDisplay('6')">6</Button>
+            <Button class="clear" onclick="clearError()">&#9003;</Button>
+            <Button class="operation" onclick="operationCalc('*')">x</Button>
+            <Button class="math" onclick="permCalc('nPr')">nPr</Button>
+            <Button class="math" onclick="permCalc('nCr')">nCr</Button>
+            <Button class="math" onclick="factorialCalc()">n!</Button>
+        </tr>
+    </table>
+    <!--row 3-->
+    <table class="keyboard">
+        <tr>
+            <Button class="trig" id="asin" onclick="trigCalc(middleArray[0])">asin</Button>
+            <Button class="trig" id="acos" onclick="trigCalc(middleArray[1])">acos</Button>
+            <Button class="trig" id="atan" onclick="trigCalc(middleArray[2])">atan</Button>
+            <Button class="number" onclick="appendToDisplay('1')">1</Button>
+            <Button class="number" onclick="appendToDisplay('2')">2</Button>
+            <Button class="number" onclick="appendToDisplay('3')">3</Button>
+            <Button class="equal" onclick="equal()">=</Button>
+            <Button class="operation" onclick="operationCalc('-')">-</Button>
+            <Button class="math" onclick="logCalc('ln')">ln</Button>
+            <Button class="math" onclick="logCalc('log')">log</Button>
+            <Button class="math" onclick="sumCalc()">&Sigma;</Button>
+        </tr>
+    </table>
+    <!--row 4-->
+    <table class="keyboard">
+        <tr>
+            <Button class="trig" id="sec" onclick="trigCalc(bottomArray[0])">sec</Button>
+            <Button class="trig" id="csc" onclick="trigCalc(bottomArray[1])">csc</Button>
+            <Button class="trig" id="cot" onclick="trigCalc(bottomArray[2])">cot</Button>
+            <Button class="number" onclick="appendToDisplay('0')">0</Button>
+            <Button class="number" onclick="appendToDisplay('00')">00</Button>
+            <Button class="number" onclick="decimalDisplay('.')">.</Button>
+            <Button class="number" onclick="plusMinus()">+/-</Button>
+            <Button class="operation" onclick="operationCalc('+')">+</Button>
+            <Button class="math" onclick="parentheses()">()</Button>
+            <Button class="math" onclick="reciprocalCalc()">1/x</Button>
+            <Button class="math" onclick="percentCalc()">%</Button>
+        </tr>
+    </table>
+    <!--row 5-->
+<!--    <table class="keyboard">-->
+<!--        <tr>-->
+<!--            <Button class="trig" onclick="appendToDisplay('7')">asinh</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('8')">acosh</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('9')">atanh</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Phi;</Button>&lt;!&ndash;1.618033988 749894&ndash;&gt;-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Sigma;</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">&Gamma;</Button>-->
+<!--        </tr>-->
+<!--    </table>-->
+<!--    &lt;!&ndash;row 6&ndash;&gt;-->
+<!--    <table class="keyboard">-->
+<!--        <tr>-->
+<!--            <Button class="trig" onclick="appendToDisplay('7')">sech</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('8')">csch</Button>-->
+<!--            <Button class="trig" onclick="appendToDisplay('9')">coth</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('7')">7</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('8')">8</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--            <Button class="number" onclick="appendToDisplay('9')">9</Button>-->
+<!--        </tr>-->
+<!--    </table>-->
+</div>
+<script src="scientific.js"></script>
+</body>
+</html>

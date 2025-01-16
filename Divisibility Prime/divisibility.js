@@ -8,8 +8,6 @@ let result = "";
 function appendToDisplay(input) {
     if (inputDisplay.value.length === 11) {
         //nothing
-    } else if (input === "0" && inputDisplay.value === "0") {
-        //nothing
     } else if (inputDisplay.value === "0") {
         inputDisplay.value = input;
     } else {

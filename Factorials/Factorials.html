@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorials Calculator</title>
+    <link type="text/css" rel="stylesheet" href="Factorials.css">
+    <link type="text/css" rel="stylesheet" href="../all-calc.css">
+</head>
+<body>
+<div class="top">
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
+</div>
+<div class="top" style="height: 50px; color: white; margin-bottom: 25px">
+    <h1>Factorials Calculator</h1>
+</div>
+<div class="factorialbox">
+    <div class="header">
+        <h2>Factorials </h2>
+    </div>
+    <div class="column left">
+        <div class="keyboard">
+            <div id="guideline">
+                <p id="instruction">Input max is 9999.</p>
+            </div>
+            <form>
+                <label for="input"></label>
+                <input id="input" type="text" value="0" readonly>
+            </form>
+            <table>
+                <tr>
+                    <Button class="number" onclick="buttonPressed('7')">7</Button>
+                    <Button class="number" onclick="buttonPressed('8')">8</Button>
+                    <Button class="number" onclick="buttonPressed('9')">9</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button class="number" onclick="buttonPressed('4')">4</Button>
+                    <Button class="number" onclick="buttonPressed('5')">5</Button>
+                    <Button class="number" onclick="buttonPressed('6')">6</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button class="number" onclick="buttonPressed('1')">1</Button>
+                    <Button class="number" onclick="buttonPressed('2')">2</Button>
+                    <Button class="number" onclick="buttonPressed('3')">3</Button>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <Button class="number" onclick="buttonPressed('0')">0</Button>
+                    <Button class="clear" onclick="clearAll()">CA</Button>
+                    <Button class="clear" onclick="clearError()">&#9003;</Button>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="column middle" id="factorial1"></div>
+    <div class="column right" id="factorial2"></div>
+</div>
+</body>
+<script src="Factorials.js"></script>
+</html>

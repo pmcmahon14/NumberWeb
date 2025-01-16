@@ -17,6 +17,7 @@ const a = ["Size", "Range", "Maximum", "Minimum", "Ar Mean", "Geo Mean",
     "Kurt Exc Sample", "Kurt Exc Pop",
     "RSD Sample", "RSD Population"];
 
+//loops to set up answers section
 let stat1 = "";
 for (let i=0; i<a.length; i++) {
     if (i%2===0) {
@@ -37,6 +38,7 @@ for (let j=0; j<a.length; j++) {
 }
 document.getElementById("stat2").innerHTML = stat2;
 
+// display answers
 let size = document.getElementById(`${a[0]}`);
 let range = document.getElementById(`${a[1]}`);
 let max = document.getElementById(`${a[2]}`);

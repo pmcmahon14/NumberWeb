@@ -24,6 +24,7 @@ body {
     color: white;
 }
 
+/*results*/
 .stats {
     color: white;
     margin-left: 20px;
@@ -47,10 +48,6 @@ body {
     color: white;
     text-align: left;
     top: -50%;
-}
-
-.stats {
-
 }
 
 form {
