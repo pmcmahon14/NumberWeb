@@ -1,18 +1,4 @@
-body {
-    background-color: black;
-    font-family: Arial, serif;
-}
 
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-.top {
-    height: 50px;
-    color: white;
-    margin-bottom: 75px;
-}
 
 .keyboard {
     height: 420px;

@@ -2,9 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Roman Numeral</title>
+    <title>Roman Numeral Converter</title>
+    <link type="text/css" rel="stylesheet" href="Roman%20Numeral.css">
+    <link type="text/css" rel="stylesheet" href="../all-calc.css">
 </head>
 <body>
-
+<div>
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
+</div>
+<div class="top">
+    <h1>Divisibility/Prime Factor Calculator</h1>
+</div>
+<div class="column left">
+    <div class="keyboard1">
+        <div class="guideline">
+            <p class="instruction">Enter a number between 2 and 999,999,999.</p>
+        </div>
+        <form>
+            <label for="input1"></label>
+            <input id="input1" type="text" value="0" readonly>
+        </form>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <Button disabled class="unused">.</Button>
+                <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                <Button disabled class="unused">.</Button>
+                <Button disabled class="unused">.</Button>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="column right">
+    <div class="keyboard2">
+        <div class="guideline">
+            <p class="instruction"></p>
+        </div>
+        <form>
+            <label for="input2"></label>
+            <input id="input2" type="text" value="0" readonly>
+        </form>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('M')">M</Button>
+                <Button class="number" onclick="appendToDisplay('D')">D</Button>
+                <Button class="number" onclick="appendToDisplay('C')">C</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('L')">L</Button>
+                <Button class="number" onclick="appendToDisplay('X')">X</Button>
+                <Button class="number" onclick="appendToDisplay('V')">V</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay()">I</Button>
+                <Button disabled class="unused">.</Button>
+                <Button class="number" onclick="appendToDisplay()">shift</Button>
+                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>

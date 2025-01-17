@@ -1,0 +1,128 @@
+body {
+    background-color: black;
+    font-family: Arial, serif;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.top {
+    height: 50px;
+    color: white;
+    margin-bottom: 75px;
+}
+
+#input1, #input2 {
+    width: 98%;
+    height: 40px;
+    border: solid white 1px;
+    border-radius: 15px;
+    font-size: 32px;
+    background-color: black;
+    color: white;
+    text-align: right;
+    position: relative;
+    top: -50%;
+}
+
+.keyboard1 {
+    height: 420px;
+    width: 325px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+    text-align: center;
+    /*1080x2106  1.95 ratio*/
+}
+
+.keyboard2 {
+    height: 340px;
+    width: 325px;
+    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 25px;
+    background-color: black;
+    text-align: center;
+    /*1080x2106  1.95 ratio*/
+}
+
+.guideline {
+    height: 30px;
+}
+
+.instruction {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.left, .right {
+    float: left;
+    width: 49%;
+}
+
+@media screen and (max-width: 1000px) {
+    .left, .right{
+        width: 100%;
+    }
+
+    .keyboard1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .keyboard2 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/*buttons*/
+button {
+    display: inline-block;
+    margin-top: 5px;
+    width: 25%;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.number {
+    background-color: rgb(50, 50, 50);
+}
+
+.number:hover {
+    background-color: grey;
+}
+
+.clear {
+    background-color: rgb(51, 0, 9);
+}
+
+.clear:hover {
+    background-color: darkmagenta;
+}
+
+.unused {
+    background-color: black;
+    color: black;
+}
+
+.enter {
+    background-color: tan;
+}
+
+.enter:hover {
+    background-color: antiquewhite;
+}
