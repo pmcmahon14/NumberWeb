@@ -11,12 +11,12 @@
     <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
 </div>
 <div class="top">
-    <h1>Divisibility/Prime Factor Calculator</h1>
+    <h1>Roman Numerals Conversion</h1>
 </div>
 <div class="column left">
     <div class="keyboard1">
         <div class="guideline">
-            <p class="instruction">Enter a number between 2 and 999,999,999.</p>
+            <p class="instruction">Enter a number between 1 and 3999.</p>
         </div>
         <form>
             <label for="input1"></label>
@@ -24,26 +24,26 @@
         </form>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay('7')">7</Button>
-                <Button class="number" onclick="appendToDisplay('8')">8</Button>
-                <Button class="number" onclick="appendToDisplay('9')">9</Button>
-                <Button class="clear" onclick="clearAll()">CA</Button>
+                <Button class="number" onclick="appendToDisplay1('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay1('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay1('9')">9</Button>
+                <Button class="clear" onclick="clearAll1()">CA</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay('4')">4</Button>
-                <Button class="number" onclick="appendToDisplay('5')">5</Button>
-                <Button class="number" onclick="appendToDisplay('6')">6</Button>
-                <Button class="clear" onclick="clearError()">&#9003;</Button>
+                <Button class="number" onclick="appendToDisplay1('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay1('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay1('6')">6</Button>
+                <Button class="clear" onclick="clearError1()">&#9003;</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay('1')">1</Button>
-                <Button class="number" onclick="appendToDisplay('2')">2</Button>
-                <Button class="number" onclick="appendToDisplay('3')">3</Button>
-                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+                <Button class="number" onclick="appendToDisplay1('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay1('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay1('3')">3</Button>
+                <Button class="enter" onclick="numberToRoman()">&#9166;</Button>
             </tr>
         </table>
         <table>
@@ -67,29 +67,30 @@
         </form>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay('M')">M</Button>
-                <Button class="number" onclick="appendToDisplay('D')">D</Button>
-                <Button class="number" onclick="appendToDisplay('C')">C</Button>
-                <Button class="clear" onclick="clearAll()">CA</Button>
+                <Button class="number" id="M" onclick="appendToDisplay('M')">M</Button>
+                <Button class="number" id="D" onclick="appendToDisplay('D')">D</Button>
+                <Button class="number" id="C" onclick="appendToDisplay('C')">C</Button>
+                <Button class="clear" onclick="clearAll2()">CA</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay('L')">L</Button>
-                <Button class="number" onclick="appendToDisplay('X')">X</Button>
-                <Button class="number" onclick="appendToDisplay('V')">V</Button>
-                <Button class="clear" onclick="clearError()">&#9003;</Button>
+                <Button class="number" id="L" onclick="appendToDisplay('L')">L</Button>
+                <Button class="number" id="X" onclick="appendToDisplay('X')">X</Button>
+                <Button class="number" id="V" onclick="appendToDisplay('V')">V</Button>
+                <Button class="clear" onclick="clearError2()">&#9003;</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay()">I</Button>
+                <Button class="number" id="I" onclick="appendToDisplay()">I</Button>
                 <Button disabled class="unused">.</Button>
-                <Button class="number" onclick="appendToDisplay()">shift</Button>
-                <Button class="enter" onclick="calculateDivisibility()">&#9166;</Button>
+                <Button disabled class="unused">.</Button>
+                <Button class="enter" onclick="romanToNumber()">&#9166;</Button>
             </tr>
         </table>
     </div>
 </div>
 </body>
+<script src="Roman%20Numeral.js"></script>
 </html>
