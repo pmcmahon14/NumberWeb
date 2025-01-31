@@ -19,37 +19,37 @@
             <p class="instruction">Enter a number between 1 and 3999.</p>
         </div>
         <form>
-            <label for="input1"></label>
-            <input id="input1" type="text" value="0" readonly>
+            <label for="ntrInput"></label>
+            <input id="ntrInput" type="text" value="0" readonly>
         </form>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay1('7')">7</Button>
-                <Button class="number" onclick="appendToDisplay1('8')">8</Button>
-                <Button class="number" onclick="appendToDisplay1('9')">9</Button>
+                <Button class="number" onclick="ntrDisplay('7')">7</Button>
+                <Button class="number" onclick="ntrDisplay('8')">8</Button>
+                <Button class="number" onclick="ntrDisplay('9')">9</Button>
                 <Button class="clear" onclick="clearAll1()">CA</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay1('4')">4</Button>
-                <Button class="number" onclick="appendToDisplay1('5')">5</Button>
-                <Button class="number" onclick="appendToDisplay1('6')">6</Button>
+                <Button class="number" onclick="ntrDisplay('4')">4</Button>
+                <Button class="number" onclick="ntrDisplay('5')">5</Button>
+                <Button class="number" onclick="ntrDisplay('6')">6</Button>
                 <Button class="clear" onclick="clearError1()">&#9003;</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" onclick="appendToDisplay1('1')">1</Button>
-                <Button class="number" onclick="appendToDisplay1('2')">2</Button>
-                <Button class="number" onclick="appendToDisplay1('3')">3</Button>
-                <Button class="enter" onclick="numberToRoman()">&#9166;</Button>
+                <Button class="number" onclick="ntrDisplay('1')">1</Button>
+                <Button class="number" onclick="ntrDisplay('2')">2</Button>
+                <Button class="number" onclick="ntrDisplay('3')">3</Button>
+                <Button class="enter" onclick="numberCheck()">&#9166;</Button>
             </tr>
         </table>
         <table>
             <tr>
                 <Button disabled class="unused">.</Button>
-                <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" onclick="ntrDisplay('0')">0</Button>
                 <Button disabled class="unused">.</Button>
                 <Button disabled class="unused">.</Button>
             </tr>
@@ -59,34 +59,34 @@
 <div class="column right">
     <div class="keyboard2">
         <div class="guideline">
-            <p class="instruction"></p>
+            <p class="instruction">Can handle up to MMMCMXCIX</p>
         </div>
         <form>
-            <label for="input2"></label>
-            <input id="input2" type="text" value="0" readonly>
+            <label for="rtnInput"></label>
+            <input id="rtnInput" type="text" value="0" readonly>
         </form>
         <table>
             <tr>
-                <Button class="number" id="M" onclick="appendToDisplay('M')">M</Button>
-                <Button class="number" id="D" onclick="appendToDisplay('D')">D</Button>
-                <Button class="number" id="C" onclick="appendToDisplay('C')">C</Button>
+                <Button class="number" id="M" onclick="rtnDisplay('M')">M</Button>
+                <Button class="number" id="D" onclick="rtnDisplay('D')">D</Button>
+                <Button class="number" id="C" onclick="rtnDisplay('C')">C</Button>
                 <Button class="clear" onclick="clearAll2()">CA</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" id="L" onclick="appendToDisplay('L')">L</Button>
-                <Button class="number" id="X" onclick="appendToDisplay('X')">X</Button>
-                <Button class="number" id="V" onclick="appendToDisplay('V')">V</Button>
+                <Button class="number" id="L" onclick="rtnDisplay('L')">L</Button>
+                <Button class="number" id="X" onclick="rtnDisplay('X')">X</Button>
+                <Button class="number" id="V" onclick="rtnDisplay('V')">V</Button>
                 <Button class="clear" onclick="clearError2()">&#9003;</Button>
             </tr>
         </table>
         <table>
             <tr>
-                <Button class="number" id="I" onclick="appendToDisplay()">I</Button>
+                <Button class="number" id="I" onclick="rtnDisplay('I')">I</Button>
                 <Button disabled class="unused">.</Button>
                 <Button disabled class="unused">.</Button>
-                <Button class="enter" onclick="romanToNumber()">&#9166;</Button>
+                <Button class="enter" onclick="romanCheck()">&#9166;</Button>
             </tr>
         </table>
     </div>

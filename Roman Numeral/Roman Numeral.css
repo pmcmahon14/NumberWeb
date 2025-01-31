@@ -14,7 +14,7 @@ body {
     margin-bottom: 75px;
 }
 
-#input1, #input2 {
+#ntrInput, #rtnInput {
     width: 98%;
     height: 40px;
     border: solid white 1px;
