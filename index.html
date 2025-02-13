@@ -6,14 +6,35 @@
     <link type="text/css" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm">
     <title>Numbertarian Calculators</title>
+    <!--script to set up timer for home page images-->
+    <script type="text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("calculator").src = images[x];
+        }
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+        let images = [], x = 0;
+        images[0] = "images/Screenshots/Base%20Conversion%20Pro.png";
+        images[1] = "images/Screenshots/Divisibility%20Pro.png";
+        images[2] = "images/Screenshots/Prime%20Pro.png";
+        images[3] = "images/Screenshots/Sci%20Pro%201.png";
+        images[4] = "images/Screenshots/Sci%20Pro%202.png";
+        images[5] = "images/Screenshots/Statistics%20Pro%201.png";
+        images[6] = "images/Screenshots/Statistics%20Pro%202.png";
+        images[7] = "images/Screenshots/Unit%20Conversion%20Pro%201.png";
+        images[8] = "images/Screenshots/Unit%20Conversion%20Pro%202.png";
+    </script>
 </head>
-<body>
+<body onload="startTimer()">
 
 <!--Headline and page intro-->
 <a href="index.html" style="text-decoration: none">
     <img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 60px;height: 60px; float: left">
     <div id="logograd"><p id="header">Numbertarian<sup class="trademark" style="font-family: Arial,serif; font-size: 24px">™</sup></p></div>
 </a>
+<!--main part of page-->
 <div class="main">
     <div id="topleft" style="float: left">
         <p id="greeting">Welcome to <span>Numbertarian</span><sup class="trademark" style="font-size: 24px">™</sup>!</p>
@@ -22,7 +43,7 @@
             <a href="Calculators.html"><h1 style="margin-top: 50px">Online Calculators</h1></a>
     </div>
     <div id="topright" style="float: right">
-        <img src="images/Test%20Website%20Image.jpeg" alt="Calculators" style="width: 650px;height: 650px; float: left">
+        <img id="calculator" src="images/Screenshots/Base%20Conversion%20Pro.png" alt="Calculators" style="width: 288px;height: 650px;">
     </div>
 </div>
 <div style="border-top: 1px solid #f1f1f1">
