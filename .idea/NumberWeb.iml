@@ -12,5 +12,6 @@
     <orderEntry type="library" name="Dart SDK" level="project" />
     <orderEntry type="library" name="Dart Packages" level="project" />
     <orderEntry type="library" name="mathjs" level="application" />
+    <orderEntry type="library" name="button.prod" level="application" />
   </component>
 </module>
