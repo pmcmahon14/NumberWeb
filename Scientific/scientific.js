@@ -26,15 +26,6 @@ let topArray = sinArray;
 let middleArray = asinArray;
 let bottomArray = secArray;
 let combArray = ncrArray;
-sinButton.innerHTML = topArray[0];
-cosButton.innerHTML = topArray[1];
-tanButton.innerHTML = topArray[2];
-asinButton.innerHTML = middleArray[0];
-acosButton.innerHTML = middleArray[1];
-atanButton.innerHTML = middleArray[2];
-secButton.innerHTML = bottomArray[0];
-cscButton.innerHTML = bottomArray[1];
-cotButton.innerHTML = bottomArray[2];
 
 const radianDivide = 1;
 const degreeDivide = (Math.PI/180);
