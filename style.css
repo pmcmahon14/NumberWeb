@@ -129,12 +129,25 @@ a:hover {
 
 /*for mobile phones*/
 @media only screen and (max-width: 1000px) {
+    #topright {
+        width: 98%;
+        opacity: 0.6;
+    }
+
     [class*="logocol-"] {
         width: 33.33%
     }
 
     [class*="calccol-"] {
         width: 100%
+    }
+
+    [class*="noticecol-"] {
+        width: 100%
+    }
+
+    .math {
+        width: 100%;
     }
 }
 
