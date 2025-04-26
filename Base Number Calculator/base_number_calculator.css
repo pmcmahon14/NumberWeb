@@ -65,6 +65,7 @@ button:disabled {
     font-size: 32px;
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 #operationInput {
@@ -149,4 +150,29 @@ button {
 
 .enter {
     background-color: tan;
+}
+
+@media only screen and (max-width: 1000px) {
+    .keyboard {
+        height: 230px;
+        width: 100%;
+    }
+
+    button {
+        height: 50px;
+    }
+
+    #operationInput {
+        font-size: 30px;
+    }
+
+    .numberForm, .baseDropdown {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #calculate {
+        margin-top: 20px;
+        width: 50px;
+    }
 }
