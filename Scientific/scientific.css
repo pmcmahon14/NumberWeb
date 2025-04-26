@@ -109,3 +109,10 @@ button {
 .math:hover {
     background-color: darkgray;
 }
+
+@media screen and (max-width: 1000px) {
+    .calculator {
+        width: 100%;
+        /*1080x2106  1.95 ratio*/
+    }
+}
