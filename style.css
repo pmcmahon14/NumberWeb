@@ -72,12 +72,26 @@ a:hover {
     & span {
         font-family: Charm, Arial, serif;
     }
-    /*.sub-headline {*/
-    /*    font-size: 40px;*/
-    /*}*/
+}
+
+#nav {
+    height: 70px;
+    background-color: black;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#nav a, #footer a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 20px;
 }
 
 #topleft {
+    float: left;
     width: 50%;
     border-bottom: 2px black solid;
     #greeting {
@@ -86,14 +100,20 @@ a:hover {
     & span {
         font-family: Charm, Arial, serif;
     }
-    #sub-headline {
-        font-size: 40px;
-    }
+}
+
+.sub-headline {
+    font-size: 40px;
 }
 
 #topright {
+    float: right;
     width: 49%;
     opacity: 0.6;
+}
+
+#bottom a {
+    text-decoration: none;
 }
 
 #header {
@@ -101,6 +121,7 @@ a:hover {
     font-size: 40px;
     text-align: inherit;
     color: white;
+    text-decoration: none;
 }
 
 .math {
@@ -121,8 +142,10 @@ a:hover {
     font-weight: bold;
 }
 
-.calculator {
-    height: 422px;
+#calculator {
+    width: 288px;
+    height: 650px;
+    margin-top: 50px;
     border: 1px solid blue;
     border-radius: 25px;
 }
@@ -132,22 +155,7 @@ a:hover {
     #topright {
         width: 98%;
         opacity: 0.6;
-    }
-
-    [class*="logocol-"] {
-        width: 33.33%
-    }
-
-    [class*="calccol-"] {
-        width: 100%
-    }
-
-    [class*="noticecol-"] {
-        width: 100%
-    }
-
-    .math {
-        width: 100%;
+        z-index: 1;
     }
 }
 
@@ -177,7 +185,10 @@ button {
 }
 
 .main {
-    height: 700px;
+    padding-top: 50px;
+    min-height: 800px;
+    height: auto;
+    margin-top: -8px;
 }
 
 .number {
@@ -216,13 +227,6 @@ button {
 #flutter_target {
     border: 1px solid;
     transition: all 150ms ease-in;
-}
-
-#logograd {
-    margin-top: -40px;
-    height: 60px;
-    background-color: dodgerblue;
-    background-image: linear-gradient(to right, blue, lightskyblue);
 }
 
 .trademark {

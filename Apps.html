@@ -16,19 +16,54 @@
     <meta name="keywords" content="calculators, apps, scientific, divisibility, prime factor, base number, statistics, unit conversion"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        #nav {
+            height: 70px;
+            background-color: black;
+            border-bottom: 1px solid #f1f1f1;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            margin-top: -8px;
+        }
+        @media only screen and (max-width: 1000px) {
+            [class*="logocol-"] {
+                width: 33.33%
+            }
+
+            [class*="calccol-"] {
+                width: 100%
+            }
+
+            [class*="noticecol-"] {
+                width: 100%
+            }
+
+            .math {
+                width: 100%;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Charm">
     <title>Numbertarian Apps Available for Download</title>
     <link rel="icon" type="image/x-icon" href="/images/Logos/Numbertarian.png">
 </head>
 <body>
-<a href="index.html" style="text-decoration: none">
-    <img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 60px;height: 60px; float: left">
-    <div id="logograd"><p id="header">Numbertarian<sup class="trademark">™</sup></p></div>
-</a>
-<div id="top">
-    <p id="greeting">Welcome to <span>Numbertarian</span><sup class="trademark">™</sup>!</p>
-    <p class="sub-headline">Your home for calculators and other number tools. <br>
-        Apps available on
+<!--Headline and page intro-->
+<div id="nav">
+    <a href="index.html">
+        <img src="images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 60px;height: 60px; float: left; margin-top: -15px">
+    </a>
+    <a href="Apps.html">Apps</a>
+    <a href="Calculators.html">Calculators</a>
+    <a href="About.html">About</a>
+</div>
+<div>
+    <div style="height: 80px"></div>
+<!--    <p id="greeting">Welcome to <span>Numbertarian</span><sup class="trademark">™</sup>!</p>-->
+<!--    <p class="sub-headline">Your home for calculators and other number tools.</p> <br>-->
+    <p class="sub-headline">Apps available on
         <a href="https://play.google.com/store/apps/developer?id=Numbertarian&gl=US" style="text-decoration: none">
             <img src="images/Google%20Play%20Square.png" alt="Google Play" style="width: 51px; height: 57px" >
         </a>.
