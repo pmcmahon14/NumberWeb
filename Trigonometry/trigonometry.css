@@ -3,12 +3,25 @@ body {
     font-family: Arial, serif;
 }
 
-/* Style the tab */
-.tab {
-    height: 8%;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+.left {
+    width: 49%;
+    float: left;
+    border-right: 1px solid floralwhite;
+}
+
+.right {
+    width: 49%;
+    float: left;
+    margin-left: 20px;
+}
+
+p, h2, h3 {
+    color: #f1f1f1
+}
+
+math {
+    color: #f1f1f1;
+    font-size: 20px;
 }
 
 .measurements>button {
@@ -16,27 +29,13 @@ body {
     border: grey solid 1px;
 }
 
-/*.measurements>button:focus {*/
-/*    background-color: green;*/
-/*}*/
-
-.trig {
-    background-color: deepskyblue;
-    color: black;
-}
-
-#shift, #hyp{
-    background-color: grey;
-    color: black;
-}
-
 label {
     color: white;
     font-size: 32px;
 }
 
-input {
-    width: 49%;
+#input {
+    width: 98%;
     height: 40px;
     border: solid white 1px;
     border-radius: 15px;
@@ -49,13 +48,13 @@ input {
 
 form {
     display: inline-block;
-    width: 49%;
+    width: 100%;
 }
 
 /*keyboard*/
 .keyboard {
     align-content: center;
-    height: 325px;
+    height: 375px;
     width: 300px;
     border: solid white 1px;
     margin-left: auto;
@@ -67,9 +66,9 @@ form {
 
 /*buttons*/
 button {
+    float: left;
     display: inline-block;
     margin-top: 5px;
-    /*width: 10%;*/
     height: 75px;
     border: none;
     border-radius: 50%;
@@ -77,11 +76,11 @@ button {
     font-weight: bold;
     color: white;
     cursor: pointer;
+    width: 25%;
 }
 
 .number {
     background-color: rgb(50, 50, 50);
-    width: 25%;
 }
 
 .number:hover {
@@ -90,7 +89,6 @@ button {
 
 .clear {
     background-color: rgb(51, 0, 9);
-    width: 25%;
 }
 
 .clear:hover {
@@ -102,7 +100,38 @@ button {
     color: black;
 }
 
-.enter {
-    background-color: tan;
+#trig {
+    background-color: deepskyblue;
+    color: black;
 }
 
+.odd {
+    background-color: #555555;
+}
+
+.even {
+    background-color: #333333;
+}
+
+.column {
+    float: left;
+    color: white;
+    font-size: 24px;
+}
+
+.answerLeft {
+    width: 50%;
+    border-left: 2px solid grey;
+}
+
+.answerRight {
+    width: 49%;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .calculator .left .right .answerLeft .answerRight{
+        width: 98%;
+        /*1080x2106  1.95 ratio*/
+    }
+}

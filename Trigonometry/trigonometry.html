@@ -19,7 +19,6 @@
 
     gtag('config', 'G-B0G9ET6BKW');
 </script>
-<!--todo put calculations on left side and chart on right side-->
 <body>
 <div class="logo">
     <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
@@ -27,65 +26,259 @@
 <div class="top" style="height: 50px; color: white">
     <h1>Trigonometry</h1>
 </div>
-<div class="calculator">
-    <div class="measurements" style="text-align: center; height: 7%">
-        <button id="select" onclick="selector()" style="width: 8%"></button>
-    </div>
-    <div style="text-align: center; height: 7%">
-        <button id="shift" onclick="shiftSelector()" style="width: 8%">shift</button>
-        <button class="trig" id="asin" style="width: 8%" onclick="trigMeas(this)"></button>
-        <button class="trig" id="acos" style="width: 8%" onclick="trigMeas(this)"></button>
-        <button class="trig" id="atan" style="width: 8%" onclick="trigMeas(this)"></button>
-    </div>
-    <div style="text-align: center; height: 7%">
-        <button id="hyp" onclick="hypSelector()" style="width: 8%">hyp</button>
-        <button class="trig" id="sin" style="width: 8%" onclick="trigMeas(this)"></button>
-        <button class="trig" id="cos" style="width: 8%" onclick="trigMeas(this)"></button>
-        <button class="trig" id="tan" style="width: 8%" onclick="trigMeas(this)"></button>
+<div class="left">
+    <div class="calculator">
+        <div class="keyboard">
+            <form>
+                <label for="input"></label>
+                <input id="input" type="text" value="0" readonly>
+            </form>
+            <table>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                    <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                    <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                    <Button class="clear" onclick="clearAll()">CA</Button>
+                </tr>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                    <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                    <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                    <Button class="clear" onclick="clearError()">&#9003;</Button>
+                </tr>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                    <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                    <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                    <button id="trig" onclick="selector()"></button>
+                </tr>
+                <tr>
+                    <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                    <Button class="number" onclick="decimalCalc()">.</Button>
+                    <Button class="number" onclick="plusMinus()">+/-</Button>
+                    <Button disabled class="unused">.</Button>
+                </tr>
+            </table>
+        </div>
     </div>
     <div>
-        <form style="margin-top: 20px">
-            <label id="inputLabel" for="meas" style="display: inline-block"></label>
-            <input id="meas" type="text" value="0" style="text-align: center; float: right; margin-right: 250px" readonly>
-        </form>
-        <form style="margin-top: 20px">
-            <label id="outputLabel" for="output" style="display: inline-block"></label>
-            <input id="output" type="text" value="0" style="text-align: center; float: right; margin-right: 250px" readonly>
-        </form>
-    </div>
-    <h1 style="color: aliceblue" id="shiftDisp"></h1>
-    <h1 style="color: aliceblue" id="hypDisp"></h1>
-    <div class="keyboard">
-        <table>
-            <tr>
-                <Button class="number" onclick="appendToDisplay('7')">7</Button>
-                <Button class="number" onclick="appendToDisplay('8')">8</Button>
-                <Button class="number" onclick="appendToDisplay('9')">9</Button>
-                <Button class="clear" onclick="clearAll()">CA</Button>
-            </tr>
-            <tr>
-                <Button class="number" onclick="appendToDisplay('4')">4</Button>
-                <Button class="number" onclick="appendToDisplay('5')">5</Button>
-                <Button class="number" onclick="appendToDisplay('6')">6</Button>
-                <Button class="clear" onclick="clearError()">&#9003;</Button>
-            </tr>
-            <tr>
-                <Button class="number" onclick="appendToDisplay('1')">1</Button>
-                <Button class="number" onclick="appendToDisplay('2')">2</Button>
-                <Button class="number" onclick="appendToDisplay('3')">3</Button>
-<!--                <Button class="enter" style="width: 25%" onclick="calculate()">&#9166;</Button>-->
-                <Button disabled class="unused">.</Button>
-            </tr>
-            <tr>
-                <Button class="number" onclick="appendToDisplay('0')">0</Button>
-                <Button class="number" onclick="decimalCalc()">.</Button>
-                <Button class="number" onclick="plusMinus()">+/-</Button>
-                <Button disabled class="unused">.</Button>
-            </tr>
-        </table>
+        <div class="column answerLeft" id="trigLabels"></div>
+        <div class="column answerRight" id="trigAnswers"></div>
     </div>
 </div>
+<div class="right">
+    <h2>The Original Three</h2>
+    <h3>Sine (sin)</h3>
+    <p>For a right triangle, the sine of an angle is the ratio of the opposite side from the angle divided by the
+        hypotenuse:</p>
+    <div id="sineRight"></div>
+    <p>For both acute and obtuse triangles (all angles less than 90 and an angle greater than 90,
+        respectively, the Law of Sines applies as follows:</p>
+    <div id="sineOthers"></div>
+    <br>
+    <p>For a unit circle (a circle with radius 1, centered at the origin), the sine is the y-coordinate of the point
+        of the circle at a specified angle.</p>
+    <br>
+    <p>The Organic Chemistry Tour provides a fun tutorial into some real-life applications for trigonometry below:</p>
+    <iframe width="300" height="169" src="https://www.youtube.com/embed/sCyQ9DcDp2E" title="Trigonometry - Real Life Applications" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <br>
+    <h3>Cosine (cos)</h3>
+    <p>For a right triangle, the cosine of an angle is the ratio of adjacent side of the angle divided by the
+        hypotenuse:</p>
+    <div id="cosineRight"></div>
+    <p>For both acute and obtuse triangles (all angles less than 90 and an angle greater than 90,
+        respectively, the Law of Cosines applies as follows:</p>
+    <div id="cosineOthers"></div>
+    <p>For a unit circle (a circle with radius 1, centered at the origin), the cosine is the x-coordinate of the point
+        of the circle at a specified angle.</p>
+    <br>
+    <h3>Tangent (tan)</h3>
+    <p>The tangent of an angle is the opposite side divided by the adjacent side (not hypotenuse); also the sine
+        divided by cosine where cosine does not equal 0:</p>
+    <div id="Tangent"></div>
+    <p>For a unit circle, the tangent is y divided by x. Note: tangent is undefined when the cosine of the angle equals 0.</p>
+    <br>
+    <h2>Inverses, Not Reciprocals!</h2>
+    <h3>Arcsine (arcsin, asin, sin<sup>-1</sup>)</h3>
+    <p>The arcsine is the inverse of the sine, thus the angle:</p>
+    <div id="arcsineDef1"></div>
+    <p>The Law of Sines can also come in handy here:</p>
+    <div id="arcsineDef2"></div>
+    <br>
+    <br>
+    <br>
+    <h3>Arccosine (arccos, acos, cos<sup>-1</sup>)</h3>
+    <p>Arccosine is the inverse of the cosine, thus the angle:</p>
+    <div id="arcCos1"></div>
+    <p>The Law of Cosines can also come in handy here:</p>
+    <div id="arcCos2"></div>
+    <br>
+    <br>
+    <br>
+    <h3>Arctangent (arctan, atan, tan<sup>-1</sup>)</h3>
+    <p>Arctangent is the inverse of the cosine and is defined as follows:</p>
+    <div id="arcTan1"></div>
+    <br>
+    <br>
+    <br>
+    <h2>Now The Reciprocals</h2>
+    <h3>Cosecant (csc)</h3>
+    <p>Since sine is:</p>
+    <div id="sineCsc"></div>
+    <p>the cosecant is the reciprocal of the sine, defined as follows:</p>
+    <div id="cosecant"></div>
+    <p>Whereas sine goes up a triangle from the opposite, the cosecant goes down the triangle.</p>
+    <p>Note: the sine cannot equal zero!</p>
+    <br>
+    <br>
+    <h3>Secant (sec)</h3>
+    <p>Given cosine is:</p>
+    <div id="cosineSec"></div>
+    <p>the secant flips the fraction:</p>
+    <div id="secant"></div>
+    <p>The cosine stays along the base while the secant follows "what goes up, must come down" (up to the hypotenuse, then back down to the base).</p>
+    <p>Note: the cosine cannot equal zero!</p>
+    <br>
+    <br>
+    <h3>Cotangent (cot)</h3>
+    <p>Given that tangent is (rise over run):</p>
+    <div id="tanCotan"></div>
+    <p>the cotangent flips the above on its head:</p>
+    <div id="cotangent"></div>
+    <p>the steeper the tangent the smaller the cotangent, aka run over rise</p>
+    <br>
+    <br>
+    <h3>Arccosecant (arccsc, csc<sup>-1</sup>)</h3>
+    <p>It is the inverse of the cosecant:</p>
+    <div id="cscArccsc"></div>
+    <p>The cosecant doesn't exist at 0, therefore the arccosecant only works for:</p>
+    <div id="arcCos"></div>
+    <br>
+    <br>
+    <h3>Arcsecant (arcsec, sec<sup>-1</sup>)</h3>
+    <p>This is the inverse of the secant:</p>
+    <div id="arcSec1"></div>
+    <p>Secant values don't exist between -1 and 1, therefore the range is:</p>
+    <div id="arcSec2"></div>
+    <br>
+    <br>
+    <h3>Arccotangent</h3>
+    <p>This is the inverse of the cotangent:</p>
+    <div id="arcCot1"></div>
+    <p>Cotangent values can be any real number, so the range is as follows:</p>
+    <div id="arcCot2"></div>
+    <br>
+    <br>
+    <br>
+    <h2>The Hyperbolic Functions</h2>
+    <p>Full definitions and applications of the following are available at <a href="https://mathworld.wolfram.com/Trigonometry.html" target="_blank" style="color: deepskyblue">Wolfram MathWorld</a>.</p>
+    <br>
+    <h3>Hyperbolic Sine</h3>
+    <p>The definition of the rollercoaster-loving hyperbolic sine is as follows:</p>
+    <div id="sinH1"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Cosine</h3>
+    <p>The definition of the hammock-shaped hyperbolic cosine is as follows:</p>
+    <div id="cosH1"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Tangent</h3>
+    <p>The definition of the elongated s-curve hyperbolic tangent is as follows:</p>
+    <div id="tanH1"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arcsine</h3>
+    <p>The definition of the hyperbolic arcsine is as follows:</p>
+    <div id="asinH1"></div>
+    <p>where the range of x is:</p>
+    <div id="asinH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arccosine</h3>
+    <p>The definition of the hyperbolic arccosine is as follows:</p>
+    <div id="acosH1"></div>
+    <p>where the range of x is:</p>
+    <div id="acosH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arctangent</h3>
+    <p>The definition of the hyperbolic arctangent is as follows:</p>
+    <div id="atanH1"></div>
+    <p>where the range of x is:</p>
+    <div id="atanH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Cosecant</h3>
+    <p>The definition of the hyperbolic cosecant is as follows:</p>
+    <div id="cscH1"></div>
+    <p>where the range of x is:</p>
+    <div id="cscH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Secant</h3>
+    <p>The definition of the hyperbolic secant is as follows:</p>
+    <div id="secH1"></div>
+    <p>where the range of x is:</p>
+    <div id="secH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Cotangent</h3>
+    <p>The definition of the hyperbolic cotangent is as follows:</p>
+    <div id="cotH1"></div>
+    <p>where the range of x is:</p>
+    <div id="cotH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arccosecant</h3>
+    <p>The definition of the hyperbolic arccosecant is as follows:</p>
+    <div id="acscH1"></div>
+    <p>where the range of x is:</p>
+    <div id="acscH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arcsecant</h3>
+    <p>The definition of the hyperbolic Arcsecant is as follows:</p>
+    <div id="asecH1"></div>
+    <p>where the range of x is:</p>
+    <div id="asecH2"></div>
+    <br>
+    <br>
+    <h3>Hyperbolic Arccotangent</h3>
+    <p>The definition of the hyperbolic Arccotangent is as follows:</p>
+    <div id="acotH1"></div>
+    <p>where the range of x is:</p>
+    <div id="acotH2"></div>
+    <p>Another way to put it is:</p>
+    <div id="acotH3"></div>
+    <br>
+    <br>
+</div>
 <script src="trigonometry.js"></script>
+<script src="sin.js"></script>
+<script src="cos.js"></script>
+<script src="tan.js"></script>
+<script src="asin.js"></script>
+<script src="acos.js"></script>
+<script src="atan.js"></script>
+<script src="csc.js"></script>
+<script src="sec.js"></script>
+<script src="cot.js"></script>
+<script src="acsc.js"></script>
+<script src="asec.js"></script>
+<script src="acot.js"></script>
+<script src="sinh.js"></script>
+<script src="cosh.js"></script>
+<script src="tanh.js"></script>
+<script src="asinh.js"></script>
+<script src="acosh.js"></script>
+<script src="atanh.js"></script>
+<script src="csch.js"></script>
+<script src="sech.js"></script>
+<script src="coth.js"></script>
+<script src="acsch.js"></script>
+<script src="asech.js"></script>
+<script src="acoth.js"></script>
 </body>
 </html>
-
