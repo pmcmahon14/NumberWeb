@@ -6,7 +6,7 @@ body {
 .left {
     width: 49%;
     float: left;
-    border-right: 1px solid floralwhite;
+    border: 1px solid floralwhite;
 }
 
 .right {
@@ -129,8 +129,13 @@ button {
     text-align: right;
 }
 
-@media screen and (max-width: 1000px) {
-    .calculator .left .right .answerLeft .answerRight{
+@media only screen and (max-width: 1000px) {
+    .left {
+        width: 98%;
+        /*1080x2106  1.95 ratio*/
+    }
+
+    .right {
         width: 98%;
         /*1080x2106  1.95 ratio*/
     }

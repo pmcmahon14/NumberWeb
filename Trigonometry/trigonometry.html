@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="N9Qiwf28RdiK3nhthq-D2n3Xu7TwLufrEEx8Wppr4hM"/>
     <meta name="description" content="Full 24-function trigonometry calculator with degree, radian, and gradian measurements."/>
     <meta name="keywords" content="calculators, online, trig, trigonometry, sin, cos, tan, secant, gradian"/>
@@ -27,39 +28,37 @@
     <h1>Trigonometry</h1>
 </div>
 <div class="left">
-    <div class="calculator">
-        <div class="keyboard">
-            <form>
-                <label for="input"></label>
-                <input id="input" type="text" value="0" readonly>
-            </form>
-            <table>
-                <tr>
-                    <Button class="number" onclick="appendToDisplay('7')">7</Button>
-                    <Button class="number" onclick="appendToDisplay('8')">8</Button>
-                    <Button class="number" onclick="appendToDisplay('9')">9</Button>
-                    <Button class="clear" onclick="clearAll()">CA</Button>
-                </tr>
-                <tr>
-                    <Button class="number" onclick="appendToDisplay('4')">4</Button>
-                    <Button class="number" onclick="appendToDisplay('5')">5</Button>
-                    <Button class="number" onclick="appendToDisplay('6')">6</Button>
-                    <Button class="clear" onclick="clearError()">&#9003;</Button>
-                </tr>
-                <tr>
-                    <Button class="number" onclick="appendToDisplay('1')">1</Button>
-                    <Button class="number" onclick="appendToDisplay('2')">2</Button>
-                    <Button class="number" onclick="appendToDisplay('3')">3</Button>
-                    <button id="trig" onclick="selector()"></button>
-                </tr>
-                <tr>
-                    <Button class="number" onclick="appendToDisplay('0')">0</Button>
-                    <Button class="number" onclick="decimalCalc()">.</Button>
-                    <Button class="number" onclick="plusMinus()">+/-</Button>
-                    <Button disabled class="unused">.</Button>
-                </tr>
-            </table>
-        </div>
+    <div class="keyboard">
+        <form>
+            <label for="input"></label>
+            <input id="input" type="text" value="0" readonly>
+        </form>
+        <table>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('7')">7</Button>
+                <Button class="number" onclick="appendToDisplay('8')">8</Button>
+                <Button class="number" onclick="appendToDisplay('9')">9</Button>
+                <Button class="clear" onclick="clearAll()">CA</Button>
+            </tr>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('4')">4</Button>
+                <Button class="number" onclick="appendToDisplay('5')">5</Button>
+                <Button class="number" onclick="appendToDisplay('6')">6</Button>
+                <Button class="clear" onclick="clearError()">&#9003;</Button>
+            </tr>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('1')">1</Button>
+                <Button class="number" onclick="appendToDisplay('2')">2</Button>
+                <Button class="number" onclick="appendToDisplay('3')">3</Button>
+                <button id="trig" onclick="selector()"></button>
+            </tr>
+            <tr>
+                <Button class="number" onclick="appendToDisplay('0')">0</Button>
+                <Button class="number" onclick="decimalCalc()">.</Button>
+                <Button class="number" onclick="plusMinus()">+/-</Button>
+                <Button disabled class="unused">.</Button>
+            </tr>
+        </table>
     </div>
     <div>
         <div class="column answerLeft" id="trigLabels"></div>
@@ -256,29 +255,29 @@
     <br>
 </div>
 <script src="trigonometry.js"></script>
-<script src="sin.js"></script>
-<script src="cos.js"></script>
-<script src="tan.js"></script>
-<script src="asin.js"></script>
-<script src="acos.js"></script>
-<script src="atan.js"></script>
-<script src="csc.js"></script>
-<script src="sec.js"></script>
-<script src="cot.js"></script>
-<script src="acsc.js"></script>
-<script src="asec.js"></script>
-<script src="acot.js"></script>
-<script src="sinh.js"></script>
-<script src="cosh.js"></script>
-<script src="tanh.js"></script>
-<script src="asinh.js"></script>
-<script src="acosh.js"></script>
-<script src="atanh.js"></script>
-<script src="csch.js"></script>
-<script src="sech.js"></script>
-<script src="coth.js"></script>
-<script src="acsch.js"></script>
-<script src="asech.js"></script>
-<script src="acoth.js"></script>
+<script src="Functions/sin.js"></script>
+<script src="Functions/cos.js"></script>
+<script src="Functions/tan.js"></script>
+<script src="Functions/asin.js"></script>
+<script src="Functions/acos.js"></script>
+<script src="Functions/atan.js"></script>
+<script src="Functions/csc.js"></script>
+<script src="Functions/sec.js"></script>
+<script src="Functions/cot.js"></script>
+<script src="Functions/acsc.js"></script>
+<script src="Functions/asec.js"></script>
+<script src="Functions/acot.js"></script>
+<script src="Functions/sinh.js"></script>
+<script src="Functions/cosh.js"></script>
+<script src="Functions/tanh.js"></script>
+<script src="Functions/asinh.js"></script>
+<script src="Functions/acosh.js"></script>
+<script src="Functions/atanh.js"></script>
+<script src="Functions/csch.js"></script>
+<script src="Functions/sech.js"></script>
+<script src="Functions/coth.js"></script>
+<script src="Functions/acsch.js"></script>
+<script src="Functions/asech.js"></script>
+<script src="Functions/acoth.js"></script>
 </body>
 </html>

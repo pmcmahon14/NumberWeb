@@ -98,6 +98,7 @@ function selector() {
 function clearAll() {
     degreeButton.innerHTML = "DEG";
     measure = degreeDivide;
+    altMeasure = altDegreeDivide;
     inputDisplay.value ='0';
     decimalUsed = false;
     calculate();
