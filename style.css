@@ -3,15 +3,15 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: whitesmoke;
-    }
+/*@media (prefers-color-scheme: light) {*/
+/*    body {*/
+/*        background-color: whitesmoke;*/
+/*    }*/
 
-    html {
-        color: black;
-    }
-}
+/*    html {*/
+/*        color: black;*/
+/*    }*/
+/*}*/
 
 body {
     background-color: black;

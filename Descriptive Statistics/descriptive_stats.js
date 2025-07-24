@@ -6,16 +6,15 @@ const inputDisplay = document.getElementById("input");
 let decimalUsed = false;
 let returnUsed = false;
 
-const a = ["Size", "Range", "Maximum", "Minimum", "Ar Mean", "Geo Mean",
+const a = ["Size", "Minimum", "Maximum", "Range", "Ar Mean", "Geo Mean",
     "Median", "Mode", "Sum", "Sum^2", "St Dev Sample", "St Dev Pop",
     "Var Sample", "Var Pop",
-    "Coeff Var Sample", "Coeff Var Pop", "Quartile 1",
+    "Coeff Var Sample", "Coeff Var Pop", "RSD Sample", "RSD Population", "Quartile 1",
     "Quartile 2", "Quartile 3", "IQR", "Mid Range", "Outliers",
     "Mean Abs Dev", "Root Mean^2", "SE Mean Sample",
     "SE Mean Pop",
     "Skewness Sample", "Skewness Pop", "Kurt Sample", "Kurt Pop",
-    "Kurt Exc Sample", "Kurt Exc Pop",
-    "RSD Sample", "RSD Population"];
+    "Kurt Exc Sample", "Kurt Exc Pop"];
 
 //loops to set up answers section
 let stat1 = "";
@@ -277,7 +276,8 @@ function modeCalc() {
             mode.innerHTML = `${mode}`+" "+`${highArray[n]}`+", ";
             n++;
         }
-        mode.innerHTML = `${mode}`+" and "+`${highArray[count-1]}`+" appear "+`${highModeCount}`+" time(s).";
+        // mode.innerHTML = `${mode}`+" and "+`${highArray[count-1]}`+" appear "+`${highModeCount}`+" time(s).";
+        mode.innerHTML = "There is no mode"
     }
     variabilityCalc();
 }

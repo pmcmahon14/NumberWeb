@@ -1,0 +1,42 @@
+let sum1 = '<math displaystyle="true">\n' +
+    '     <mtext>sum</mtext>\n' +
+    '  <mo>=</mo>\n' +
+    '  <munderover>\n' +
+    '    <mo>&#x2211;<!-- ∑ --></mo>\n' +
+    '    <mrow>\n' +
+    '      <mi>i</mi>\n' +
+    '      <mo>=</mo>\n' +
+    '      <mn>1</mn>\n' +
+    '    </mrow>\n' +
+    '    <mrow>\n' +
+    '      <mi>n</mi>\n' +
+    '    </mrow>\n' +
+    '  </munderover>\n' +
+    '  <msub>\n' +
+    '    <mi>x</mi>\n' +
+    '    <mi>i</mi>\n' +
+    '  </msub>\n' +
+    '    <mo>=</mo>\n' +
+    '    <mfrac>\n' +
+    '      <mrow>\n' +
+    '        <msub>\n' +
+    '          <mi>&#119909;</mi>\n' +
+    '          <mn>1</mn>\n' +
+    '        </msub>\n' +
+    '        <mo>+</mo>\n' +
+    '        <msub>\n' +
+    '          <mi>&#119909;</mi>\n' +
+    '          <mn>2</mn>\n' +
+    '        </msub>\n' +
+    '        <mtext>...</mtext>\n' +
+    '        <msub>\n' +
+    '          <mi>&#119909;</mi>\n' +
+    '          <mn>n</mn>\n' +
+    '        </msub>\n' +
+    '      </mrow>\n' +
+    '      <mrow>\n' +
+    '        <mtext>n</mtext>\n' +
+    '      </mrow>\n' +
+    '    </mfrac>\n' +
+    '  </math>';
+document.getElementById("Sum1").innerHTML = sum1;

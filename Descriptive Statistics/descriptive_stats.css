@@ -3,25 +3,37 @@ body {
     font-family: Arial, serif;
 }
 
+p, h3, li {
+    color: #f1f1f1;
+}
+
+math {
+    color: #f1f1f1;
+    font-size: 20px;
+}
+
 .column {
     float: left;
 }
 
 .left {
     width: 49%;
+    border: 1px solid floralwhite;
 }
 
 .middle, .right{
-    width: 24%;
-}
-
-.middle {
-    border-left: 2px solid grey;
+    width: 49%;
 }
 
 .right {
     text-align: right;
     color: white;
+}
+
+.descright {
+    width: 49%;
+    float: left;
+    margin-left: 20px;
 }
 
 /*results*/

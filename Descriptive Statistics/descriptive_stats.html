@@ -11,6 +11,7 @@
         gtag('config', 'G-B0G9ET6BKW');
     </script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="N9Qiwf28RdiK3nhthq-D2n3Xu7TwLufrEEx8Wppr4hM"/>
     <meta name="description" content="Descriptive statistics with full analytics."/>
     <meta name="keywords" content="calculators, online, statistics, descriptive statistics"/>
@@ -25,46 +26,252 @@
 <div id="top" style="height: 50px; color: white">
     <h1>Descriptive Statistics</h1>
 </div>
-<div>
-    <div class="column left">
-        <!--todo add n count in real time-->
-        <form>
-            <label for="input"></label>
-<!--            <input id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%">-->
-            <textarea id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%"></textarea>
-        </form>
-        <div class="keyboard">
-            <table>
-                <tr>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('7')">7</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('8')">8</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('9')">9</Button>
-                    <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAll()">CA</Button>
-                </tr>
-                <tr>
-                    <Button class="number" style="width :25%" onclick="buttonPressed('4')">4</Button>
-                    <Button class="number" style="width :25%" onclick="buttonPressed('5')">5</Button>
-                    <Button class="number" style="width :25%" onclick="buttonPressed('6')">6</Button>
-                    <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
-                </tr>
-                <tr>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
-                    <Button class="switch" style="width: 25%" onclick="buttonPressed('return')">&#11184;</Button>
-                </tr>
-                <tr>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>
-                    <Button class="number" style="width: 25%" onclick="buttonPressed(',')">,</Button>
-                </tr>
-            </table>
-        </div>
+<div class="column left">
+    <!--todo add n count in real time-->
+    <form>
+        <label for="input"></label>
+        <!--            <input id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%">-->
+        <textarea id="input" type="text" value="" style="text-align: center; height: 300px; width: 200%"></textarea>
+    </form>
+    <div class="keyboard">
+        <table>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('7')">7</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('8')">8</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('9')">9</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CA'); clearAll()">CA</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width :25%" onclick="buttonPressed('4')">4</Button>
+                <Button class="number" style="width :25%" onclick="buttonPressed('5')">5</Button>
+                <Button class="number" style="width :25%" onclick="buttonPressed('6')">6</Button>
+                <Button class="clear" style="width: 25%" onclick="buttonPressed('CE')">&#9003;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('1')">1</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('2')">2</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('3')">3</Button>
+                <Button class="switch" style="width: 25%" onclick="buttonPressed('return')">&#11184;</Button>
+            </tr>
+            <tr>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('0')">0</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('.')">.</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed('-')">+/-</Button>
+                <Button class="number" style="width: 25%" onclick="buttonPressed(',')">,</Button>
+            </tr>
+        </table>
     </div>
     <div class="column middle" id="stat1"></div>
     <div class="column right" id="stat2"></div>
 </div>
+<div class="descright">
+    <h3>Size (n)</h3>
+    <p>This is how many values are in your data set, whether sample or population.</p>
+    <div id="size"></div>
+    <p><b>Note:</b> data set must contain at least 30 values to be considered statistically significant.</p>
+    <p>Problems with a smaller (n<30) data set include:</p>
+    <ul>
+        <li><a href="https://statisticsbyjim.com/basics/central-limit-theorem/" target="_blank" style="color: deepskyblue">Central Limit Theorem</a> may not resemble a normal distribution.</li>
+        <li>Also a good <a href="https://www.investopedia.com/terms/c/central_limit_theorem.asp" target="_blank" style="color: deepskyblue">description</a>.</li>
+        <li>Increased chances of Type I (false positive) or Type II (false negative) errors</li>
+    </ul>
+    <a href="https://leanscape.io/the-importance-of-identifying-the-right-sample-size-for-business-improvement/"></a>
+    <br>
+    <br>
+    <h3>Minimum (min)</h3>
+    <p>When ordering a data set from least to greatest, the minimum is the least value.</p>
+    <div id="minimum"></div>
+    <br>
+    <br>
+    <h3>Maximum (max)</h3>
+    <p>When ordering a data set from least to greatest, the minimum is the least value.</p>
+    <div id="maximum"></div>
+    <br>
+    <br>
+    <h3>Range (R)</h3>
+    <p>Range is the difference between the greatest and least values:</p>
+    <div id="range"></div>
+    <br>
+    <br>
+    <h3>Arithmetic Mean (sample: <span id="aMean3"></span>, population: &#x03BC;)</h3>
+    <p>The arithmetic mean, better known as the average, is the sum of the data points divided by the size.
+        The basic formula is the same for both the sample and population. The arithmetic mean is best used for regular numbers (e.g., test scores or temperatures).</p>
+    <div id="aMean1"></div>
+    <p><b>Note 1:</b> if the mean is for population, use &#x03BC;; otherwise use <span id="aMean2"></span> for sample. The formula is the same for both. </p>
+    <p><b>Note 2:</b> if mean > median, there are outlying values at the upper end. If mean < median, there are outlying values at the lower end.</p>
+    <br>
+    <br>
+    <h3>Geometric Mean (GM)</h3>
+    <p>The geometric mean finds the middle value by multiplying the data points and finding the square root of
+        the product instead of adding them and dividing by the number of data points. The geometric mean is best
+        used for anything that compounds or multiplies over time (e.g., growth rates or ratios).</p>
+    <div id="gMean1"></div>
+    <br>
+    <br>
+    <h3>Median (x&tilde;)</h3>
+    <p>Median is the sweet middle value spot between the greatest and least values.</p>
+    <p>There are two possibilities. If there's an odd number of values:</p>
+    <div id="Median1"></div>
+    <p>if there is an even number of values:</p>
+    <div id="Median2"></div>
+    <br>
+    <br>
+    <h3>Mode (Z)</h3>
+    <p>Mode is the value(s) that appears most often in a data set.</p>
+    <p><b>Note:</b> there is an interesting dilemma that says if all values appear the same amount of times
+        (e.g. once, twice), either all values are the mode or there is no mode. </p>
+    <br>
+    <br>
+    <h3>Sum (sum, &Sigma;)</h3>
+    <p>Sum is the total of all values:</p>
+    <div id="Sum1"></div>
+    <br>
+    <br>
+    <h3>Sum of Squares (SS)</h3>
+    <p>The sum of squares quantifies the spread of data points against the mean and is used in regression analysis.</p>
+    <p>The basic formula is the same for both the sample and population. For clarity:</p>
+    <p>For a sample:</p>
+    <div id="SumSquares1"></div>
+    <p>For a population:</p>
+    <div id="SumSquares2"></div>
+    <br>
+    <br>
+    <h3>Standard Deviation (&sigma;)</h3>
+    <p>Standard deviation measures how far from the mean a group of numbers is.
+        The formulas for both sample and population are slightly different. The sample formula has an adjustment
+        in the denominator to account for the increased uncertainty involved in a data subset. For clarity:</p>
+    <p>The formula for a sample looks like:</p>
+    <div id="SD1"></div>
+    <p>While the formula for a population looks like:</p>
+    <div id="SD2"></div>
+    <br>
+    <br>
+    <h3>Variance (&sigma;<sup>2</sup>)</h3>
+    <p>Variance is the average of the squared differences of each data point from the mean. In other words,
+        variance is the square of the standard deviation. Again, the formulas for both sample and population are
+        slightly different. The sample formula has an adjustment in the denominator to account for the increased
+        uncertainty involved in a data subset. For clarity:</p>
+    <p>The formula for the sample is:</p>
+    <div id="Variance1"></div>
+    <p>While the formula for a population is:</p>
+    <div id="Variance2"></div>
+    <br>
+    <br>
+    <h3>Coefficient of Variation (CV)</h3>
+    <p>The coefficient of variation shows how much variability there is in relation to the mean. Here, the basic
+        formula is the same for sample and population. For clarity:</p>
+    <p>Formula for a sample:</p>
+    <div id="CV1"></div>
+    <p>While the formula for a population is:</p>
+    <div id="CV2"></div>
+    <br>
+    <br>
+    <h3>Relative Standard Deviation (RSD)</h3>
+    <p>The relative standard deviation is simply a percentage expression of the coefficient of variation.
+        The basic formula is the same for both a sample and a population.</p>
+    <p>For preciseness, the formulas are illustrated as follows:</p>
+    <p>For a sample:</p>
+    <div id="RSD1"></div>
+    <p>For a population:</p>
+    <div id="RSD2"></div>
+    <h3>Quartiles (Q<sub>1</sub>, Q<sub>2</sub>, Q<sub>3</sub>)</h3>
+    <p>Quartiles are a trio of values that split the dataset into 25th, 50th, and 75th percentiles.
+        Each quartile has its own formula.</p>
+    <p>First quartile:</p>
+    <div id="Quartile1"></div>
+    <p>Second quartile:</p>
+    <div id="Quartile2"></div>
+    <p>Third quartile:</p>
+    <div id="Quartile3"></div>
+    <br>
+    <br>
+    <h3>Interquartile Range (IQR)</h3>
+    <p>The interquartile range is between Q1 and Q3</p>
+    <div id="Interquartile"></div>
+    <h3>Midrange (MR)</h3>
+    <p>The midrange is considered a type of average (mean) using only the minimum and maximum values of a data set
+        instead of all values. The formula is:</p>
+    <div id="Midrange"></div>
+    <br>
+    <br>
+    <h3>Outliers</h3>
+    <div id="Outliers1"></div>
+    <div id="Outliers2"></div>
+    <h3>Mean Absolute Deviation (MAD)</h3>
+    <p>Mean absolute deviation is the sum of absolute values of data spread from the mean.</p>
+    <p>The basic formula is the same for both sample and population. For clarity:</p>
+    <p>The sample is as follows:</p>
+    <div id="MAD1"></div>
+    <p>The population is as follows:</p>
+    <div id="MAD2"></div>
+    <br>
+    <br>
+    <h3>Root Mean Square (RMS)</h3>
+    <p>Root mean square shows the magnitude of a data set.</p>
+    <p>The formula is as follows:</p>
+    <div id="RMS1"></div>
+    <br>
+    <br>
+    <h3>Standard Error of the Mean (SE)</h3>
+    <p>Standard error measures how much the mean might vary from the true population value ("wiggle room").</p>
+    <p>The basic formula is the same for both sample and population. For clarity:</p>
+    <p>The sample:</p>
+    <div id="SE1"></div>
+    <p>The population:</p>
+    <div id="SE2"></div>
+    <br>
+    <br>
+    <h3>Skewness (&gamma;<sub>1</sub>)</h3>
+    <p>Skewness measures the asymmetry of a data set. Unlike a normal distribution, a skewed distribution will either
+        have a longer left tail (negative skew) or a longer right tail (positive skew).</p>
+    <p>The sample formula is:</p>
+    <div id="Skewness1"></div>
+    <p>The population formula is:</p>
+    <div id="Skewness2"></div>
+    <br>
+    <br>
+    <h3>Kurtosis (&beta;<sub>2</sub>)</h3>
+    <p>Kurtosis describes the extremeness of a distribution's outliers on either tail end. The greater the value,
+        the more outliers there are from the mean.</p>
+    <p>The formula for a sample is:</p>
+    <div id="Kurtosis1"></div>
+    <p>The formula for a population is:</p>
+    <div id="Kurtosis2"></div>
+    <br>
+    <br>
+    <h3>Kurtosis Excess (&alpha;<sub>4</sub>)</h3>
+    <p>Kurtosis excess describes the height of a distribution's outliers on either tail end. The greater the value,
+        the more outliers there are from the mean.</p>
+    <p>The formula for a sample is:</p>
+    <div id="KurtExcess1"></div>
+    <p>The formula for a population is:</p>
+    <div id="KurtExcess2"></div>
+    <br>
+    <br>
+</div>
 <script src="descriptive_stats.js"></script>
+<script src="Formulas/size.js"></script>
+<script src="Formulas/range.js"></script>
+<script src="Formulas/minimum.js"></script>
+<script src="Formulas/maximum.js"></script>
+<script src="Formulas/arithmeticmean.js"></script>
+<script src="Formulas/geometricmean.js"></script>
+<script src="Formulas/median.js"></script>
+<script src="Formulas/sum.js"></script>
+<script src="Formulas/sumsquares.js"></script>
+<script src="Formulas/stddev.js"></script>
+<script src="Formulas/variance.js"></script>
+<script src="Formulas/coeffvar.js"></script>
+<script src="Formulas/quartiles.js"></script>
+<script src="Formulas/interquartile.js"></script>
+<script src="Formulas/midrange.js"></script>
+<script src="Formulas/outliers.js"></script>
+<script src="Formulas/mad.js"></script>
+<script src="Formulas/rms.js"></script>
+<script src="Formulas/standarderror.js"></script>
+<script src="Formulas/skewness.js"></script>
+<script src="Formulas/kurtosis.js"></script>
+<script src="Formulas/kurtosisexcess.js"></script>
+<script src="Formulas/rsd.js"></script>
 </body>
 </html>
