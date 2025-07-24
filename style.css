@@ -157,6 +157,10 @@ a:hover {
         opacity: 0.6;
         z-index: 1;
     }
+
+    .math {
+        width: 99%;
+    }
 }
 
 .desc {
