@@ -46,4 +46,4 @@ let cotangentsnippets = '<math>\n' +
     '                </mfrac>\n' +
     '            </mrow>\n' +
     '        </math>';
-document.getElementById("cotangentsnippets").innerHTML = cotangentsnippets;
+document.getElementById("cotangent").innerHTML = cotangentsnippets;

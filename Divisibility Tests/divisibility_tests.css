@@ -1,0 +1,42 @@
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-bottom-color: white;
+    border-bottom-width: 3px;
+    text-align: center;
+    outline: white;
+    font-size: 24px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    background-color: lightgrey;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.column {
+    float: left;
+}
+
+.left, .right{
+    width: 49%;
+    border: 1px solid floralwhite;
+}
+
+p {
+    font-size: 20px;
+}
+
+math {
+    font-size: 20px;
+    color: black;
+}

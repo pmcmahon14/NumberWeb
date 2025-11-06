@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="N9Qiwf28RdiK3nhthq-D2n3Xu7TwLufrEEx8Wppr4hM"/>
     <meta name="description" content="Full 24-function trigonometry calculator with degree, radian, and gradian measurements."/>
-    <meta name="keywords" content="calculators, online, trig, trigonometry, sin, cos, tan, secant, gradian"/>
+    <meta name="keywords" content="calculators, online, trig, trigonometry, sin, cos, tan, asin, acos, atan, sec, csc, cot,
+     gradian, radian, degree"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trigonometry Calculator</title>
     <link type="text/css" rel="stylesheet" href="trigonometry.css">
     <link type="text/css" rel="stylesheet" href="../all-calc.css">
@@ -21,10 +23,11 @@
     gtag('config', 'G-B0G9ET6BKW');
 </script>
 <body>
-<div class="logo">
-    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width: 100px;height: 100px"></a>
+<div>
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
+    <a href="https://www.buymeacoffee.com/numbertarik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" class="center"></a>
 </div>
-<div class="top" style="height: 50px; color: white">
+<div class="top">
     <h1>Trigonometry</h1>
 </div>
 <div class="left">
@@ -148,21 +151,21 @@
     <p>the steeper the tangent the smaller the cotangent, aka run over rise</p>
     <br>
     <br>
-    <h3>Arccosecant (arccsc, csc<sup>-1</sup>)</h3>
+    <h3>Arccosecant (arccsc, acsc, csc<sup>-1</sup>)</h3>
     <p>It is the inverse of the cosecant:</p>
     <div id="cscArccsc"></div>
     <p>The cosecant doesn't exist at 0, therefore the arccosecant only works for:</p>
     <div id="arcCos"></div>
     <br>
     <br>
-    <h3>Arcsecant (arcsec, sec<sup>-1</sup>)</h3>
+    <h3>Arcsecant (arcsec, asec, sec<sup>-1</sup>)</h3>
     <p>This is the inverse of the secant:</p>
     <div id="arcSec1"></div>
     <p>Secant values don't exist between -1 and 1, therefore the range is:</p>
     <div id="arcSec2"></div>
     <br>
     <br>
-    <h3>Arccotangent</h3>
+    <h3>Arccotangent (arccot, acot, cot<sup>-1</sup>)</h3>
     <p>This is the inverse of the cotangent:</p>
     <div id="arcCot1"></div>
     <p>Cotangent values can be any real number, so the range is as follows:</p>
@@ -173,78 +176,78 @@
     <h2>The Hyperbolic Functions</h2>
     <p>Full definitions and applications of the following are available at <a href="https://mathworld.wolfram.com/Trigonometry.html" target="_blank" style="color: deepskyblue">Wolfram MathWorld</a>.</p>
     <br>
-    <h3>Hyperbolic Sine</h3>
+    <h3>Hyperbolic Sine (sinh)</h3>
     <p>The definition of the rollercoaster-loving hyperbolic sine is as follows:</p>
     <div id="sinH1"></div>
     <br>
     <br>
-    <h3>Hyperbolic Cosine</h3>
+    <h3>Hyperbolic Cosine (cosh)</h3>
     <p>The definition of the hammock-shaped hyperbolic cosine is as follows:</p>
     <div id="cosH1"></div>
     <br>
     <br>
-    <h3>Hyperbolic Tangent</h3>
+    <h3>Hyperbolic Tangent (tanh)</h3>
     <p>The definition of the elongated s-curve hyperbolic tangent is as follows:</p>
     <div id="tanH1"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arcsine</h3>
+    <h3>Hyperbolic Arcsine (arcsinh, asinh, sinh<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic arcsine is as follows:</p>
     <div id="asinH1"></div>
     <p>where the range of x is:</p>
     <div id="asinH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arccosine</h3>
+    <h3>Hyperbolic Arccosine (arccosh, acosh, cosh<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic arccosine is as follows:</p>
     <div id="acosH1"></div>
     <p>where the range of x is:</p>
     <div id="acosH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arctangent</h3>
+    <h3>Hyperbolic Arctangent (arctanh, atanh, tanh<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic arctangent is as follows:</p>
     <div id="atanH1"></div>
     <p>where the range of x is:</p>
     <div id="atanH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Cosecant</h3>
+    <h3>Hyperbolic Cosecant (csch)</h3>
     <p>The definition of the hyperbolic cosecant is as follows:</p>
     <div id="cscH1"></div>
     <p>where the range of x is:</p>
     <div id="cscH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Secant</h3>
+    <h3>Hyperbolic Secant (sech)</h3>
     <p>The definition of the hyperbolic secant is as follows:</p>
     <div id="secH1"></div>
     <p>where the range of x is:</p>
     <div id="secH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Cotangent</h3>
+    <h3>Hyperbolic Cotangent (coth)</h3>
     <p>The definition of the hyperbolic cotangent is as follows:</p>
     <div id="cotH1"></div>
     <p>where the range of x is:</p>
     <div id="cotH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arccosecant</h3>
+    <h3>Hyperbolic Arccosecant (arccsch, acsch, csch<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic arccosecant is as follows:</p>
     <div id="acscH1"></div>
     <p>where the range of x is:</p>
     <div id="acscH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arcsecant</h3>
+    <h3>Hyperbolic Arcsecant (arcsech, asech, sech<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic Arcsecant is as follows:</p>
     <div id="asecH1"></div>
     <p>where the range of x is:</p>
     <div id="asecH2"></div>
     <br>
     <br>
-    <h3>Hyperbolic Arccotangent</h3>
+    <h3>Hyperbolic Arccotangent (arccoth, acoth, coth<sup>-1</sup>)</h3>
     <p>The definition of the hyperbolic Arccotangent is as follows:</p>
     <div id="acotH1"></div>
     <p>where the range of x is:</p>

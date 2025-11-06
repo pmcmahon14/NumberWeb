@@ -35,6 +35,8 @@ function disableButton() {
     }
 }
 
+let originalBase = "10";
+
 let base2 = document.getElementById(`${baseArray[0]}`);
 let base3 = document.getElementById(`${baseArray[1]}`);
 let base4 = document.getElementById(`${baseArray[2]}`);
@@ -142,46 +144,46 @@ function clearError() {
 }
 
 function baseConverter() {
-    for (let b=2; b<37; b++) {
-        base2.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(2);
-        base3.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(3);
-        base4.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(4);
-        base5.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(5);
-        base6.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(6);
-        base7.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(7);
-        base8.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(8);
-        base9.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(9);
-        base10.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(10);
-        base11.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(11);
-        base12.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(12);
-        base13.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(13);
-        base14.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(14);
-        base15.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(15);
-        base16.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(16);
-        base17.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(17);
-        base18.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(18);
-        base19.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(19);
-        base20.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(20);
-        base21.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(21);
-        base22.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(22);
-        base23.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(23);
-        base24.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(24);
-        base25.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(25);
-        base26.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(26);
-        base27.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(27);
-        base28.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(28);
-        base29.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(29);
-        base30.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(30);
-        base31.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(31);
-        base32.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(32);
-        base33.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(33);
-        base34.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(34);
-        base35.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(35);
-        base36.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(36);
-    }
+    base2.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(2);
+    base3.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(3);
+    base4.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(4);
+    base5.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(5);
+    base6.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(6);
+    base7.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(7);
+    base8.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(8);
+    base9.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(9);
+    base10.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(10);
+    base11.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(11);
+    base12.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(12);
+    base13.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(13);
+    base14.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(14);
+    base15.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(15);
+    base16.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(16);
+    base17.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(17);
+    base18.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(18);
+    base19.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(19);
+    base20.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(20);
+    base21.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(21);
+    base22.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(22);
+    base23.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(23);
+    base24.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(24);
+    base25.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(25);
+    base26.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(26);
+    base27.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(27);
+    base28.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(28);
+    base29.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(29);
+    base30.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(30);
+    base31.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(31);
+    base32.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(32);
+    base33.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(33);
+    base34.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(34);
+    base35.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(35);
+    base36.innerHTML = parseInt(inputDisplay.value, parseInt(selectedBase.value)).toString(36);
 }
 
 function changeBase() {
+    inputDisplay.value = parseInt(inputDisplay.value, parseInt(originalBase)).toString(selectedBase.value);
+    originalBase = selectedBase.value;
     disableButton();
     baseConverter();
 }

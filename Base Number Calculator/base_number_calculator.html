@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="N9Qiwf28RdiK3nhthq-D2n3Xu7TwLufrEEx8Wppr4hM"/>
+    <meta name="description" content="Base number calculator."/>
+    <meta name="keywords" content="calculators, online, base number, binary, octal, decimal, hexadecimal"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0G9ET6BKW"></script>
     <script>
@@ -10,20 +15,17 @@
 
         gtag('config', 'G-B0G9ET6BKW');
     </script>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="N9Qiwf28RdiK3nhthq-D2n3Xu7TwLufrEEx8Wppr4hM"/>
-    <meta name="description" content="Base number calculator."/>
-    <meta name="keywords" content="calculators, online, base number, binary, octal, decimal, hexadecimal"/>
     <title>Base Number Calculator</title>
     <link rel="canonical" href="https://www.numbertarian.com/base_number_calculator.html">
     <link type="text/css" rel="stylesheet" href="base_number_calculator.css">
     <link type="text/css" rel="stylesheet" href="../all-calc.css">
 </head>
 <body>
-<div class="top">
-    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" style="width :90px;height: 100px"></a>
+<div>
+    <a href="../index.html"><img src="../images/Logos/Numbertarian.png" alt="Numbertarian" class="logo"></a>
+    <a href="https://www.buymeacoffee.com/numbertarik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;" class="center"></a>
 </div>
-<div class="top" style="height: 50px; color: white; margin-bottom: 25px">
+<div class="top">
     <h1>Base Number Calculator</h1>
 </div>
 <div class="calculator">
@@ -35,7 +37,7 @@
     <div>
         <form class="numberForm">
             <label for="baseInput1"></label>
-            <input id="baseInput1" type="text" value="0" readonly>
+            <input id="baseInput1" type="text" value="0" onkeypress="appendToDisplay()">
         </form>
     </div>
     <div>
@@ -117,4 +119,3 @@
 <script src="base_number_calculator.js"></script>
 </body>
 </html>
-
