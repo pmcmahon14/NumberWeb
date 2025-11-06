@@ -20,7 +20,7 @@ const test1_10 = '<p><span style="font-weight: bold">Divisibility Rule for 1:</s
     '        <p></p>\n' +
     '        <p><span style="font-weight: bold">Divisibility Rule for 5:</span><br>If the last digit is either 5 or 0, then the number is divisible by 5.</p>\n' +
     '        <math>\n' +
-    '            <mtext>17520 => last digit is 0 => 16/4=4 </mtext>\n' +
+    '            <mtext>17520 => last digit is 0' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
