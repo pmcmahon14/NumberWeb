@@ -20,7 +20,8 @@ for (i = 0; i < coll.length; i++) {
 
 const div1 = '<h2>Divisibility Rule for 1:</h2><p>All non-zero integers!</p>\n';
 const div2 = '<h2>Divisibility Rule for 2:</h2><p>If the non-zero number ends in either 0, 2, 4, 6, or 8, it is divisible by two. All even numbers are divisible by 2.</p>\n';
-const div3 = '<h2>Divisibility Rule for 3:</h2><h3>If the sum of the digits is divisible by 3, then the number is divisible by 3.</h3>\n' +
+const div3 = '<h2>Divisibility Rule for 3:</h2>' +
+    '        <h3>If the sum of the digits is divisible by 3, then the number is divisible by 3.</h3>\n' +
     '        <math>\n' +
     '            <mtext>3258 => 3+2+5+8=18 => 18/3=6 </mtext>\n' +
     '        </math>\n' +
@@ -45,7 +46,8 @@ const div3 = '<h2>Divisibility Rule for 3:</h2><h3>If the sum of the digits is d
     '            <mtext>&#8756; 987,654,321,099,876,543,210/3=329,218,107,033,292,181,070</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div4 = '<h2>Divisibility Rule for 4:</h2><h3>If the last two digits as a number are divisible by 4, then the number is divisible by 4.</p>\n' +
+const div4 = '<h2>Divisibility Rule for 4:</h2>' +
+    '        <h3>If the last two digits as a number are divisible by 4, then the number is divisible by 4.</h3>\n' +
     '        <math>\n' +
     '            <mtext>5216 => last two digits 16 => 16/4=4 </mtext>\n' +
     '        </math>\n' +
@@ -54,7 +56,8 @@ const div4 = '<h2>Divisibility Rule for 4:</h2><h3>If the last two digits as a n
     '            <mtext>&#8756; 5216/4=1304</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div5 = '<h2>Divisibility Rule for 5:</h2><h3>If the last digit is either 5 or 0, then the number is divisible by 5.</h3>\n' +
+const div5 = '<h2>Divisibility Rule for 5:</h2>' +
+    '        <h3>If the last digit is either 5 or 0, then the number is divisible by 5.</h3>\n' +
     '        <math>\n' +
     '            <mtext>34625 => last digit is 5' +
     '        </math>\n' +
@@ -71,11 +74,13 @@ const div5 = '<h2>Divisibility Rule for 5:</h2><h3>If the last digit is either 5
     '            <mtext>&#8756; 17520/5=3504</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div6 = '<h2>Divisibility Rule for 6:</h2><h3>If the number is divisible by both 2 and 3, then the number is divisible by 6.</p>\n' +
+const div6 = '<h2>Divisibility Rule for 6:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 3, then the number is divisible by 6.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
     '        <math>\n' +
     '            <mtext>576 => last digit is even (6) => 576/2=288 </mtext>\n' +
     '        </math>\n' +
-    '        <p></p>\n' +
+    '        <h3>Divisibility by 3</h3>\n' +
     '        <math>\n' +
     '            <mtext>576 => 5+7+6=18 => 18/3=6 => 576/3=192 </mtext>\n' +
     '        </math>\n' +
@@ -84,7 +89,8 @@ const div6 = '<h2>Divisibility Rule for 6:</h2><h3>If the number is divisible by
     '            <mtext>&#8756; 576/6=96</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div7 = '<h2>Divisibility Rule for 7:</h2><h3>Take the last digit, double it, and subtract it from the rest of the number. Repeat the process until a two-digit number remains. If that answer is divisible by 7, then the original number is divisible by 7.</p>\n' +
+const div7 = '<h2>Divisibility Rule for 7:</h2>' +
+    '        <h3>Take the last digit, double it, and subtract it from the rest of the number. Repeat the process until a two-digit number remains. If that answer is divisible by 7, then the original number is divisible by 7.</h3>\n' +
     '        <math>\n' +
     '            <mtext>24003 => last digit is 3 => 3*2=6 => 2400-6=2394</mtext>\n' +
     '        </math>\n' +
@@ -101,7 +107,8 @@ const div7 = '<h2>Divisibility Rule for 7:</h2><h3>Take the last digit, double i
     '            <mtext>&#8756; 24003/7=3429</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div8 = '<h2>Divisibility Rule for 8:</h2><h3>Take the last three digits as a number. If that number is divisible by 8, then the original number is divisible by 8.</p>\n' +
+const div8 = '<h2>Divisibility Rule for 8:</h2>' +
+    '        <h3>Take the last three digits as a number. If that number is divisible by 8, then the original number is divisible by 8.</h3>\n' +
     '        <math>\n' +
     '            <mtext>65728 => last three digits are 728 => 728/8=91</mtext>\n' +
     '        </math>\n' +
@@ -110,7 +117,8 @@ const div8 = '<h2>Divisibility Rule for 8:</h2><h3>Take the last three digits as
     '            <mtext>&#8756; 65728/8=8216</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div9 = '<h2>Divisibility Rule for 9:</h2><h3>If the sum of the digits is 9, then the number is divisible by 9.</p>\n' +
+const div9 = '<h2>Divisibility Rule for 9:</h2>' +
+    '        <h3>If the sum of the digits is 9, then the number is divisible by 9.</h3>\n' +
     '        <math>\n' +
     '            <mtext>45261 => 4+5+2+6+1=18 => 18/9=2</mtext>\n' +
     '        </math>\n' +
@@ -119,7 +127,8 @@ const div9 = '<h2>Divisibility Rule for 9:</h2><h3>If the sum of the digits is 9
     '            <mtext>&#8756; 45261/9=5029</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div10 = '<h2>Divisibility Rule for 10:</h2><h3>If the last digit of the number is 0, then the number is divisible by 10.</p>\n' +
+const div10 = '<h2>Divisibility Rule for 10:</h2>' +
+    '        <h3>If the last digit of the number is 0, then the number is divisible by 10.</h3>\n' +
     '        <math>\n' +
     '            <mtext>6350 => last digit is 0</mtext>\n' +
     '        </math>\n' +
@@ -128,7 +137,8 @@ const div10 = '<h2>Divisibility Rule for 10:</h2><h3>If the last digit of the nu
     '            <mtext>&#8756; 6350/10=635</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div11 = '<h2>Divisibility Rule for 11:</h2><h3>If the difference between the sum of the digits in odd positions and the sum of the digits in the even positions is either 0 or divisible by 11, then the number is divisible by 11.</p>\n' +
+const div11 = '<h2>Divisibility Rule for 11:</h2>' +
+    '        <h3>If the difference between the sum of the digits in odd positions and the sum of the digits in the even positions is either 0 or divisible by 11, then the number is divisible by 11.</h3>\n' +
     '        <math>\n' +
     '            <mtext>247588 => 2+7+8=17 => 4+5+8=17 => 17-17=0 </mtext>\n' +
     '        </math>\n' +
@@ -145,11 +155,13 @@ const div11 = '<h2>Divisibility Rule for 11:</h2><h3>If the difference between t
     '            <mtext>&#8756; 227480/11=20680</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div12 = '<h2>Divisibility Rule for 12:</h2><h3>If the number is divisible by 3 and 4, then the number is divisible by 12.</p>\n' +
+const div12 = '<h2>Divisibility Rule for 12:</h2>' +
+    '        <h3>If the number is divisible by 3 and 4, then the number is divisible by 12.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
     '        <math>\n' +
     '            <mtext>4572 => 4+5+7+2=18 => 18/3=6 </mtext>\n' +
     '        </math>\n' +
-    '        <p></p>\n' +
+    '        <h3>Divisibility by 4</h3>\n' +
     '        <math>\n' +
     '            <mtext>4572 => last two digits 72 => 72/4=18 </mtext>\n' +
     '        </math>\n' +
@@ -158,8 +170,9 @@ const div12 = '<h2>Divisibility Rule for 12:</h2><h3>If the number is divisible 
     '            <mtext>&#8756; 4572/12=381</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div13 = '<h2>Divisibility Rules for 13:</h2><h3>There are four methods to test for divisibility by 13.</p>\n' +
-    '        <p>Method One: Alternating Sum of Triplets, starting from the right (especially useful for large numbers)</p>\n' +
+const div13 = '<h2>Divisibility Rules for 13:</h2>' +
+    '        <h3>There are four methods to test for divisibility by 13.</h3>\n' +
+    '        <h3>Method One: Alternating Sum of Triplets, starting from the right (especially useful for large numbers)</h3>\n' +
     '        <math>\n' +
     '            <mtext>5,098,418 => 418, 098, 5 => 418-098+5=325 => 325/13=25 </mtext>\n' +
     '        </math>\n' +
@@ -168,7 +181,7 @@ const div13 = '<h2>Divisibility Rules for 13:</h2><h3>There are four methods to 
     '            <mtext>&#8756; 5,098,418/13=392,186</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Two: Multiply the Last Digit by 4</p>\n' +
+    '        <h3>Method Two: Multiply the Last Digit by 4</h3>\n' +
     '        <math>\n' +
     '            <mtext>6760 => Last digit is 0 => 676+(0*4)=676 => 676/13=52 </mtext>\n' +
     '        </math>\n' +
@@ -177,7 +190,7 @@ const div13 = '<h2>Divisibility Rules for 13:</h2><h3>There are four methods to 
     '            <mtext>&#8756; 6760/13=520</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Three: Subtracting the Last Two Digits and Subtract From Four Times the Rest of the Number</p>\n' +
+    '        <h3>Method Three: Subtracting the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
     '        <math>\n' +
     '            <mtext>17537 => Last two digits are 37; remaining number is 175 => 175*4-37=663 => 663/13=51</mtext>\n' +
     '        </math>\n' +
@@ -186,7 +199,7 @@ const div13 = '<h2>Divisibility Rules for 13:</h2><h3>There are four methods to 
     '            <mtext>&#8756; 17537/13=1349</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</p>\n' +
+    '        <h3>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</h3>\n' +
     '        <math>\n' +
     '            <mtext>884 => 88-(4*9) => 88-36=52 => 52/13=4 </mtext>\n' +
     '        </math>\n' +
@@ -195,8 +208,9 @@ const div13 = '<h2>Divisibility Rules for 13:</h2><h3>There are four methods to 
     '            <mtext>&#8756; 884/13=68</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div14 = '<h2>Divisibility Rule for 14:</h2><h3>There are two rules for testing divisibility by 14.</p>\n' +
-    '        <p>Method One: Test for divisibility by both 2 and 7</p>\n' +
+const div14 = '<h2>Divisibility Rule for 14:</h2>' +
+    '        <h3>There are two rules for testing divisibility by 14.</h3>\n' +
+    '        <h3>Method One: Test for divisibility by both 2 and 7</h3>\n' +
     '        <math>\n' +
     '            <mtext>7546 => 7546 is an even number => 7546/2=3773 </mtext>\n' +
     '        </math>\n' +
@@ -209,7 +223,7 @@ const div14 = '<h2>Divisibility Rule for 14:</h2><h3>There are two rules for tes
     '            <mtext>&#8756; 7546/14=539</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Two: Add the last two digits of the number to twice the rest of the digits.</p>\n' +
+    '        <h3>Method Two: Add the last two digits of the number to twice the rest of the digits.</h3>\n' +
     '        <math>\n' +
     '            <mtext>19,460 => 194 60 => (194*2)+60 => 388+60=448 => 448/14=32 </mtext>\n' +
     '        </math>\n' +
@@ -218,11 +232,13 @@ const div14 = '<h2>Divisibility Rule for 14:</h2><h3>There are two rules for tes
     '            <mtext>&#8756; 19460/14=1390</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div15 = '<h2>Divisibility Rule for 15:</h2><h3>If the number is divisible by both 3 and 5, then it is divisible by 15.</p>\n' +
+const div15 = '<h2>Divisibility Rule for 15:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 5, then it is divisible by 15.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
     '        <math>\n' +
     '            <mtext>765 => 7+6+5=18 => 18/3=6 </mtext>\n' +
     '        </math>\n' +
-    '        <p></p>\n' +
+    '        <h3>Divisibility by 5</h3>\n' +
     '        <math>\n' +
     '            <mtext>765 => The number ends in 5</mtext>\n' +
     '        </math>\n' +
@@ -231,8 +247,9 @@ const div15 = '<h2>Divisibility Rule for 15:</h2><h3>If the number is divisible 
     '            <mtext>&#8756; 765/15=51</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div16 = '<h2>Divisibility Rules for 16:</h2><h3>There are three ways to test if a number is divisible by 16.</p>\n' +
-    '        <p>Method One: Last four digits</p>\n' +
+const div16 = '<h2>Divisibility Rules for 16:</h2>' +
+    '        <h3>There are three ways to test if a number is divisible by 16.</h3>\n' +
+    '        <h3>Method One: Last four digits</h3>\n' +
     '        <math>\n' +
     '            <mtext>25,472 => 5472 => 5472/16=342 </mtext>\n' +
     '        </math>\n' +
@@ -240,7 +257,7 @@ const div16 = '<h2>Divisibility Rules for 16:</h2><h3>There are three ways to te
     '        <math>\n' +
     '            <mtext>&#8756; 25,472/16=1592</mtext>\n' +
     '        </math>\n' +
-    '        <p>Method Two: Thousands-Digit Test</p>\n' +
+    '        <h3>Method Two: Thousands-Digit Test</h3>\n' +
     '        <p>If the thousands digit is even, test to see if the last three digits are divisible by 16</p>' +
     '        <math>\n' +
     '            <mtext>2864 => 2 is even => 864/16=54</mtext>\n' +
@@ -258,7 +275,7 @@ const div16 = '<h2>Divisibility Rules for 16:</h2><h3>There are three ways to te
     '            <mtext>&#8756; 35,632/16=2227</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Three: Four Times the Rest</p>\n' +
+    '        <h3>Method Three: Four Times the Rest</h3>\n' +
     '        <p>Take the last two digits, multiply the rest of the number by 4, and divide that answer by 16.</p>\n' +
     '        <math>\n' +
     '            <mtext>45,872 => 458 72 => (458*4)+72 => (1832)+72=1904 => 1904/16=119</mtext>\n' +
@@ -268,8 +285,9 @@ const div16 = '<h2>Divisibility Rules for 16:</h2><h3>There are three ways to te
     '            <mtext>&#8756; 45,872/16=2867</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div17 = '<h2>Divisibility Rule for 17:</h2><h3>There are three ways to test for divisibility by 17.</p>\n' +
-    '        <p>Method One: Check the last digit</p>\n' +
+const div17 = '<h2>Divisibility Rule for 17:</h2>' +
+    '        <h3>There are three ways to test for divisibility by 17.</h3>\n' +
+    '        <h3>Method One: Check the last digit</h3>\n' +
     '        <p>Multiply the last digit by 5</p>\n' +
     '        <math>\n' +
     '            <mtext>25,472 => 5472 => 5472/16=342 </mtext>\n' +
@@ -278,7 +296,7 @@ const div17 = '<h2>Divisibility Rule for 17:</h2><h3>There are three ways to tes
     '        <math>\n' +
     '            <mtext>&#8756; 25,472/16=1592</mtext>\n' +
     '        </math>\n' +
-    '        <p>Method Two: If the thousands place digit is even, check the last three digits</p>\n' +
+    '        <h3>Method Two: If the thousands place digit is even, check the last three digits</h3>\n' +
     '        <math>\n' +
     '            <mtext>2864 => 2 is even => 864/16=54</mtext>\n' +
     '        </math>\n' +
@@ -287,7 +305,7 @@ const div17 = '<h2>Divisibility Rule for 17:</h2><h3>There are three ways to tes
     '            <mtext>&#8756; 2864/16=179</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <p>Method Three: Four Times the Rest</p>\n' +
+    '        <h3>Method Three: Four Times the Rest</h3>\n' +
     '        <p>Take the last two digits, multiply the rest of the number by 4, and divide that answer by 16.</p>\n' +
     '        <math>\n' +
     '            <mtext>45,872 => 458 72 => (458*4)+72 => (1832)+72=1904 => 1904/16=119</mtext>\n' +
@@ -297,11 +315,13 @@ const div17 = '<h2>Divisibility Rule for 17:</h2><h3>There are three ways to tes
     '            <mtext>&#8756; 45,872/16=2867</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div18 = '<h2>Divisibility Rule for 18:</h2><h3>If the number is divisible by both 2 and 9, then the number is divisible by 18.</p>\n' +
+const div18 = '<h2>Divisibility Rule for 18:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 9, then the number is divisible by 18.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
     '        <math>\n' +
     '            <mtext>5778 => 5778 is an even number => 5778/2=2889</mtext>\n' +
     '        </math>\n' +
-    '        <p></p>\n' +
+    '        <h3>Divisibility by 9</h3>\n' +
     '        <math>\n' +
     '            <mtext>5778 => 5+7+7+8=27 => 27/9=3</mtext>\n' +
     '        </math>\n' +
@@ -310,7 +330,8 @@ const div18 = '<h2>Divisibility Rule for 18:</h2><h3>If the number is divisible 
     '            <mtext>&#8756; 5778/18=321</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div19 = '<h2>Divisibility Rule for 19:</h2><h3>Double the last digit and add to remaining part of the number. If that number is divisible by 19, then the original number is divisible by 19.</p>\n' +
+const div19 = '<h2>Divisibility Rule for 19:</h2>' +
+    '        <h3>Double the last digit and add to remaining part of the number. If that number is divisible by 19, then the original number is divisible by 19.</h3>\n' +
     '        <math>\n' +
     '            <mtext>30,267 => last digit is 7 => 7*2=14 => 3026+14=3040 </mtext>\n' +
     '        </math>\n' +
@@ -323,7 +344,8 @@ const div19 = '<h2>Divisibility Rule for 19:</h2><h3>Double the last digit and a
     '            <mtext>&#8756; 30,267/19=1593</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div20 = '<h2>Divisibility Rule for 20:</h2><h3>If the last digit is 0 and the last two digits are divisible by 4, then the number is divisible by 20.</p>\n' +
+const div20 = '<h2>Divisibility Rule for 20:</h2>' +
+    '        <h3>If the last digit is 0 and the last two digits are divisible by 4, then the number is divisible by 20.</h3>\n' +
     '        <math>\n' +
     '            <mtext>2060 => last digit is 0 => 7*2=14 => 3026+14=3040 </mtext>\n' +
     '        </math>\n' +
@@ -336,7 +358,29 @@ const div20 = '<h2>Divisibility Rule for 20:</h2><h3>If the last digit is 0 and 
     '            <mtext>&#8756; 2060/20=103</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div21 = '21';
+const div21 = '<h2>Divisibility Rule for 21:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 7, then the number is divisible by 21.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>15,246 => 1+5+2+4+6=18 => 18/3=6</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 7</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>15,246 => last digit is 6 => 6*2=12 => 1524-12=1512</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>1512 => last digit is 2 => 2*2=4 => 151-4=147</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>147 => last digit is 7 => 7*2=14 => 14-14=0 => 0/7=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 15,246/21=726</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div22 = '22';
 const div23 = '23';
 const div24 = '24';
