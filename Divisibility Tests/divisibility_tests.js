@@ -431,7 +431,40 @@ const div24 = '<h2>Divisibility Rule for 24:</h2>' +
     '            <mtext>&#8756; 2976/24=124</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div25 = '25';
+const div25 = '<h2>Divisibility Rule for 25:</h2>' +
+    '        <h3>If the last two digits are either 00, 25, 50, or 75, then the number is divisible by 25.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1500 => last two digits are 00' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1500/25=60</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>2725 => last two digits are 25' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 2725/25=109</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>34650 => last two digits are 50' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 34650/25=1386</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>19975 => last two digits are 75' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 19975/25=799</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n';
 const div26 = '26';
 const div27 = '27';
 const div28 = '28';
