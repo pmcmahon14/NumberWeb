@@ -381,7 +381,27 @@ const div21 = '<h2>Divisibility Rule for 21:</h2>' +
     '            <mtext>&#8756; 15,246/21=726</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div22 = '22';
+const div22 = '<h2>Divisibility Rule for 22:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 11, then the number is divisible by 22.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <p>If the non-zero number ends in either 0, 2, 4, 6, or 8, it is divisible by two. All even numbers are divisible by 2.</p>' +
+    '        <h3>Divisibility by 11</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>15,246 => last digit is 6 => 6*2=12 => 1524-12=1512</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>1512 => last digit is 2 => 2*2=4 => 151-4=147</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>147 => last digit is 7 => 7*2=14 => 14-14=0 => 0/7=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 15,246/21=726</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div23 = '23';
 const div24 = '24';
 const div25 = '25';
