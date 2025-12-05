@@ -491,7 +491,20 @@ const div26 = '<h2>Divisibility Rule for 26:</h2>' +
     '            <mtext>&#8756; 14,196/26=546</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div27 = '27';
+const div27 = '<h2>Divisibility Rule for 27:</h2>' +
+    '        <h3>First, find the sum of its digits. If that sum is divisible by 9, multiply the sum by 3 and check if the result is divisible by 27. If it is, then the original number is divisible by 27.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>7695 => 7+6+9+5=27 => 27/9=3</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>27*3=81 => 81/27=3</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 7695/27=285</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div28 = '28';
 const div29 = '29';
 const div30 = '30';
