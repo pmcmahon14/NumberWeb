@@ -416,7 +416,21 @@ const div23 = '<h2>Divisibility Rule for 23:</h2>' +
     '            <mtext>&#8756; 6348/23=276</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div24 = '24';
+const div24 = '<h2>Divisibility Rule for 24:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 8, then the number is divisible by 24.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>2976 => 2+9+7+6=24 => 24/3=8</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 8</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2976 => last three digits are 976 => 976/8=122</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 2976/24=124</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div25 = '25';
 const div26 = '26';
 const div27 = '27';
