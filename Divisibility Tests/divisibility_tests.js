@@ -190,7 +190,7 @@ const div13 = '<h2>Divisibility Rules for 13:</h2>' +
     '            <mtext>&#8756; 6760/13=520</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <h3>Method Three: Subtracting the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
+    '        <h3>Method Three: Take the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
     '        <math>\n' +
     '            <mtext>17537 => Last two digits are 37; remaining number is 175 => 175*4-37=663 => 663/13=51</mtext>\n' +
     '        </math>\n' +
@@ -465,7 +465,32 @@ const div25 = '<h2>Divisibility Rule for 25:</h2>' +
     '            <mtext>&#8756; 19975/25=799</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n';
-const div26 = '26';
+const div26 = '<h2>Divisibility Rule for 26:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 13, then the number is divisible by 26.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <p>If the non-zero number ends in either 0, 2, 4, 6, or 8, it is divisible by two. All even numbers are divisible by 2.</p>' +
+    '        <h3>Divisibility by 13, any of four methods</h3>\n' +
+    '        <h3>Method One: Alternating Sum of Triplets, starting from the right</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>14,196 => 196, 14 => 196-14=182 => 182/13=14 </mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Method Two: Multiply the Last Digit by 4</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>14,196 => Last digit is 6 => 1419+(6*4)=1443 => 1443/13=111 </mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Method Three: Take the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>14,196 => Last two digits are 96; remaining number is 141 => 141*4-96=468 => 468/13=36</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>14,196 => 1419-(6*9) => 1419-54=1365 => 1365/13=105 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 14,196/26=546</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div27 = '27';
 const div28 = '28';
 const div29 = '29';
