@@ -538,7 +538,17 @@ const div29 = '<h2>Divisibility Rule for 29:</h2>' +
     '            <mtext>&#8756; 6348/23=276</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div30 = '30';
+const div30 = '<h2>Divisibility Rule for 30:</h2>' +
+    '        <h3>If the number ends in 0 and is divisible by 3, then the number is divisible by 30.</h3>\n' +
+    '        <h3>Ends in 0 and divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>142,890 => last digit is 0 => 1+4+2+8+9+0=24 => 24/3=8</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 142,890/30=4763</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div31 = '31';
 const div32 = '32';
 const div33 = '33';
