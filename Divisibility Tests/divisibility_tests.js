@@ -90,7 +90,7 @@ const div6 = '<h2>Divisibility Rule for 6:</h2>' +
     '        </math>\n' +
     '        <p></p>\n';
 const div7 = '<h2>Divisibility Rule for 7:</h2>' +
-    '        <h3>Take the last digit, double it, and subtract it from the rest of the number. Repeat the process until a two-digit number remains. If that answer is divisible by 7, then the original number is divisible by 7.</h3>\n' +
+    '        <h3>Take the last digit, double it, and subtract it from the rest of the number. Repeat the process until either a two-digit number remains or the result is 0. If that answer is divisible by 7, then the original number is divisible by 7.</h3>\n' +
     '        <math>\n' +
     '            <mtext>24003 => last digit is 3 => 3*2=6 => 2400-6=2394</mtext>\n' +
     '        </math>\n' +
@@ -549,7 +549,24 @@ const div30 = '<h2>Divisibility Rule for 30:</h2>' +
     '            <mtext>&#8756; 142,890/30=4763</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div31 = '31';
+const div31 = '<h2>Divisibility Rule for 31:</h2>' +
+    '        <h3>Take the last digit, triple it, and subtract it from the rest of the number. Repeat the process until either a two-digit number remains or zero is a result. If that answer is divisible by 31, then the original number is divisible by 31.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>16,988 => last digit is 8 => 8*3=24 => 1698-24=1674</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>1674 => last digit is 4 => 4*3=12 => 167-12=155</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>155 => last digit is 5 => 5*3=15 => 15-15=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 16,988/31=548</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div32 = '32';
 const div33 = '33';
 const div34 = '34';
