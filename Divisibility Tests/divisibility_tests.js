@@ -524,7 +524,20 @@ const div28 = '<h2>Divisibility Rule for 28:</h2>' +
     '            <mtext>&#8756; 1848/28=66</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div29 = '29';
+const div29 = '<h2>Divisibility Rule for 29:</h2>' +
+    '        <h3>Multiply the last digit by 7 and add to the remaining part of the number. If that sum is divisible by 23, then the original number is divisible by 23.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>6348 => last digit is 8 => 8*7=56 => 634+56=690 => </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>690/23=30</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 6348/23=276</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div30 = '30';
 const div31 = '31';
 const div32 = '32';
