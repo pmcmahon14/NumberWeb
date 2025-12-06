@@ -505,7 +505,25 @@ const div27 = '<h2>Divisibility Rule for 27:</h2>' +
     '            <mtext>&#8756; 7695/27=285</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div28 = '28';
+const div28 = '<h2>Divisibility Rule for 28:</h2>' +
+    '        <h3>If the number is divisible by both 4 and 7, then the number is divisible by 28.</h3>\n' +
+    '        <h3>Divisibility by 4</h3>' +
+    '        <math>\n' +
+    '            <mtext>1848 => last two digits are 48 => 48/4=12</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 7</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1848 => last digit is 8 => 8*2=16 => 184-16=168</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>168 => last digit is 8 => 8*2=16 => 16-16=0 => 0/7=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1848/28=66</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div29 = '29';
 const div30 = '30';
 const div31 = '31';
