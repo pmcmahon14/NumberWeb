@@ -567,9 +567,46 @@ const div31 = '<h2>Divisibility Rule for 31:</h2>' +
     '            <mtext>&#8756; 16,988/31=548</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div32 = '32';
-const div33 = '33';
-const div34 = '34';
+const div32 = '<h2>Divisibility Rule for 32:</h2>' +
+    '        <h3>Check the last five digits of the number. If the number has fewer than five digits, check the entire number. If this number is divisible by 32, then the original number is also divisible by 32..</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>776,192 => last 5 digits are 76,192 => 76,192/32=2381</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 776,192/32=24,256</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
+const div33 = '<h2>Divisibility Rule for 33:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 11, then the number is divisible by 33.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>1848 => 1+8+4+8=21 => 21/3=7</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 11</h3>\n' +
+    '         <math>\n' +
+    '            <mtext>1848 => 1+4=5 => 8+8=16 => 5-16=-11 => -11/11=-1</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1848/33=56</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
+const div34 = '<h2>Divisibility Rule for 34:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 17, then the number is divisible by 34.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <math>\n' +
+    '            <mtext>4284 => 4284 is an even number => 4284/2=2142</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 17</h3>\n' +
+    '         <math>\n' +
+    '            <mtext>4284 => last digit is 4 => 4*5=20 => 428-20=408 => 408/17=24</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 4284/34=126</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div35 = '35';
 const div36 = '36';
 const div37 = '37';
