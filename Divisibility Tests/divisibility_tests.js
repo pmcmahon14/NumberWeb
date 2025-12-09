@@ -1,7 +1,6 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
+const coll = document.getElementsByClassName("collapsible");
+let i;
 const rule = document.getElementById("container");
-let divRule = "";
 
 const error = "Rule not found.";
 // const div1 = '<p><span style="font-weight: bold">Divisibility Rule for 1:</span><br>All non-zero integers!</p>';
@@ -9,7 +8,7 @@ const error = "Rule not found.";
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
+        let content = this.nextElementSibling;
         if (content.style.maxHeight){
             content.style.maxHeight = null;
         } else {
@@ -568,7 +567,7 @@ const div31 = '<h2>Divisibility Rule for 31:</h2>' +
     '        </math>\n' +
     '        <p></p>';
 const div32 = '<h2>Divisibility Rule for 32:</h2>' +
-    '        <h3>Check the last five digits of the number. If the number has fewer than five digits, check the entire number. If this number is divisible by 32, then the original number is also divisible by 32..</h3>\n' +
+    '        <h3>Check the last five digits of the number. If the number has fewer than five digits, check the entire number. If this number is divisible by 32, then the original number is also divisible by 32.</h3>\n' +
     '        <math>\n' +
     '            <mtext>776,192 => last 5 digits are 76,192 => 76,192/32=2381</mtext>\n' +
     '        </math>\n' +
@@ -607,9 +606,46 @@ const div34 = '<h2>Divisibility Rule for 34:</h2>' +
     '            <mtext>&#8756; 4284/34=126</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div35 = '35';
-const div36 = '36';
-const div37 = '37';
+const div35 = '<h2>Divisibility Rule for 35:</h2>' +
+    '        <h3>If the number is divisible by both 5 and 7, then the number is divisible by 35.</h3>\n' +
+    '        <h3>Divisibility by 5</h3>' +
+    '        <math>\n' +
+    '            <mtext>5880 => ends in either 5 or 0 => 5880/5=1176</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 7</h3>\n' +
+    '         <math>\n' +
+    '            <mtext>5880 => last digit is 0 => 0*7=0 => 588-0=588 => 588/7=84</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 5880/35=168</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
+const div36 = '<h2>Divisibility Rule for 36:</h2>' +
+    '        <h3>If the number is divisible by both 4 and 9, then the number is divisible by 36.</h3>\n' +
+    '        <h3>Divisibility by 4</h3>' +
+    '        <math>\n' +
+    '            <mtext>3276 => last two digits are 76 => 76/4=19 => 3276/36=91</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 9</h3>\n' +
+    '         <math>\n' +
+    '            <mtext>3276 => 3+2+7+6=18 => 18/2=9</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 3276/36=91</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
+const div37 = '<h2>Divisibility Rule for 37:</h2>' +
+    '        <h3>Split the number into groups of three digits, starting from the right, and add the triplets together. Repeat until the sum is no larger than three digits. If that sum is divisible by 37, then the original number is divisible by 37.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1,723,793 => 793+723+1=1517 => 517+1=518 => 518/37=14</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1,723,793/37=46,589</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div38 = '38';
 const div39 = '39';
 const div40 = '40';
