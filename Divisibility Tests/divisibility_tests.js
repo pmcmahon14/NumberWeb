@@ -654,11 +654,11 @@ const div38 = '<h2>Divisibility Rule for 38:</h2>' +
     '        </math>\n' +
     '        <h3>Divisibility by 19</h3>\n' +
     '        <math>\n' +
-    '            <mtext>1976 => last digit is 6 => 6*2=12 => 197-12=185/mtext>\n' +
+    '            <mtext>1976 => last digit is 6 => 6*2=12 => 197-12=185</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>185 => last digit is 5 => 5*2=10 => 18-10=8/mtext>\n' +
+    '            <mtext>185 => last digit is 5 => 5*2=10 => 18-10=8</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
@@ -714,26 +714,49 @@ const div40 = '<h2>Divisibility Rule for 40:</h2>' +
 const div41 =  '<h2>Divisibility Rule for 41:</h2>' +
     '        <h3>Take the last digit, multiply by 4, and then subtract from the rest of the number. Repeat as needed to get a manageable number (two or three digits). If that difference is divisible by 41, then the original number is divisible by 41.</h3>\n' +
     '        <math>\n' +
-    '            <mtext>1,463,249 => last digit is 9 => 9*4=36 => 146,324-(36) => 146,288</mtext>\n' +
+    '            <mtext>1,463,249 => last digit is 9 => 9*4=36 => 146,324-36 => 146,288</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>146,288 => last digit is 8 => 8*4=32 => 14,628-(32) => 14,596</mtext>\n' +
+    '            <mtext>146,288 => last digit is 8 => 8*4=32 => 14,628-32 => 14,596</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>14,596 => last digit is 6 => 6*4=24 => 1459-(24) => 1435</mtext>\n' +
+    '            <mtext>14,596 => last digit is 6 => 6*4=24 => 1459-24 => 1435</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>1435 => last digit is 5 => 5*4=20 => 143-(20)=123 => 123/41=3</mtext>\n' +
+    '            <mtext>1435 => last digit is 5 => 5*4=20 => 143-20=123 => 123/41=3</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
     '            <mtext>&#8756; 1,463,249/41=35,689</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div42 = '42';
+const div42 = '<h2>Divisibility Rule for 42:</h2>' +
+    '        <h3>If the number is divisible by both 2, 3, and 7 (3 and 7 to test for 21), then the number is divisible by 42.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <math>\n' +
+    '            <mtext>153,636 => 153,636 is an even number => 153,636/2=76,818</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 3</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>153,636 => 1+5+3+6+3+6=24 => 24/8=3</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Divisibility by 7</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>153,636 => last digit is 6 => 6*2=12 => 15,363-12=15,351 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>15,351/7=2193</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 153,636/42=3658</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div43 = '43';
 const div44 = '44';
 const div45 = '45';
