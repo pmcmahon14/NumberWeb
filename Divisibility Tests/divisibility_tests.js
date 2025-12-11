@@ -711,7 +711,28 @@ const div40 = '<h2>Divisibility Rule for 40:</h2>' +
     '            <mtext>&#8756; 4284/34=126</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div41 = '41';
+const div41 =  '<h2>Divisibility Rule for 41:</h2>' +
+    '        <h3>Take the last digit, multiply by 4, and then subtract from the rest of the number. Repeat as needed to get a manageable number (two or three digits). If that difference is divisible by 41, then the original number is divisible by 41.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1,463,249 => last digit is 9 => 9*4=36 => 146,324-(36) => 146,288</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>146,288 => last digit is 8 => 8*4=32 => 14,628-(32) => 14,596</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>14,596 => last digit is 6 => 6*4=24 => 1459-(24) => 1435</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>1435 => last digit is 5 => 5*4=20 => 143-(20)=123 => 123/41=3</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1,463,249/41=35,689</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div42 = '42';
 const div43 = '43';
 const div44 = '44';
