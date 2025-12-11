@@ -646,8 +646,56 @@ const div37 = '<h2>Divisibility Rule for 37:</h2>' +
     '            <mtext>&#8756; 1,723,793/37=46,589</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div38 = '38';
-const div39 = '39';
+const div38 = '<h2>Divisibility Rule for 38:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 19, then the number is divisible by 38.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <math>\n' +
+    '            <mtext>1976 => 1976 is an even number => 1976/2=988</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 19</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1976 => last digit is 6 => 6*2=12 => 197-12=185/mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>185 => last digit is 5 => 5*2=10 => 18-10=8/mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 4284/34=126</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
+const div39 = '<h2>Divisibility Rule for 39:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 13, then the number is divisible by 39.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>9945 => 9+9+4+5=27 => 27/3=9</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 13 (4 methods)</h3>\n' +
+    '        <h3>Method One: Alternating Sum of Triplets, starting from the right (especially useful for large numbers)</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>9945 => 945, 9 => 945-9=936 => 936/13=72 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Two: Multiply the Last Digit by 4</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>9945 => Last digit is 5 => 994+(5*4)=1014 => 1014/13=78 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Three: Take the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>9945 => Last two digits are 45; remaining number is 99 => 99*4-45=351 => 351/13=27</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>9945 => 994-(5*9) => 994-45=949 => 949/13=73 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 9945/39=255</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div40 = '40';
 const div41 = '41';
 const div42 = '42';
