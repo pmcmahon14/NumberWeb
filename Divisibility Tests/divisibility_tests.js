@@ -696,7 +696,21 @@ const div39 = '<h2>Divisibility Rule for 39:</h2>' +
     '            <mtext>&#8756; 9945/39=255</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div40 = '40';
+const div40 = '<h2>Divisibility Rule for 40:</h2>' +
+    '        <h3>If the number is divisible by both 5 and 8, then the number is divisible by 40.</h3>\n' +
+    '        <h3>Divisibility by 5 (in this case, the number must end in 0)</h3>' +
+    '        <math>\n' +
+    '            <mtext>2520 => last digit is 0 => 2520/5=504</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 8</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2520 => last three digits are 520 => 520/8=65</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 4284/34=126</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div41 = '41';
 const div42 = '42';
 const div43 = '43';
