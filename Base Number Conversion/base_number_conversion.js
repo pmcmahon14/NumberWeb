@@ -133,12 +133,9 @@ function clearAll() {
 }
 
 function clearError() {
-    tempValue = Math.floor(inputDisplay.value/10);
-    if(tempValue.length === ""){
+    inputDisplay.value = inputDisplay.value.slice(0,-1);
+    if(inputDisplay.value === ""){
         inputDisplay.value = "0";
-    } else {
-        tempValue = tempValue.toLocaleString();
-        inputDisplay.value=tempValue;
     }
     baseConverter();
 }

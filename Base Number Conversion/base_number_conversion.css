@@ -11,13 +11,18 @@ body {
     width: 49%;
 }
 
+.conversions {
+    height: 500px;
+    overflow-x: scroll;
+}
+
 .middle {
-    width: 12%;
+    width: 16%;
     border-left: 2px solid grey;
 }
 
 .right {
-    width: 36%;
+    width: 82%;
     text-align: right;
     color: white;
 }
