@@ -813,7 +813,21 @@ const div45 = '<h2>Divisibility Rule for 45:</h2>' +
     '            <mtext>&#8756; 28,035/45=623</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div46 = '46';
+const div46 = '<h2>Divisibility Rule for 46:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 23, then the number is divisible by 46.</h3>\n' +
+    '        <h3>Divisibility by 2</h3>' +
+    '        <math>\n' +
+    '            <mtext>27,002 => last digit is 2, an even number=> 27,002/2=13,501</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 23</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>27,002 => last digit is 2 => 2*7=14 => 2700+14=2714 => 2714/23=118</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 27,002/46=587</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div47 = '47';
 const div48 = '48';
 const div49 = '49';
