@@ -17,12 +17,12 @@ body {
 }
 
 .middle {
-    width: 16%;
+    width: 20%;
     border-left: 2px solid grey;
 }
 
 .right {
-    width: 82%;
+    width: 78%;
     text-align: right;
     color: white;
 }
