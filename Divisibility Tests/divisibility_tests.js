@@ -267,7 +267,7 @@ const div16 = '<h2>Divisibility Rules for 16:</h2>' +
     '        </math>\n' +
     '        <p>If the thousands digit is odd, test to see if the last three digits are equal to 8 times an odd number</p>\n' +
     '        <math>\n' +
-    '            <mtext>&#8756; 35,632 => 5 is odd => 632/8=79</mtext>\n' +
+    '            <mtext>35,632 => 5 is odd => 632/8=79 => 79 is an odd number</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
@@ -846,7 +846,51 @@ const div47 = '<h2>Divisibility Rule for 47:</h2>' +
     '            <mtext>&#8756; 23,406/47=498</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div48 = '48';
+const div48 = '<h2>Divisibility Rule for 48:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 16, then the number is divisible by 48.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>190,320 => 1+9+0+3+2+0=15 => 15/3=5</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>195,312 => 1+9+5+3+1+2=21 => 21/3=7 </mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 16 (3 methods)</h3>\n' +
+    '        <h3>Method One: Last four digits</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>190,320 => 320 => 320/16=20 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>195,312 => 5312 => 5312/16=332 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Two: Thousands-Digit Test</h3>\n' +
+    '        <p>If the thousands digit is even, test to see if the last three digits are divisible by 16</p>' +
+    '        <math>\n' +
+    '            <mtext>190,320 => 0 is even => 320/16=20</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <p>If the thousands digit is odd, test to see if the last three digits are equal to 8 times an odd number</p>\n' +
+    '        <math>\n' +
+    '            <mtext>195,312 => 5 is odd => 312/8=39 => 39 is an odd number</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Three: Four Times the Rest</h3>\n' +
+    '        <p>Take the last two digits, multiply the rest of the number by 4, and divide that answer by 16.</p>\n' +
+    '        <math>\n' +
+    '            <mtext>190,320 => 20 => 1903*4=7612 => 7612+20=7632 => 7632/16=477</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>195,312 => 12 => 1953*4=7812 => 7812+12=7824 => 7824/16=489</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 190,320/48=3965 and 195,312/48=4069</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div49 = '49';
 const div50 = '50';
 const div51 = '51';
