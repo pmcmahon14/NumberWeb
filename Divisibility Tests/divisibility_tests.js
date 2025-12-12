@@ -779,7 +779,25 @@ const div43 = '<h2>Divisibility Rule for 43:</h2>' +
     '            <mtext>&#8756; 329,036/43=7652</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div44 = '44';
+const div44 = '<h2>Divisibility Rule for 44:</h2>' +
+    '        <h3>If the number is divisible by both 4 and 11, then the number is divisible by 44.</h3>\n' +
+    '        <h3>Divisibility by 4</h3>' +
+    '        <math>\n' +
+    '            <mtext>40,656 => last two digits are 56 => 56/4=14</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 11</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>40,656 => odd position digits 4, 6, 6; even position digits 0, 5 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>4+6+6=16 and 0+5=5 => 16-5=11 => 11/11=1</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 40,656/44=924</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div45 = '45';
 const div46 = '46';
 const div47 = '47';
