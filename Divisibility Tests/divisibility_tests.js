@@ -798,7 +798,21 @@ const div44 = '<h2>Divisibility Rule for 44:</h2>' +
     '            <mtext>&#8756; 40,656/44=924</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div45 = '45';
+const div45 = '<h2>Divisibility Rule for 45:</h2>' +
+    '        <h3>If the number is divisible by both 5 and 9, then the number is divisible by 45.</h3>\n' +
+    '        <h3>Divisibility by 5</h3>' +
+    '        <math>\n' +
+    '            <mtext>28,035 => last digit is either 5 or 0=> 28,035/5=5607</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 9</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>28,035 => 2+8+0+3+5=18 => 18/9=2</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 28,035/45=623</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div46 = '46';
 const div47 = '47';
 const div48 = '48';
