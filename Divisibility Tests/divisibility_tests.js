@@ -757,7 +757,28 @@ const div42 = '<h2>Divisibility Rule for 42:</h2>' +
     '            <mtext>&#8756; 153,636/42=3658</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div43 = '43';
+const div43 = '<h2>Divisibility Rule for 43:</h2>' +
+    '        <h3>Take the last digit, multiply by 13, and then add to the rest of the number. Repeat until you get a two digit number. If that sum is divisible by 43, then the original number is divisible by 43.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>329,036 => last digit is 6 => 6*13=78 => 32,903+78= => 32,981</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>32,981 => last digit is 1 => 1*13=13 => 3298+13 => 3311</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>3311 => last digit is 1 => 1*13=13 => 331+13 => 344</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>344 => last digit is 4 => 4*13=52 => 34+52=86 => 86/43=2</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 329,036/43=7652</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div44 = '44';
 const div45 = '45';
 const div46 = '46';
