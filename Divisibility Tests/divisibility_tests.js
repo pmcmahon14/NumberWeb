@@ -828,7 +828,24 @@ const div46 = '<h2>Divisibility Rule for 46:</h2>' +
     '            <mtext>&#8756; 27,002/46=587</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div47 = '47';
+const div47 = '<h2>Divisibility Rule for 47:</h2>' +
+    '        <h3>Take the last digit, multiply by 14, and then subtract from the rest of the number. Repeat until you get a two digit number. If that difference is either divisible by 47 or 0, then the original number is divisible by 47.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>23,406 => last digit is 6 => 6*14=84 => 2340-84= => 2256</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>2256 => last digit is 6 => 6*14=84 => 225-84 => 141</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>141 => last digit is 1 => 1*14=14 => 14-14=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 23,406/47=498</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div48 = '48';
 const div49 = '49';
 const div50 = '50';
