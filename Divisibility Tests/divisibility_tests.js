@@ -891,7 +891,42 @@ const div48 = '<h2>Divisibility Rule for 48:</h2>' +
     '            <mtext>&#8756; 190,320/48=3965 and 195,312/48=4069</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div49 = '49';
+const div49 = '<h2>Divisibility Rule for 49:</h2>' +
+    '        <h3>If the number is two digits: Only 49 and 98 are divisible by 49. If the number is three or more digits, take the last digit, multiply that number by 5, and add to the remaining number. Repeat until the sum is two digits. If that sum results in either 49 or 98, then the original number is divisible by 49.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2,787,953 => last digit is 3 => 278,795+(3*5)=278,810</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>278,810 => last digit is 0 => 27,881+(0*5)=27881</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>27,881 => last digit is 1 => 2788+(1*5)=2793</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>2793 => last digit is 3 => 279+(3*5)=294</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>294 => last digit is 4 => 29+(4*5)=49 => 49/49=1</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 2,787,953/49=56,897</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
+for (let i=10000; i<20001; i++) {
+    let n=i.toString();
+    let f=Number(n.substring(0, n.length-2))*2;
+    let s=Number(n.substring(3, n.length));
+    if ((f+s)%49===0) {
+        console.log(i);
+    }
+}
+// 12691=>126*2+91=343=>34+(3*5)=49
+// 2787953=>27879*2+53=55811=>5581+(1*5)=5586=>558+(6*5)=588=>58+(8*5)=98
 const div50 = '50';
 const div51 = '51';
 const div52 = '52';
