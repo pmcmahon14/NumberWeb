@@ -992,7 +992,11 @@ const div52 = '<h2>Divisibility Rule for 52:</h2>' +
     '        <p></p>\n' +
     '        <h3>Method Three: Take the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
     '        <math>\n' +
-    '            <mtext>2392 => Last two digits are 92; remaining number is 23 => 23*4-92=0 => 0/13=0</mtext>\n' +
+    '            <mtext>2392 => Last two digits are 92; remaining number is 23 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>23*4-92=0 => 0/13=0</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <h3>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</h3>\n' +
@@ -1004,7 +1008,41 @@ const div52 = '<h2>Divisibility Rule for 52:</h2>' +
     '            <mtext>&#8756; 2392/13=184</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div53 = '53';
+const div53 = '<h2>Divisibility Rule for 53:</h2>' +
+    '        <h3>For numbers with at least seven digits, take the last six digits and separate from the rest of the number. Multiply the remaining number by 4 and subtract that number from the six digits. Take the last digit from that difference, multiply it by 16, and add that to the remaining number from the difference. Repeat the last step until you have a manageable number.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>3,310,804 => last six digits are 310804 => 3*4=12 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>310,804-12=310,792 => last digit is 2 => 31,079+(16*2)=31,111 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>last digit is 1 => 3111+(16*1)=3127 => last digit is 7 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>312+(16*7)=424 => last digit is 4 => 42+(16*4)=106 => 106/53=2</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 3,310,804/53=62,468</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>For numbers with fewer than seven digits, take the last digit from the number, multiply it by 16, and add that to the remaining number from the difference. Repeat until you have a manageable number.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>1378 => last digit is 8 => 137+(16*8)=265 => last digit is 5 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>26+(16*5)=106 => 106/53=2</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 1378/53=26</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div54 = '54';
 const div55 = '55';
 const div56 = '56';
