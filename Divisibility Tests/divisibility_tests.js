@@ -973,7 +973,37 @@ const div51 = '<h2>Divisibility Rule for 51:</h2>' +
     '            <mtext>&#8756; 3315/51=65</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-const div52 = '52';
+const div52 = '<h2>Divisibility Rule for 52:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 17, then the number is divisible by 51.</h3>\n' +
+    '        <h3>Divisibility by 4</h3>' +
+    '        <math>\n' +
+    '            <mtext>2392 => last two digits are 92 => 92/4=23</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 13 (4 methods)</h3>\n' +
+    '        <h3>Method One: Alternating Sum of Triplets, starting from the right (especially useful for large numbers)</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2392 => 2, 392 => 392-2=390 => 390/13=30 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Two: Multiply the Last Digit by 4</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2392 => Last digit is 2 => 239+(2*4)=247 => 247/13=19 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Three: Take the Last Two Digits and Subtract From Four Times the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2392 => Last two digits are 92; remaining number is 23 => 23*4-92=0 => 0/13=0</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Four: Multiply the Last Digit by 9 and Subtract From the Rest of the Number</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>2392 => 239-(2*9) => 239-18=221 => 221/13=17 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 2392/13=184</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div53 = '53';
 const div54 = '54';
 const div55 = '55';
