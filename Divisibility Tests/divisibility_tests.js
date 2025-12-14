@@ -287,31 +287,36 @@ const div16 = '<h2>Divisibility Rules for 16:</h2>' +
 const div17 = '<h2>Divisibility Rule for 17:</h2>' +
     '        <h3>There are three ways to test for divisibility by 17.</h3>\n' +
     '        <h3>Method One: Check the last digit</h3>\n' +
-    '        <p>Multiply the last digit by 5</p>\n' +
+    '        <p>Multiply the last digit by 5 and subtract the product from the rest of the number.</p>\n' +
     '        <math>\n' +
-    '            <mtext>25,472 => 5472 => 5472/16=342 </mtext>\n' +
+    '            <mtext>884 => last digit is 4 => 88-(4*5)=68 => 68/17=4 </mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>&#8756; 25,472/16=1592</mtext>\n' +
+    '            <mtext>&#8756; 884/16=52</mtext>\n' +
     '        </math>\n' +
-    '        <h3>Method Two: If the thousands place digit is even, check the last three digits</h3>\n' +
+    '        <h3>Method Two: Weighted Sum Method</h3>\n' +
+    '        <p>Find the sum of 9 times the last digit and 5 times the rest of the number and divide the sum by 17.</p>\n' +
     '        <math>\n' +
-    '            <mtext>2864 => 2 is even => 864/16=54</mtext>\n' +
+    '            <mtext>2873 => 3*9=27 and 287*5=1435 => 27+14351462 => 1462/17=86</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
     '            <mtext>&#8756; 2864/16=179</mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
-    '        <h3>Method Three: Four Times the Rest</h3>\n' +
-    '        <p>Take the last two digits, multiply the rest of the number by 4, and divide that answer by 16.</p>\n' +
+    '        <h3>Method Three: Four Times the Rest or Last Two Digits</h3>\n' +
+    '        <p>Take the last two digits, multiply the rest of the number by 2, and divide that answer by 17.</p>\n' +
     '        <math>\n' +
-    '            <mtext>45,872 => 458 72 => (458*4)+72 => (1832)+72=1904 => 1904/16=119</mtext>\n' +
+    '            <mtext>62,798 => last two digits are 98 => (627*2)-98 =></mtext>\n' +
     '        </math>\n' +
     '        <p></p>\n' +
     '        <math>\n' +
-    '            <mtext>&#8756; 45,872/16=2867</mtext>\n' +
+    '            <mtext>1254-98=1156 => 1156/17=68</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 62,798/17=3694</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
 const div18 = '<h2>Divisibility Rule for 18:</h2>' +
@@ -935,7 +940,39 @@ const div50 = '<h2>Divisibility Rule for 50:</h2>' +
     '            <mtext>&#8756; 2500/50=50</mtext>\n' +
     '        </math>\n' +
     '        <p></p> ';
-const div51 = '51';
+const div51 = '<h2>Divisibility Rule for 51:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 17, then the number is divisible by 51.</h3>\n' +
+    '        <h3>Divisibility by 3</h3>' +
+    '        <math>\n' +
+    '            <mtext>3315 => 3+3+1+5=12 => 12/3=4</mtext>\n' +
+    '        </math>\n' +
+    '        <h3>Divisibility by 17 (3 methods)</h3>\n' +
+    '        <h3>Method One: Check the last digit</h3>\n' +
+    '        <p>Multiply the last digit by 5 and subtract the product from the rest of the number.</p>\n' +
+    '        <math>\n' +
+    '            <mtext>3315 => last digit is 5 => 331-(5*5)=306 => 306/17=18 </mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Two: Weighted Sum Method</h3>\n' +
+    '        <p>Find the sum of 9 times the last digit and 5 times the rest of the number and divide the sum by 17.</p>\n' +
+    '        <math>\n' +
+    '            <mtext>3315 => 5*9=45 and 331*5=1655 => 45+1655=1700 => 1700/17=100</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <h3>Method Three: Four Times the Rest or Last Two Digits</h3>\n' +
+    '        <p>Take the last two digits, multiply the rest of the number by 2, and divide that answer by 17.</p>\n' +
+    '        <math>\n' +
+    '            <mtext>3315 => last two digits are 15 => (33*2)-15=51 => 66-15=51 =></mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>51/17=3</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 3315/51=65</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>';
 const div52 = '52';
 const div53 = '53';
 const div54 = '54';
