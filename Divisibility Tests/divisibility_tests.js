@@ -917,17 +917,24 @@ const div49 = '<h2>Divisibility Rule for 49:</h2>' +
     '            <mtext>&#8756; 2,787,953/49=56,897</mtext>\n' +
     '        </math>\n' +
     '        <p></p>';
-for (let i=10000; i<20001; i++) {
-    let n=i.toString();
-    let f=Number(n.substring(0, n.length-2))*2;
-    let s=Number(n.substring(3, n.length));
-    if ((f+s)%49===0) {
-        console.log(i);
-    }
-}
-// 12691=>126*2+91=343=>34+(3*5)=49
-// 2787953=>27879*2+53=55811=>5581+(1*5)=5586=>558+(6*5)=588=>58+(8*5)=98
-const div50 = '50';
+const div50 = '<h2>Divisibility Rule for 50:</h2>' +
+    '        <h3>If the number ends in either 50 or 00, then the number is divisible by 50.</h3>\n' +
+    '        <math>\n' +
+    '            <mtext>750 => number ends in 50</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 750/50=15</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>2500 => number ends in 00</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p>\n' +
+    '        <math>\n' +
+    '            <mtext>&#8756; 2500/50=50</mtext>\n' +
+    '        </math>\n' +
+    '        <p></p> ';
 const div51 = '51';
 const div52 = '52';
 const div53 = '53';
