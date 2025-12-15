@@ -636,7 +636,7 @@ const div68 = '<h2>Divisibility Rule for 68:</h2>' +
     '        <h3>If the number is divisible by both 4 and 17, then the number is divisible by 68.</h3>\n';
 const div69 = '<h2>Divisibility Rule for 69:</h2>' +
     '        <h3>If the number is divisible by both 3 and 23, then the number is divisible by 69.</h3>\n';
-const div70 = '<h2>Divisibility Rule for 58:</h2>' +
+const div70 = '<h2>Divisibility Rule for 70:</h2>' +
     '        <h3>If the number is divisible by 2, 5, and 7, then the number is divisible by 70.</h3>\n';
 const div71 = '71';
 const div72 = '<h2>Divisibility Rule for 72:</h2>' +
@@ -646,7 +646,8 @@ const div74 = '<h2>Divisibility Rule for 74:</h2>' +
     '        <h3>If the number is divisible by both 2 and 37, then the number is divisible by 74.</h3>\n';
 const div75 = '<h2>Divisibility Rule for 75:</h2>' +
     '        <h3>If the number is divisible by both 3 and 25, then the number is divisible by 75.</h3>\n';
-const div76 = '76';
+const div76 = '<h2>Divisibility Rule for 76:</h2>' +
+    '        <h3>If the number is divisible by both 4 and 19, then the number is divisible by 76.</h3>\n';
 const div77 = '77';
 const div78 = '78';
 const div79 = '79';
