@@ -629,7 +629,8 @@ const div63 = '<h2>Divisibility Rule for 63:</h2>' +
 const div64 = '64';
 const div65 = '<h2>Divisibility Rule for 65:</h2>' +
     '        <h3>If the number is divisible by both 5 and 13, then the number is divisible by 65.</h3>\n';
-const div66 = '66';
+const div66 = '<h2>Divisibility Rule for 66:</h2>' +
+    '        <h3>If the number is divisible by 2, 3, and 11, then the number is divisible by 66.</h3>\n';
 const div67 = '67';
 const div68 = '68';
 const div69 = '69';
