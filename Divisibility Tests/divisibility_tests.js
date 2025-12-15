@@ -634,7 +634,8 @@ const div66 = '<h2>Divisibility Rule for 66:</h2>' +
 const div67 = '67';
 const div68 = '<h2>Divisibility Rule for 68:</h2>' +
     '        <h3>If the number is divisible by both 4 and 17, then the number is divisible by 68.</h3>\n';
-const div69 = '69';
+const div69 = '<h2>Divisibility Rule for 69:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 23, then the number is divisible by 69.</h3>\n';
 const div70 = '70';
 const div71 = '71';
 const div72 = '72';
