@@ -642,7 +642,8 @@ const div71 = '71';
 const div72 = '<h2>Divisibility Rule for 72:</h2>' +
     '        <h3>If the number is divisible by both 8 and 9, then the number is divisible by 72.</h3>\n';
 const div73 = '73';
-const div74 = '74';
+const div74 = '<h2>Divisibility Rule for 74:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 37, then the number is divisible by 74.</h3>\n';
 const div75 = '75';
 const div76 = '76';
 const div77 = '77';
