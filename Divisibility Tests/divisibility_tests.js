@@ -661,7 +661,8 @@ const div82 = '<h2>Divisibility Rule for 82:</h2>' +
 const div83 = '83';
 const div84 = '<h2>Divisibility Rule for 84:</h2>' +
     '        <h3>If the number is divisible by both 3, 4, and 7, then the number is divisible by 84.</h3>\n';
-const div85 = '85';
+const div85 = '<h2>Divisibility Rule for 85:</h2>' +
+    '        <h3>If the number is divisible by both 5 and 17, then the number is divisible by 85.</h3>\n';
 const div86 = '86';
 const div87 = '87';
 const div88 = '88';
