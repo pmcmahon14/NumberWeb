@@ -605,7 +605,8 @@ const div57 = '<h2>Divisibility Rule for 57:</h2>' +
 const div58 = '<h2>Divisibility Rule for 58:</h2>' +
     '        <h3>If the number is divisible by both 2 and 29, then the number is divisible by 58.</h3>\n';
 const div59 = '59';
-const div60 = '60';
+const div60 = '<h2>Divisibility Rule for 60:</h2>' +
+    '        <h3>If the number is divisible by 3, 4, and 5, then the number is divisible by 60.</h3>\n';
 const div61 = '61';
 const div62 = '62';
 const div63 = '63';
