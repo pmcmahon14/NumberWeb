@@ -656,7 +656,8 @@ const div79 = '79';
 const div80 = '<h2>Divisibility Rule for 80:</h2>' +
     '        <h3>If the number is divisible by both 5 and 16, then the number is divisible by 80.</h3>\n';
 const div81 = '81';
-const div82 = '82';
+const div82 = '<h2>Divisibility Rule for 82:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 41, then the number is divisible by 82.</h3>\n';
 const div83 = '83';
 const div84 = '84';
 const div85 = '85';
