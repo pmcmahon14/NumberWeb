@@ -605,10 +605,25 @@ const div57 = '<h2>Divisibility Rule for 57:</h2>' +
 const div58 = '<h2>Divisibility Rule for 58:</h2>' +
     '        <h3>If the number is divisible by both 2 and 29, then the number is divisible by 58.</h3>\n';
 const div59 = '59';
+// for (let i=10000; i<20001; i++) {
+//     let n = i.toString();
+//     let r = Number(n.substring(2, n.length));
+//     let l = Number(n.substring(0, 2))*3;
+//     let t = r-l;
+//     let n2 = t.toString();
+//     let r2 = Number(n2.substring(n2.length-1))*6;
+//     let l2 = Number(n2.substring(0, 2));
+//     let t2 = r2+l2;
+//     if ((t2)%59===0) {
+//         console.log(i);
+//     }
+// }
+// 11505=>11 505=>505-11*3=472=>47 2=>47+6*2=59
 const div60 = '<h2>Divisibility Rule for 60:</h2>' +
     '        <h3>If the number is divisible by 3, 4, and 5, then the number is divisible by 60.</h3>\n';
 const div61 = '61';
-const div62 = '62';
+const div62 = '<h2>Divisibility Rule for 62:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 31, then the number is divisible by 62.</h3>\n';
 const div63 = '63';
 const div64 = '64';
 const div65 = '65';
