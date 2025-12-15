@@ -600,8 +600,10 @@ const div55 = '<h2>Divisibility Rule for 55:</h2>' +
     '        <h3>If the number is divisible by both 5 and 11, then the number is divisible by 55.</h3>\n';
 const div56 = '<h2>Divisibility Rule for 56:</h2>' +
     '        <h3>If the number is divisible by both 7 and 8, then the number is divisible by 56.</h3>\n';
-const div57 = '57';
-const div58 = '58';
+const div57 = '<h2>Divisibility Rule for 57:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 19, then the number is divisible by 57.</h3>\n';
+const div58 = '<h2>Divisibility Rule for 58:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 29, then the number is divisible by 58.</h3>\n';
 const div59 = '59';
 const div60 = '60';
 const div61 = '61';
