@@ -668,7 +668,8 @@ const div87 = '87';
 const div88 = '<h2>Divisibility Rule for 88:</h2>' +
     '        <h3>If the number is divisible by both 8 and 11, then the number is divisible by 88.</h3>\n';
 const div89 = '89';
-const div90 = '90';
+const div90 = '<h2>Divisibility Rule for 90:</h2>' +
+    '        <h3>If the number is divisible by both 9 and 10, then the number is divisible by 85.</h3>\n';
 const div91 = '91';
 const div92 = '92';
 const div93 = '93';
