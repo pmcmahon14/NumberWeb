@@ -675,8 +675,10 @@ const div91 = '<h2>Divisibility Rule for 91:</h2>' +
 const div92 = '92';
 const div93 = '<h2>Divisibility Rule for 93:</h2>' +
     '        <h3>If the number is divisible by both 3 and 31, then the number is divisible by 93.</h3>\n';
-const div94 = '94';
-const div95 = '95';
+const div94 = '<h2>Divisibility Rule for 94:</h2>' +
+    '        <h3>If the number is divisible by both 2 and 47, then the number is divisible by 94.</h3>\n';
+const div95 = '<h2>Divisibility Rule for 95:</h2>' +
+    '        <h3>If the number is divisible by both 5 and 19, then the number is divisible by 95.</h3>\n';
 const div96 = '96';
 const div97 = '97';
 const div98 = '98';
