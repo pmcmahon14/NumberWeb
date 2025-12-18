@@ -462,7 +462,7 @@ const div41 =  '<h2>Divisibility Rule for 41:</h2>' +
     '        </math>\n' +
     '        <p></p>';
 const div42 = '<h2>Divisibility Rule for 42:</h2>' +
-    '        <h3>If the number is divisible by both 2, 3, and 7, then the number is divisible by 42.</h3>\n';
+    '        <h3>If the number is divisible by 2, 3, and 7, then the number is divisible by 42.</h3>\n';
 const div43 = '<h2>Divisibility Rule for 43:</h2>' +
     '        <h3>Take the last digit, multiply by 13, and then add to the rest of the number. Repeat until you get a two digit number. If that sum is divisible by 43, then the original number is divisible by 43.</h3>\n' +
     '        <math>\n' +
@@ -651,7 +651,7 @@ const div76 = '<h2>Divisibility Rule for 76:</h2>' +
 const div77 = '<h2>Divisibility Rule for 77:</h2>' +
     '        <h3>If the number is divisible by both 7 and 11, then the number is divisible by 77.</h3>\n';
 const div78 = '<h2>Divisibility Rule for 78:</h2>' +
-    '        <h3>If the number is divisible by both 2, 3, and 13, then the number is divisible by 78.</h3>\n';
+    '        <h3>If the number is divisible by 2, 3, and 13, then the number is divisible by 78.</h3>\n';
 const div79 = '79';
 const div80 = '<h2>Divisibility Rule for 80:</h2>' +
     '        <h3>If the number is divisible by both 5 and 16, then the number is divisible by 80.</h3>\n';
@@ -660,7 +660,7 @@ const div82 = '<h2>Divisibility Rule for 82:</h2>' +
     '        <h3>If the number is divisible by both 2 and 41, then the number is divisible by 82.</h3>\n';
 const div83 = '83';
 const div84 = '<h2>Divisibility Rule for 84:</h2>' +
-    '        <h3>If the number is divisible by both 3, 4, and 7, then the number is divisible by 84.</h3>\n';
+    '        <h3>If the number is divisible by 3, 4, and 7, then the number is divisible by 84.</h3>\n';
 const div85 = '<h2>Divisibility Rule for 85:</h2>' +
     '        <h3>If the number is divisible by both 5 and 17, then the number is divisible by 85.</h3>\n';
 const div86 = '86';
@@ -669,10 +669,12 @@ const div88 = '<h2>Divisibility Rule for 88:</h2>' +
     '        <h3>If the number is divisible by both 8 and 11, then the number is divisible by 88.</h3>\n';
 const div89 = '89';
 const div90 = '<h2>Divisibility Rule for 90:</h2>' +
-    '        <h3>If the number is divisible by both 9 and 10, then the number is divisible by 85.</h3>\n';
-const div91 = '91';
+    '        <h3>If the number is divisible by both 9 and 10, then the number is divisible by 90.</h3>\n';
+const div91 = '<h2>Divisibility Rule for 91:</h2>' +
+    '        <h3>If the number is divisible by both 7 and 13, then the number is divisible by 91.</h3>\n';
 const div92 = '92';
-const div93 = '93';
+const div93 = '<h2>Divisibility Rule for 93:</h2>' +
+    '        <h3>If the number is divisible by both 3 and 31, then the number is divisible by 93.</h3>\n';
 const div94 = '94';
 const div95 = '95';
 const div96 = '96';
