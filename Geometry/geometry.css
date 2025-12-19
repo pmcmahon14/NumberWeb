@@ -22,7 +22,7 @@
     overflow: scroll;
 }
 
-button {
+.number {
     background-color: #777;
     color: white;
     cursor: pointer;
@@ -33,6 +33,23 @@ button {
     text-align: center;
     outline: white;
     font-size: 24px;
+}
+
+.selector {
+    background-color: deepskyblue;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 32.9%;
+    border-bottom-color: white;
+    border-bottom-width: 3px;
+    text-align: center;
+    outline: white;
+    font-size: 24px;
+}
+
+.selector:focus {
+    background-color: #007bff;
 }
 
 .active, .collapsible:hover {
